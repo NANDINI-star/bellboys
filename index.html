@@ -1,14 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-	<script src="index.js"></script>
-  <h1>bellboys</h1>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Award winning website... kinda</title>
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link href="https://fonts.cdnfonts.com/css/recoleta" rel="stylesheet">
+    </head>
+    <body>
+      <script src="./assets/js/app.js"></script>
+
+        <section class="hero">
+          <div class="top-nav">
+            <ul>
+              <li>
+                <a href="./index.html" class="logo">
+                  <div style="color: white; font-size: 40px; font-family: Poppins; font-weight: 800; word-wrap: break-word">LOGO</div>
+                </a>
+              </li>
+              <li onclick="handleNavClick()">
+                <img class="nav-icon" src="assets/images/nav-icon.svg"></img>
+              </li>
+            </ul>
+            
+          </div>
+          
+          <nav class="navbar vertical-center line line-vertical">
+            <div class="navbar-inner">
+              <div class="bbp-text">
+                <div class="bbp-part-1" style="font-size: 100px; font-family: Recoleta; font-weight: 700;word-wrap: break-word;">
+                  BELLBOYS
+                </div>
+                <div style="font-size: 50px; font-family: Recoleta; font-weight: 700;color: #8B8B8B; word-wrap: break-word;">
+                  PRODUCTIONS
+                </div>
+                <div style="color: #2A2A2A; font-size: 30px; font-weight: 600; word-wrap: break-word; font-family: Recoleta; ">
+                  believes that there's a smarter way to produce content.
+                </div>
+              </div>
+              <div class="nav-menu">
+                <ul>
+                  <li onclick="handleCloseNav()">
+                    <a href="#" class="link">
+                      <img class="close-icon" src="assets/images/close-icon.svg"></img>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="link" style="font-family: 'Poppins'">
+                      <div style="font-family: Poppins;">
+                        Home
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="link">About Us</a>
+                  </li>
+                  <li>
+                    <a href="#" class="link">Our Work</a>
+                  </li>
+                  <li>
+                    <a href="#" class="link">Meet the Team</a>
+                  </li>
+                  <li>
+                    <a href="#" class="link">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+          </nav>
+
+          <div class="home-1">
+            <img src="./assets/images/horz-rect.svg" alt="" class="horz-rect-1">
+            <img src="./assets/images/vertical-rect.svg" alt="" class="vert-rect-1">
+            <img src="./assets/images/text-3.svg" alt="" class="text-3">
+            <img src="./assets/images/vertical-rect.svg" alt="" class="vert-rect-2">
+
+            <img src="./assets/images/horz-rect.svg" alt="" class="horz-rect-2">
+          </div>
+        </section>
+        <section class="home-2">
+          <img src="./assets/images/bg-img-1.png" alt="" class="bg-img-1">
+          <div class="text-2">
+            <img src="./assets/images/text-1.svg"></img>
+          </div>
+        </section>
+        <section class="home-3">
+          <div class="text-4">
+            <img src="./assets/images/text-4.svg" alt="" >
+          </div>
+          <div class="circles">
+              <div id="circle">
+                <img class="corp" src="assets/images/indian-oil-bw.svg" alt="" style="">
+              </div>
+              <div id="circle">
+                <img class="corp" src="assets/images/corp-2.svg" alt="" style="">
+              </div>
+              <div id="circle">
+                <img class="corp" src="assets/images/corp-3.svg" alt="" style="">
+              </div>
+              <div id="circle">
+                <img class="corp" src="assets/images/corp-4.svg" alt="" style="">
+              </div>
+              <div id="circle">
+                <img class="corp" src="assets/images/corp-5.svg" alt="" style="">
+              </div>
+              <div id="circle">
+                <img class="corp" src="assets/images/corp-6.svg" alt="" style="">
+              </div>
+              <div id="circle">
+                <img class="corp" src="assets/images/corp-7.svg" alt="" style="">
+              </div>
+              <div id="circle">
+                <img class="corp" src="assets/images/corp-8.svg" alt="" style="">
+              </div>
+              <div></div>
+              <div id="circle">
+                <img class="corp"g src="assets/images/corp-9.svg" alt="" style=""/>
+              </div>
+              <div id="circle">
+                <img class="corp" src="assets/images/corp-10.svg" alt="" style=""/>
+              </div>
+          </div>
+          
+        </section>
+        
+        <span class="copyright copyright-year line-vertical">
+          Copyright &copy;2023 www.bellboys.in - 
+        </span>
+        <span class="copyright copyright-name line-vertical">
+          All Rights Reserved. <br>Powered by BellBoys
+        </span>
+
+    </body>
 </html>
