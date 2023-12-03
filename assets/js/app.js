@@ -28,99 +28,22 @@ var circle = document.querySelector('.circle');
 var circleClr = document.querySelector('.circle-clr');
 var home3 = document.querySelector('.home-3');
 var home4 = document.querySelector('.home-4');
+var scrollTopDiff = 0;
+console.log(1, scrollTopDiff);
 
 home3.addEventListener("mousemove", updateDotPosition);
-home3.addEventListener("scroll", updateDotPosition);
 
 function updateDotPosition(dets){
+  const elementRect2 = home3.getBoundingClientRect();
+
   gsap.to(cursor, {
     x: dets.clientX,
-    y: dets.clientY,
-    duration: 0.3,
+    y: (dets.clientY)+(elementRect2.top<0 ? Math.abs(elementRect2.top): -elementRect2.top),
+    duration: 0.2,
     ease: Expo
   })
 }
 
-// circle.addEventListener("mousemove", updateBackground);
-
-// function updateBackground(){
-//   gsap.to(cursor, {})
-//   cursor.style.zIndex = 6;
-//   circle.style.zIndex = -2;
-// }
-
-
-// home3.addEventListener("scroll", updateDotPosition);
-// // home3.addEventListener("mouseenter", function() {
-// //   cursor.style.opacity = 1;
-// // })
-// home3.addEventListener("mouseleave", function(dets){
-//   console.log(dets.x, dets.y);
-//   // cursor.style.opacity = 0;
-//   // document.querySelector('.corp-clr').style.opacity = 0;
-// })
-
-// function updateDotPosition(dets){
-//   cursor.style.left = (dets.x-1000) + "px";
-//   cursor.style.top = (dets.y+1750) + "px";
-//   // cursor.style.opacity = 1;
-//   // const rect1 = document.querySelector('.corp-clr');
-//   // const rect2 = document.querySelector('#cursor');
-
-//   // const observer = new IntersectionObserver(entries => {
-//   //   const isOverlap = entries[0].isIntersecting;
-
-//   //   if (isOverlap) {
-//   //     // Trigger your custom event or perform an action
-
-//   //   }
-//   // });
-
-//   // observer.observe(rect2);
-// }
-// function updateDotPosition2(dets){
-//   cursor.style.left = dets.x + "px";
-//   cursor.style.top = (dets.y) + "px";
-// }
-
-// let items = document.querySelectorAll('.carousel .card');
-// let next = document.getElementById('next');
-// let prev = document.getElementById('prev');
-
-// let active = 2;
-// function loadshow(){
-//   console.log(active);
-//   items[active].style.transform = `none`;
-//   items[active].style.zIndex = 1;
-//   items[active].style.filter = 'none';
-//   items[active].style.opacity = 1;
-//   let stt = 0;
-//   for(var i = active + 1; i< items.length; i++){
-//     stt++;
-//     items[i].style.transform = `translateX(${200*stt}px) translateY(${50*stt}px)`;
-//     items[i].style.zIndex = -stt;
-//     items[i].style.filter = 'contrast(60%)';
-//     console.log(i, stt);
-//   }
-//   stt=0;
-//   for(var i = active-1; i >= 0; i--){
-//     stt++;
-//     items[i].style.transform = `translateX(${-200*stt}px) translateY(${50*stt}px)`;
-//     items[i].style.zIndex = -stt;
-//     items[i].style.filter = 'contrast(60%)';
-//     console.log(i, stt);
-//   }
-// }
-// loadshow();
-// next.onclick = function() {
-//   active = active + 1 < items.length ? active + 1 : active;
-//   console.log(active);
-//   loadshow();
-// }
-// prev.onclick = function() {
-//   active = active - 1 >= 0 ? active - 1 : active;
-//   loadshow();
-// }
 
 class Node {
   constructor(element) {
@@ -339,11 +262,9 @@ function debounce(func, delay){
 // // //   console.log(scrollCount);
 // }
 const projFunc = debounce(function() {
-  // scrollCount++;
-  // console.log(scrollCount);
+
   activeVid = activeVid + 1 < items.length ? activeVid + 1 : activeVid;
   loadVideo();
-  // circularList.loadNextVideo();
   projects[activeVid].classList.add('fade-in');
   const animatedVideo = videos[activeVid];
   const scrollPosition = window.scrollY + window.innerHeight;
@@ -357,3 +278,7 @@ const projFunc = debounce(function() {
 },90);
 
 videoContent.addEventListener('wheel', projFunc);
+
+
+
+
