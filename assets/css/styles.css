@@ -4,6 +4,17 @@
     --light-color: #d8d8d8;
     --dark-color: #060606;
     --number-of-cols: 4;
+    animation-delay: calc(var(--scroll) * -1s);
+}
+
+:root * {
+  /* Pause the animation */
+  animation-play-state: paused;
+  /* Bind the animation to scroll */
+  animation-delay: calc(var(--scroll) * -1s);
+  /* These last 2 properites clean up overshoot weirdness */
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
 }
 
 *,
@@ -93,6 +104,7 @@ section {
   margin-top: -11rem;
   visibility: hidden;
   background: #060606;
+  display: none;
 }
 
 .navbar-inner{
