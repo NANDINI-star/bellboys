@@ -99,12 +99,13 @@ section {
 }
 
 .navbar{
-  position: relative;
+  position: absolute;
   z-index: 2;
   margin-top: -11rem;
   visibility: hidden;
   background: #060606;
   display: none;
+  width: 100%;
 }
 
 .navbar-inner{
@@ -132,10 +133,11 @@ section {
 }
 
 .nav-menu ul li{
-  padding: 2rem;
+  padding: 3rem;
   font-size: 35px;
   font-family: 'Poppins';
-  word-wrap: break-word
+  word-wrap: break-word;
+  margin-right: 4rem;
 }
 
 .close-icon{

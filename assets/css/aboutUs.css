@@ -90,3 +90,13 @@
     width: 100%;
   }
 }
+
+.navbar-about-us{
+  position: absolute;
+  z-index: 2;
+  margin-top: -11rem;
+  visibility: hidden;
+  background: #060606;
+  display: none;
+  width: 100%
+}
