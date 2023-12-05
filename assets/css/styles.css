@@ -100,7 +100,7 @@ section {
 
 .navbar{
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   margin-top: -11rem;
   visibility: hidden;
   background: #060606;

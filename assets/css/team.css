@@ -1,0 +1,20 @@
+.elevator{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  padding: 15rem;
+}
+
+.meet-team-txt{
+  display: flex;
+  justify-content: center;
+
+}
+
+.one, .two, .three, .four,.five, .six{
+  transform: translate(-50%, -50%);
+}
+
+.team-txt{
+  opacity: 0;
+}
