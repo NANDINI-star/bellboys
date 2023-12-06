@@ -254,11 +254,7 @@ section {
   /* transition: all linear 0.2s; */
   mix-blend-mode: difference;
 }
-/* #cursor{
-  position: absolute;
-  width: 200px;
-  height: 800px; 
-} */
+
 
 .corp{
   /* mix-blend-mode: difference; */
