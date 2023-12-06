@@ -447,7 +447,7 @@ video{
   display: flex;
   width: 100%;
   justify-content: center;
-  padding: 5rem;
+  padding: 2rem;
   column-gap: 5rem;
 }
 
