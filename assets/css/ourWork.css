@@ -1,0 +1,141 @@
+.our-work-txt{
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.our-work-hero{
+  height: 80vh;
+}
+
+.actions {
+  position: absolute;
+  top: 70%;
+  left: 22%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  height: 200px;
+  width: 600px;
+  background-color: black;
+}
+
+.gallery {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.cards {
+  position: absolute;
+  width: 609px;
+  height: 310px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cards li {
+  width: 609px;
+  height: 310px;
+  background-color: #9d7cce;
+  position: absolute;
+}
+
+button {
+  display:inline-block;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  padding: 14px 14px;
+  background: #161012;
+  cursor: pointer;
+}
+
+button {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.video-content{
+  overflow-y: hidden;
+}
+
+.vid-1{
+  z-index: 5
+}
+
+.vid-2{
+  top: 4%;
+  scale: 0.9;
+  z-index: 4;
+}
+.vid-3{
+  top: 8%;
+  scale: 0.8;
+  z-index: 3;
+}
+.vid-4{
+  top: 12%;
+  scale: 0.7;
+  z-index: 2;
+}
+.vid-5{
+  top: 16%;
+  scale: 0.6;
+  z-index: 1;
+}
+
+.our-work-1{
+  height: 100vh;
+  
+}
+
+.videos{
+  left: 60%;
+}
+
+.vid-txt{
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  background: black;
+  width: 50vw;
+}
+
+.txt-container-1{
+  /* background-color: black; */
+  height: 300px;
+  z-index: 5;
+  position: absolute;
+  /* top: -50% */
+}
+
+.txt-container-2{
+  /* top: -5%; */
+  position: absolute;
+  opacity: 0;
+  background-color: black;
+  height: 100px;
+  z-index: 4;
+}
+.txt-container-3{
+  /* top: 15%; */
+  position: absolute;
+  opacity: 0;
+  background-color: black;
+  height: 100px;
+  z-index: 3;
+}
+.txt-container-4{
+  position: absolute;
+  opacity: 0;
+  background-color: black;
+  height: 100px;
+}
+.txt-container-5{
+  /* position: absolute; */
+  opacity: 0;
+  background-color: black;
+  height: 100px;
+}

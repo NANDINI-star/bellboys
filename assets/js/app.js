@@ -126,9 +126,9 @@ prev.onclick = function () {
 };
 
 //our work
-let videos = document.querySelectorAll('.video video');
+let videos = document.querySelectorAll('video');
 let projects = document.querySelectorAll('.content-details');
-let videoContent = document.querySelector('.video-content');
+let videoContent = document.querySelector('.home-6');
 
 console.log(videos);
 let activeVid = 0;
