@@ -64,6 +64,8 @@ section {
   padding: 2rem;
   text-align: left;
   isolation: isolate;
+  z-index: 5;
+  background-color: black;
 }
 
 .hero::before{
@@ -149,14 +151,7 @@ section {
 .bg-img-1{
   /* height: 100vh; */
   width: 100%;
-  opacity: 0.4;
-}
-
-.text-2{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 625%);
+  /* opacity: 0.4; */
 }
 
 .horz-rect-1{
@@ -187,6 +182,18 @@ section {
   transform: translate(-50%, -50%);
 }
 
+.home-2{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5
+}
+
+.text-2{
+  position: absolute;
+}
+
 .text-3{
   position: absolute;
   top: 50%;
@@ -199,7 +206,7 @@ section {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 195vh;
+  height: 155vh;
   position: relative;
 }
 
@@ -242,18 +249,21 @@ section {
 }
 
 #cursor{
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   pointer-events: none;
   height: 350px;
   width: 350px;
   background-color: white;
-  position: absolute;
-  z-index: 99;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 4;
   border-radius: 50%;
-  opacity: 1;
+  opacity: 0;
   /* transition: all linear 0.2s; */
   mix-blend-mode: difference;
 }
+
 
 
 .corp{
@@ -279,6 +289,9 @@ section {
   justify-content: flex-start;
   align-items: center;
   height: 95vh;
+  position: relative;
+  z-index: 5;
+  background-color: black;
 }
 
 .text-6{
@@ -417,6 +430,7 @@ video{
   padding: 5rem;
   background-color: black;
   position: relative;
+  z-index: 5
 }
 
 .footer-menu{
@@ -443,6 +457,8 @@ video{
   justify-content: center;
   flex-direction: column;
   background-color: black;
+  position: relative;
+  z-index: 5;
 }
 
 .social-lists{

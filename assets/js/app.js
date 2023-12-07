@@ -23,6 +23,7 @@ function handleCloseNav(){
   });
 }
 
+//custom-cursor
 var cursor = document.querySelector('#cursor');
 var circle = document.querySelector('.circle');
 var circleClr = document.querySelector('.circle-clr');
@@ -34,13 +35,13 @@ console.log(1, scrollTopDiff);
 home3.addEventListener("mousemove", updateDotPosition);
 
 function updateDotPosition(dets){
-  const elementRect2 = home3.getBoundingClientRect();
 
   gsap.to(cursor, {
-    x: dets.clientX,
-    y: (dets.clientY)+(elementRect2.top<0 ? Math.abs(elementRect2.top): -elementRect2.top),
+    x: dets.clientX-180,
+    y: dets.clientY-180,
     duration: 0.2,
-    ease: Expo
+    ease: Expo,
+    opacity: 1,
   })
 }
 
