@@ -391,6 +391,7 @@ section {
   position: relative;
   overflow: hidden;
   height: 100%;
+  width: 650px;
 }
 
 video{
@@ -415,6 +416,7 @@ video{
   height: 40vh;
   padding: 5rem;
   background-color: black;
+  position: relative;
 }
 
 .footer-menu{

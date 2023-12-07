@@ -2,8 +2,10 @@ var tl = gsap.timeline({
   scrollTrigger: {
     trigger: "body",
     scrub: 1,
-    end: "100%",
+    end: "50%",
     pin: true,
+    markers: true
+
   }
 });
 tl.add("start");
