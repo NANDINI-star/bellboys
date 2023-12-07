@@ -125,160 +125,147 @@ prev.onclick = function () {
   loadshow();
 };
 
-//our work
-let videos = document.querySelectorAll('video');
-let projects = document.querySelectorAll('.content-details');
-let videoContent = document.querySelector('.home-6');
-
-console.log(videos);
-let activeVid = 0;
-function loadVideo() {
-  console.log("activeVid", videos[activeVid]);
-  videos[activeVid].style.transform = `none`;
-  videos[activeVid].style.zIndex = 1;
-  videos[activeVid].style.filter = 'none';
-  videos[activeVid].style.opacity = 1;
-
-  projects[activeVid].style.zIndex = 1;
-  let stt = 0;
-  for(var i = activeVid + 1; i< videos.length; i++){
-    stt++;
-    console.log(i, videos[i]);
-    videos[i].style.transform = `translateY(${40*stt}px) scale(${1-0.1*stt})`;
-    videos[i].style.zIndex = -stt;
-    videos[i].style.filter = 'contrast(60%)';
+//ourwork
+var tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".our-work-1",
+    scrub: 1,
+    end: "100%",
+    pin: true,
   }
-}
+});
+tl.add("start");
+tl.to(".vid-1",{
+  opacity: 0,
+  delay: 2,
+  duration: 2
+},"start")
+tl.from(".txt-container-1",{
+  opacity: 1,
+  duration: 3
+}, "start")
+tl.to(".txt-container-1",{
+  opacity: 0,
+  delay: 2,
+  duration: 2,
+}, "start")
+tl.set(".vid-1", {zIndex: -1})
 
-loadVideo();
+tl.add("start2")
+tl.from(".vid-2", {
+  scale: 0.9,
+}, "start2")
+tl.to(".vid-2", {
+  scale: 1,
+  y: -40
+}, "start2")
+tl.to(".txt-container-2",{
+  opacity: 1,
+  duration: 3
+}, "start2")
+tl.to(".vid-2", {
+  opacity: 0,
+  delay: 2,
+  duration: 2
+}, "start2")
+tl.to(".txt-container-2",{
+  opacity: 0,
+  delay: 2,
+  duration: 2
+}, "start2")
+tl.to(".vid-3", {
+  y: -20
+}, "start2")
+tl.to(".vid-4", {
+  y: -20
+}, "start2")
+tl.to(".vid-5", {
+  y: -20
+}, "start2")
+tl.set(".vid-2", {zIndex: -1})
 
-// class Node {
-//   constructor(video, project) {
-//     this.video = video;
-//     this.project = project;
-//     this.next = null;
-//   }
-// }
+tl.add("start3")
+tl.from(".vid-3", {
+  scale: 0.8,
+}, "start3")
+tl.to(".vid-3", {
+  scale: 1,
+  y: -80
+}, "start3")
+tl.to(".txt-container-3",{
+  opacity: 1,
+  duration: 3
+}, "start3")
+tl.to(".vid-3", {
+  opacity: 0,
+  delay: 2,
+  duration: 2
+}, "start3")
+tl.to(".txt-container-3",{
+  opacity: 0,
+  delay: 2,
+  duration: 2
+}, "start3")
+tl.to(".vid-4", {
+  y: -70,
+  scale: 0.9
+}, "start3")
+tl.to(".vid-5", {
+  y: -70,
+  scale: 0.8
+}, "start3")
+tl.set(".vid-3", {zIndex: -1})
 
-// class CircularLinkedList {
-//   constructor() {
-//     this.head = null;
-//     this.current = null;
-//   }
+tl.add("start4")
+tl.from(".vid-4", {
+  scale: 0.7,
+}, "start4")
+tl.to(".vid-4", {
+  scale: 1,
+  y: -110
+}, "start4")
+tl.to(".txt-container-4",{
+  opacity: 1,
+  duration: 3
+}, "start4")
+tl.to(".vid-4", {
+  opacity: 0,
+  delay: 2,
+  duration: 2
+}, "start4")
+tl.to(".txt-container-4",{
+  opacity: 0,
+  delay: 2,
+  duration: 2
+}, "start4")
+tl.to(".vid-5", {
+  y: -100,
+  scale: 0.9
+}, "start4")
+tl.set(".vid-4", {zIndex: -1})
 
-//   add(video, project) {
-//     const newNode = new Node(video, project);
-//     if (!this.head) {
-//       this.head = newNode;
-//       this.head.next = this.head; // Circular reference
-//       this.current = this.head;
-//     } else {
-//       let temp = this.head;
-//       while (temp.next !== this.head) {
-//         temp = temp.next;
-//       }
-//       temp.next = newNode;
-//       newNode.next = this.head; // Circular reference
-//     }
-//   }
-
-//   loadNextVideo() {
-//     // Reset styles for all videos and projects
-//     this.resetStyles();
-
-//     // Apply styles for the current video
-//     this.current.video.style.transform = 'none';
-//     this.current.video.style.zIndex = 1;
-//     this.current.video.style.filter = 'none';
-//     this.current.video.style.opacity = 1;
-
-//     this.current.project.style.zIndex = 1;
-
-//     // Apply styles for the remaining videos in the list
-//     let stt = 0;
-//     let temp = this.current.next;
-//     while (temp !== this.current) {
-//       stt++;
-//       temp.video.style.transform = `translateY(${40 * stt}px) scale(${1 - 0.1 * stt})`;
-//       temp.video.style.zIndex = -stt;
-//       temp.video.style.filter = 'contrast(60%)';
-//       temp = temp.next;
-//     }
-
-//     // Move to the next video in the circular list
-//     this.current = this.current.next;
-//   }
-
-//   resetStyles() {
-//     let temp = this.head;
-//     while (temp !== this.current) {
-//       temp.video.style.transform = '';
-//       temp.video.style.zIndex = '';
-//       temp.video.style.filter = '';
-//       temp.video.style.opacity = '';
-//       temp.project.style.zIndex = '';
-//       temp = temp.next;
-//     }
-//   }
-// }
-
-// // Example usage
-// const circularList = new CircularLinkedList();
-
-// document.querySelectorAll('.video video').forEach((video, index) => {
-//   const project = document.querySelectorAll('.content-details')[index];
-//   circularList.add(video, project);
-// });
-
-// // Initial load
-// circularList.loadNextVideo();
-
-
-
-
-// let scrollCount = 0;
-function debounce(func, delay){
-  let timeoutId;
-
-  return function() {
-    const context = this;
-    const args = arguments;
-
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(function(){
-      func.apply(context, args);
-    }, delay);
-  };
-}
-// function projFunc(event) {
-//   // if(document.documentElement.scrollTop > 3000){
-//     activeVid = activeVid + 1 < items.length ? activeVid + 1 : activeVid;
-//     loadVideo();
-//   // }
-//   setTimeout(()=>{
-//     scrollCount++;
-//   }, 5000);
-  
-// // //   console.log(scrollCount);
-// }
-const projFunc = debounce(function() {
-
-  activeVid = activeVid + 1 < items.length ? activeVid + 1 : activeVid;
-  loadVideo();
-  projects[activeVid].classList.add('fade-in');
-  const animatedVideo = videos[activeVid];
-  const scrollPosition = window.scrollY + window.innerHeight;
-  const elementPosition = animatedVideo.offsetTop + animatedVideo.offsetHeight / 2;
-
-  if (scrollPosition > elementPosition) {
-      animatedVideo.classList.add('video-out');
-  } else {
-      animatedVideo.classList.remove('video-out');
-  }
-},90);
-
-videoContent.addEventListener('wheel', projFunc);
-
-
+tl.add("start5")
+tl.from(".vid-5", {
+  scale: 0.6,
+}, "start5")
+tl.to(".vid-5", {
+  scale: 1,
+  y: -150
+}, "start5")
+tl.to(".txt-container-5",{
+  opacity: 1,
+  duration: 3
+}, "start5")
+tl.to(".vid-5", {
+  opacity: 0,
+  delay: 2,
+  duration: 2
+}, "start5")
+tl.to(".txt-container-5",{
+  opacity: 0,
+  delay: 2,
+  duration: 2
+}, "start5")
+tl.set(".vid-5", {zIndex: -1})
 
 
