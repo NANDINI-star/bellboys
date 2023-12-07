@@ -4,7 +4,6 @@ var tl = gsap.timeline({
     scrub: 1,
     end: "50%",
     pin: true,
-    markers: true
 
   }
 });

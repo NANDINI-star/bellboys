@@ -132,7 +132,6 @@ var tl = gsap.timeline({
     scrub: 1,
     end: "100%",
     pin: true,
-    markers: true
   }
 });
 tl.add("start");
