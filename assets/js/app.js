@@ -80,6 +80,12 @@ head.prev = tail;
 
 let active = head;
 
+let count = 0;
+while(count<2){
+  active = active.next;
+  count++;
+}
+
 function loadshow() {
   console.log(active.element);
 
@@ -116,13 +122,17 @@ function loadshow() {
 loadshow();
 
 next.onclick = function () {
-  active = active.next !== null ? active.next : head;
+  active = active.next;
   console.log(active.element);
+  head = head.next;
+  tail = tail.next;
   loadshow();
 };
 
 prev.onclick = function () {
-  active = active.prev !== null ? active.prev : tail;
+  active = active.prev;
+  head = head.prev;
+  tail = tail.prev;
   loadshow();
 };
 
