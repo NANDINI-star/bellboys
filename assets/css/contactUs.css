@@ -25,32 +25,35 @@
 
 /* lg */
 @media (max-width: 1024px) {
-  .contact-us-content{
+  /* .contact-us-content{
     height: 60vh;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr;
     padding: 3rem;
+  } */
+  .contact-us-content{
+    padding: 0 3rem 3rem 3rem;
   }
   .contact-us-hero {
     height: 100vh;
   }
   .contact-us-txt{
     padding: 1rem;
-    /* font-size: 1.5rem; */
+    font-size: 2rem;
   }
   .contact-us-details{
     grid-row: 1;
-    /* font-size: 1.5rem !important; */
+    font-size: 2rem !important;
   }
   .social-lists{
     column-gap: 2rem;
   }
-  .iframe-rwd{
+  /* .iframe-rwd{
     grid-row: 3;
   }
   .iframe-rwd iframe{
     grid-row: 3;
-  }
+  } */
   .line-2{
     width: 60vw !important;
   }
@@ -69,12 +72,11 @@
     height: 100vh !important;
   }
   .contact-us-txt{
-    padding: 1rem;
-    /* font-size: 1.5rem; */
+    padding: 1rem !important;
   }
   .contact-us-details{
     grid-row: 1;
-    /* font-size: 1.5rem !important; */
+    font-size: 2rem !important;
   }
   .social-lists{
     column-gap: 2rem;
