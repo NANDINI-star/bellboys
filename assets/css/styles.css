@@ -1,20 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
-
+@font-face { font-family: Black Mango; src: url('./Black Mango Black.ttf'); } 
 :root {
     --light-color: #d8d8d8;
     --dark-color: #060606;
     --number-of-cols: 4;
-    animation-delay: calc(var(--scroll) * -1s);
-}
-
-:root * {
-  /* Pause the animation */
-  animation-play-state: paused;
-  /* Bind the animation to scroll */
-  animation-delay: calc(var(--scroll) * -1s);
-  /* These last 2 properites clean up overshoot weirdness */
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
 }
 
 *,
@@ -49,8 +38,9 @@ ul {
 }
 
 img {
-    display: block;
-    max-width: 100%;
+    /* display: block; */
+    /* max-width: 100%; */
+  /* width: 5rem; */
 }
 
 section {
@@ -78,69 +68,93 @@ section {
 
 }
 
+.top-nav{
+  width: 100vw;
+  padding: 6rem 6rem 0 6rem;
+}
 
 .top-nav ul{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 3rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
 }
 
 .logo{
   position:relative;
   z-index: 3;
-  width: 3.5rem;
-  margin-inline: auto;
+  width: 2.5rem;
 }
 
 .nav-icon{
   padding-block: 2.5rem;
   cursor: pointer;
   float: right;
+  width: 2rem;
 }
 
 .navbar{
   position: absolute;
   z-index: 1000;
-  margin-top: -11rem;
   visibility: hidden;
   background: #060606;
   display: none;
-  width: 100%;
+  width: 100vw;
 }
 
-.navbar-inner{
-  display: flex;
-  flex-direction: row;
-
+@media screen and (max-width: 430px){
+  .nav-menu{
+    justify-content: center;
+    height: 100vh !important;
+  }
+  .nav-menu ul li {
+    text-align: center;
+    padding: 1rem !important;
+    font-size: 1.5rem !important;
+  }
+  .social-lists img{
+    width: 3rem;
+  }
+  img{
+    /* width: 3rem; */
+  }
+  .footer-menu, .home-8{
+    font-size: 1.5rem !important;
+    /* padding: 3rem; */
+  }
+  .top-nav{
+    padding: 3rem 3rem 0 3rem;
+  }
+  .home-7{
+    padding: 0 3rem 3rem 3rem !important;
+  }
 }
+
 
 .nav-menu{
-  margin-left: auto;
   background-color: #060606;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .bbp-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   padding: 3rem;
-  align-self: center;
-  padding-top: 200px;
   padding-left: 4rem;
 }
 
 .navbar ul{
-  float: right;
   text-align: right;
-  padding: 2rem;
 }
 
 .nav-menu ul li{
-  padding: 3rem;
-  font-size: 35px;
+  padding: 3rem 6rem 3rem 3rem;
+  font-size: 2.5rem;
   font-family: 'Poppins';
   word-wrap: break-word;
-  margin-right: 4rem;
 }
 
 .close-icon{
@@ -149,9 +163,7 @@ section {
 }
 
 .bg-img-1{
-  /* height: 100vh; */
   width: 100%;
-  /* opacity: 0.4; */
 }
 
 .horz-rect-1{
@@ -231,7 +243,6 @@ section {
   column-gap: 9rem;
   width: 60%;
   justify-items: center;
-  /* margin-top: -50rem; */
   z-index: -1
 }
 
@@ -249,7 +260,6 @@ section {
 }
 
 #cursor{
-  /* transform: translate(-50%, -50%); */
   pointer-events: none;
   height: 350px;
   width: 350px;
@@ -427,23 +437,23 @@ video{
 .home-7{
   display: flex;
   justify-content: center;
-  height: 40vh;
-  padding: 5rem;
-  background-color: black;
+  height: 25vh;
+  padding: 0 6rem 6rem 6rem;
+  background-color: #010101;
   position: relative;
   z-index: 5
 }
 
 .footer-menu{
-  width: 90%;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
-  column-gap: 40em;
+  font-size: 2.5rem;
+  /* column-gap: 4rem; */
 }
 
 .col-1,.col-2{
   display: flex;
-
   justify-content: space-evenly;
   flex-direction: column;
   float: right;
@@ -457,21 +467,28 @@ video{
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: black;
+  background-color: #010101;
   position: relative;
-  z-index: 5;
+  width: 100vw;
+  font-size: 2.5rem;
+  /* z-index: 5; */
 }
 
 .social-lists{
   display: flex;
-  width: 100%;
+  width: 100vw;
   justify-content: center;
   padding: 2rem;
   column-gap: 5rem;
+}
+
+.social-lists img{
+  width: 3rem;
 }
 
 .copyright{
   display: flex;
   justify-content: center;
   background-color: black;
+  font-size: 1.25rem;
 }
