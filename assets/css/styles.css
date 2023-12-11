@@ -83,7 +83,6 @@ section {
   position:relative;
   z-index: 3;
   width: 2.5rem;
-  padding-block: 2.5rem;
 }
 
 .nav-icon{
@@ -224,34 +223,6 @@ section {
   }
 
 }
-
-/* @media screen and (max-width: 430px){
-  .nav-menu{
-    justify-content: center;
-    height: 100vh !important;
-  }
-  .nav-menu ul li {
-    text-align: center;
-    padding: 1rem !important;
-    font-size: 1.5rem !important;
-  }
-  .social-lists img{
-    width: 3rem;
-  }
-  img{
-    /* width: 3rem; */
-  /* } */
-  /* .footer-menu, .home-8{ */
-    /* font-size: 1.5rem !important; */
-    /* padding: 3rem; */
-  /* } */
-  /* .top-nav{ */
-    /* padding: 3rem 3rem 0 3rem; */
-  /* } */
-  /* .home-7{ */
-    /* padding: 0 3rem 3rem 3rem !important; */
-  /* } */
-/* } */
 
 
 .nav-menu{
