@@ -116,7 +116,7 @@ section {
   .nav-menu ul li {
     text-align: center;
     padding: 1rem !important;
-    /* font-size: 1.5rem !important; */
+    font-size: 2rem !important;
   }
   .social-lists img{
     width: 3rem;
@@ -125,7 +125,7 @@ section {
     /* width: 3rem; */
   }
   .footer-menu, .home-8{
-    /* font-size: 1.5rem !important; */
+    font-size: 2rem !important;
     /* padding: 3rem; */
   }
   .top-nav{
