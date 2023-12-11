@@ -83,6 +83,7 @@ section {
   position:relative;
   z-index: 3;
   width: 2.5rem;
+  padding-block: 2.5rem;
 }
 
 .nav-icon{
@@ -101,7 +102,101 @@ section {
   width: 100vw;
 }
 
-@media screen and (max-width: 430px){
+/* 2xl */
+@media (max-width: 1536px) {}
+
+/* xl */
+@media (max-width: 1280px) {}
+
+/* lg */
+@media (max-width: 1024px) {
+  .nav-menu{
+    justify-content: center;
+    height: 100vh !important;
+  }
+  .nav-menu ul li {
+    text-align: center;
+    padding: 1rem !important;
+    /* font-size: 1.5rem !important; */
+  }
+  .social-lists img{
+    width: 3rem;
+  }
+  img{
+    /* width: 3rem; */
+  }
+  .footer-menu, .home-8{
+    /* font-size: 1.5rem !important; */
+    /* padding: 3rem; */
+  }
+  .top-nav{
+    padding: 3rem 3rem 0 3rem;
+  }
+  .home-7{
+    padding: 0 3rem 3rem 3rem !important;
+  }
+}
+
+/* md */
+@media (max-width: 768px) {
+  .nav-menu{
+    justify-content: center;
+    height: 100vh !important;
+  }
+  .nav-menu ul li {
+    text-align: center;
+    padding: 1rem !important;
+    /* font-size: 1.5rem !important; */
+  }
+  .social-lists img{
+    width: 3rem;
+  }
+  img{
+    /* width: 3rem; */
+  }
+  .footer-menu, .home-8{
+    /* font-size: 1.5rem !important; */
+    /* padding: 3rem; */
+  }
+  .top-nav{
+    padding: 3rem 3rem 0 3rem;
+  }
+  .home-7{
+    padding: 0 3rem 3rem 3rem !important;
+  }
+}
+
+/* sm */
+@media (max-width: 640px) {
+  .nav-menu{
+    justify-content: center;
+    height: 100vh !important;
+  }
+  .nav-menu ul li {
+    text-align: center;
+    padding: 1rem !important;
+    /* font-size: 1.5rem !important; */
+  }
+  .social-lists img{
+    width: 3rem;
+  }
+  img{
+    /* width: 3rem; */
+  }
+  .footer-menu, .home-8{
+    /* font-size: 1.5rem !important; */
+    /* padding: 3rem; */
+  }
+  .top-nav{
+    padding: 3rem 3rem 0 3rem;
+  }
+  .home-7{
+    padding: 0 3rem 3rem 3rem !important;
+  }
+}
+
+/* xs */
+@media (max-width: 475px) {
   .nav-menu{
     justify-content: center;
     height: 100vh !important;
@@ -127,7 +222,36 @@ section {
   .home-7{
     padding: 0 3rem 3rem 3rem !important;
   }
+
 }
+
+/* @media screen and (max-width: 430px){
+  .nav-menu{
+    justify-content: center;
+    height: 100vh !important;
+  }
+  .nav-menu ul li {
+    text-align: center;
+    padding: 1rem !important;
+    font-size: 1.5rem !important;
+  }
+  .social-lists img{
+    width: 3rem;
+  }
+  img{
+    /* width: 3rem; */
+  /* } */
+  /* .footer-menu, .home-8{ */
+    /* font-size: 1.5rem !important; */
+    /* padding: 3rem; */
+  /* } */
+  /* .top-nav{ */
+    /* padding: 3rem 3rem 0 3rem; */
+  /* } */
+  /* .home-7{ */
+    /* padding: 0 3rem 3rem 3rem !important; */
+  /* } */
+/* } */
 
 
 .nav-menu{
