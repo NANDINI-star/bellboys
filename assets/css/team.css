@@ -1,3 +1,16 @@
+@media (max-width: 1700px) {
+  .hero{
+    height: auto !important;
+  }
+  .hero-content{
+    height: auto !important;
+  }
+  .elevator{
+    height: auto !important;
+  }
+
+  
+}
 @media (max-width: 475px){
   .hero{
     height: auto !important;
