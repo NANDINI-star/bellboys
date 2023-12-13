@@ -1,7 +1,4 @@
 .contact-us-content{
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-between; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 15rem;
@@ -11,6 +8,10 @@
   height: 55vh;
 }
 
+img{
+  width: 3vw;
+}
+
 /* 2xl */
 @media (max-width: 1536px) {
   
@@ -18,19 +19,13 @@
 
 /* xl */
 @media (max-width: 1280px) {
-  img{
+  /* img{
     width: 3rem;
-  }
+  } */
 }
 
 /* lg */
 @media (max-width: 1024px) {
-  /* .contact-us-content{
-    height: 60vh;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr;
-    padding: 3rem;
-  } */
   .contact-us-content{
     padding: 0 3rem 3rem 3rem;
   }
@@ -44,18 +39,6 @@
   .contact-us-details{
     grid-row: 1;
     font-size: 2rem !important;
-  }
-  .social-lists{
-    column-gap: 2rem;
-  }
-  /* .iframe-rwd{
-    grid-row: 3;
-  }
-  .iframe-rwd iframe{
-    grid-row: 3;
-  } */
-  .line-2{
-    width: 60vw !important;
   }
 
 }
@@ -78,17 +61,11 @@
     grid-row: 1;
     font-size: 2rem !important;
   }
-  .social-lists{
-    column-gap: 2rem;
-  }
   .iframe-rwd{
     grid-row: 3;
   }
   .iframe-rwd iframe{
     grid-row: 3;
-  }
-  .line-2{
-    width: 60vw !important;
   }
 
 }
@@ -112,17 +89,11 @@
     grid-row: 1;
     /* font-size: 1.5rem !important; */
   }
-  .social-lists{
-    column-gap: 2rem;
-  }
   .iframe-rwd{
     grid-row: 3;
   }
   .iframe-rwd iframe{
     grid-row: 3;
-  }
-  .line-2{
-    width: 60vw !important;
   }
 
 }
@@ -146,25 +117,19 @@
     grid-row: 1;
     font-size: 1.5rem !important;
   }
-  .social-lists{
-    column-gap: 2rem;
-  }
   .iframe-rwd{
     grid-row: 3;
   }
   .iframe-rwd iframe{
     grid-row: 3;
   }
-  .line-2{
-    width: 60vw !important;
-  }
   img{
-    width: 1.5rem;
+    /* width: 1.5rem; */
   }
 }
 
 .contact-us-details{
-  font-size: 2.5rem;
+  font-size: 2vw;
 }
 
 .iframe-rwd  {
@@ -205,17 +170,14 @@
 }
 
 .contact-us-txt{
-  padding: 5rem;
-  font-size: 4rem;
+  padding: 5vw;
+  font-size: 4vw;
 }
 
-.line-1{
-  width: 90vw;
-  margin: auto;
+.idea{
+  font-size: 1.5vw;
 }
 
-.line-2{
-  width: 25vw;
-  margin: auto;
-  margin-bottom: 4rem;
+.contact, .mail{
+  font-size: 2vw;
 }
