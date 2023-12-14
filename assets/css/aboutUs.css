@@ -1,3 +1,5 @@
+@font-face { font-family: Black Mango; src: url('./Black Mango Black.ttf'); } 
+
 @media (max-width: 475px){
   .hero{
     height: 60vh;
@@ -67,7 +69,7 @@
   display: grid;
   width: 85%;
   height: 100%;
-  
+  background-color: #0D0D0D;
   grid-template-columns: repeat(3, 1fr);
   overflow: scroll;
   
