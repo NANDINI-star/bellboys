@@ -1,3 +1,5 @@
+@font-face { font-family: Black Mango; src: url('./Black Mango Black.ttf'); } 
+
 @media (max-width: 1700px) {
   .hero{
     height: auto !important;

@@ -1,3 +1,5 @@
+@font-face { font-family: Black Mango; src: url('./Black Mango Black.ttf'); } 
+
 .contact-us-content{
   display: grid;
   grid-template-columns: 1fr 1fr;
