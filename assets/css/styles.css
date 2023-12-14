@@ -644,7 +644,7 @@ position: absolute;
   display: flex;
   justify-content: center;
   background-color: black;
-  font-size: 1.25rem;
+  font-size: 1vw;
 }
 
 .line-1{
