@@ -1,6 +1,9 @@
 @font-face { font-family: Black Mango; src: url('./Black Mango Black.ttf'); } 
 
 @media (max-width: 475px){
+  .our-work-hero{
+    height: 80vh !important;
+  }
   .our-work-txt{
     font-size: 6vw !important;
   }
@@ -10,6 +13,7 @@
   
   section {
       background: #010101;
+      height: 90%;
   }
   
   .container {
@@ -257,7 +261,7 @@ button {
 }
 
 .our-work-1{
-  height: 100vh;
+  height: 50vh;
   position: relative;
   z-index: 5;
   background-color: black;
@@ -272,6 +276,7 @@ button {
   position: relative;
   background: black;
   width: 50vw;
+  height: 30vh;
 }
 
 .vid-carousel{
@@ -282,7 +287,6 @@ button {
   position: absolute;
   opacity: 0;
   background-color: black;
-  height: 40vw;
   
 }
 

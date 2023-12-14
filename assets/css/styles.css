@@ -110,13 +110,13 @@ section {
 /* lg */
 @media (max-width: 1024px) {
   .nav-menu{
-    justify-content: center;
+    /* justify-content: center; */
     height: 100vh !important;
   }
   .nav-menu ul li {
     text-align: center;
     padding: 1rem !important;
-    font-size: 2rem !important;
+    font-size: 3vw !important;
   }
   .social-lists img{
     width: 3rem;
@@ -146,7 +146,7 @@ section {
     height: 100vh !important;
   }
   .nav-menu ul li {
-    text-align: center;
+    /* text-align: center; */
     padding: 1rem !important;
     /* font-size: 1.5rem !important; */
   }
@@ -283,7 +283,7 @@ section {
 
 .nav-menu ul li{
   padding: 3rem 6rem 3rem 3rem;
-  font-size: 2.5rem;
+  font-size: 3vw;
   font-family: 'Poppins';
   word-wrap: break-word;
 }
