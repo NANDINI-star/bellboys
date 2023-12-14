@@ -75,15 +75,15 @@ let head = null;
 let tail = null;
 
 for (let i = 0; i < items.length; i++) {
-  let node = new Node(items[i]);
+  let Node = new Node(items[i]);
 
   if (!head) {
-    head = node;
-    tail = node;
+    head = Node;
+    tail = Node;
   } else {
-    tail.next = node;
-    node.prev = tail;
-    tail = node;
+    tail.next = Node;
+    Node.prev = tail;
+    tail = Node;
   }
 }
 
