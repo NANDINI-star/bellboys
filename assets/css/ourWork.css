@@ -156,7 +156,7 @@
   z-index: 1000;
   height: 200px;
   width: 600px;
-  background-color: black;
+  background-color: #010101;
 }
 
 .gallery {
@@ -264,7 +264,7 @@ button {
   height: 50vh;
   position: relative;
   z-index: 5;
-  background-color: black;
+  background-color: #010101;
 }
 
 .videos{
@@ -274,7 +274,7 @@ button {
 
 .vid-txt{
   position: relative;
-  background: black;
+  background: #010101;
   width: 50vw;
   height: 30vh;
 }
@@ -286,7 +286,7 @@ button {
 .txt-container{
   position: absolute;
   opacity: 0;
-  background-color: black;
+  background-color: #010101;
   
 }
 
