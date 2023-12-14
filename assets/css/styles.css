@@ -96,7 +96,7 @@ section {
   position: absolute;
   z-index: 1000;
   visibility: hidden;
-  background: #060606;
+  background: #010101;
   display: none;
   width: 100vw;
 }
@@ -279,6 +279,7 @@ section {
 
 .navbar ul{
   text-align: right;
+  background: #010101;
 }
 
 .nav-menu ul li{
