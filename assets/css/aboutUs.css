@@ -1,3 +1,52 @@
+@media (max-width: 475px){
+  .hero{
+    height: 60vh;
+  }
+  .home-1{
+    justify-content: start !important;
+  }
+
+  .about-us-txt{
+    font-size: 6vw !important;
+  } 
+
+  .about-us-title img{
+    width: 35vw !important;
+    padding-left: 5vw;
+  }
+
+  .about-us-details{
+    
+    grid-template-columns: repeat(3, 2fr) !important;
+    height: 32vh !important;
+  }
+
+  .about-us-title{
+    grid-column: 1/4 !important;
+    grid-row: 1 !important;
+    height: 10vh !important;
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px !important;
+    border-bottom-left-radius: 0 !important;
+    justify-content: start !important;
+  }
+
+  .about-us-desc{
+    grid-row: 2 !important;
+    grid-column: 1/4 !important;
+    border-bottom-left-radius: 18px;
+    border-top-right-radius: 0 !important;
+    height: 20vh !important;
+    font-size: 2.5vw !important;
+  }
+
+  .au-desc{
+    height: 20vh !important;
+    font-size: 2.5vw !important;
+    padding: 2vw;
+    border-top-right-radius: 0 !important;
+  }
+}
 
 .home-1{
   display: flex;
@@ -9,7 +58,8 @@
 .about-us-txt{
   display: flex;
   justify-content: center;
-  padding: 2rem;
+  padding: 5vw;
+  font-size: 4vw;
 }
 
 .about-us-details{
@@ -33,14 +83,21 @@
   border-bottom-left-radius: 18px;
 }
 
+.about-us-title img{
+  width: 20vw;
+}
+
 .about-us-desc{
   grid-column: 2/4;
   grid-row: 1 ;
-  overflow:hidden;
-  height: 461px;
+  overflow-y:scroll;
+  height: 50vh;
   scroll-snap-type: y mandatory;
 }
-
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -59,7 +116,7 @@
 
 .au-desc{
   background-color: #0D0D0D;
-  height: 461px;
+  height: 50vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -68,11 +125,12 @@
   border-bottom-right-radius: 18px;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+  font-size: 1.5vw;
 }
 
 .about-us-title{
   background-color: #0D0D0D;
-  height: 461px;
+  height: 50vh;
   scroll-snap-type: y mandatory;
 }
 
