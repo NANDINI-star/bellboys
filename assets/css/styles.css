@@ -89,7 +89,7 @@ section {
   padding-block: 2.5rem;
   cursor: pointer;
   float: right;
-  width: 2rem;
+  width: 2vw;
 }
 
 .navbar{
@@ -539,23 +539,41 @@ section {
   animation: fade-in 0.7s ease-in forwards;
 }
 
-.videos{
-  position: relative;
+
+.videos1{
+  position: absolute;
   overflow: hidden;
   height: 100%;
-  width: 650px;
+  width: 40vw;
+  /* top: 0; */
+}
+.videos2{
+  position: absolute;
+  overflow: hidden;
+  height: 40vw;
+  width: 40vw;
+  z-index: -1;
 }
 
 video{
-  position: absolute;
+  /* position: absolute; */
   border: 2px solid white;
   background: #060606;
-  width: 609px;
-  height: 310px;
-  transition: 0.2s;
-  transform: scale(1) translateY(0);
+  width: 40vw;
+  height: 20vw;
+  /* transition: 0.2s;
+  transform: scale(1) translateY(0); */
   transition: transform 0.2s ease-in-out;
   
+}
+.video-1{
+position: absolute;
+}
+
+.video-2{
+  position: absolute;
+
+  /* scroll-snap-align: start; */
 }
 
 .video-out {

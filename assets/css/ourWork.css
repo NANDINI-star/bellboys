@@ -1,11 +1,20 @@
 .our-work-txt{
-  padding: 5rem;
+  padding: 5vw;
+  font-size: 4vw;
   display: flex;
   justify-content: center;
 }
 
 .our-work-hero{
-  height: 80vh;
+  height: 100vh;
+}
+
+.ow-content{
+  position: relative;
+  display: flex;
+  height: 70vh;
+  column-gap: 10vw;
+  padding: 0 10vw 10vw 10vw;
 }
 
 .actions {
@@ -62,28 +71,62 @@ button {
 }
 
 .vid-1{
-  z-index: 5
+  z-index: 5;
+  background-color: #cbce7c;
 }
 
 .vid-2{
-  top: 4%;
-  scale: 0.9;
+  /* top: 3vw; */
+  /* scale: 0.9; */
   z-index: 4;
+  background-color: #9d7cce;
 }
 .vid-3{
-  top: 8%;
-  scale: 0.8;
+  /* top: 6vw; */
+  /* scale: 0.8; */
   z-index: 3;
+  background-color: #82ce7c;
 }
 .vid-4{
-  top: 12%;
-  scale: 0.7;
+  /* top: 8vw; */
+  /* scale: 0.7; */
   z-index: 2;
+  background-color: #ce7c7c;
 }
 .vid-5{
-  top: 16%;
+  /* top: 10vw; */
+  /* scale: 0.6; */
+  z-index: 1;
+  background-color: #7cb4ce;
+}
+.vid-12{
+  z-index: 5;
+  background-color: #cbce7c;
+}
+
+.vid-22{
+  top: 3vw;
+  scale: 0.9;
+  z-index: 4;
+  background-color: #9d7cce;
+}
+.vid-32{
+  top: 6vw;
+  scale: 0.8;
+  z-index: 3;
+  background-color: #82ce7c;
+}
+.vid-42{
+  top: 8vw;
+  scale: 0.7;
+  z-index: 2;
+  background-color: #ce7c7c;
+}
+.vid-52{
+  top: 10vw;
   scale: 0.6;
   z-index: 1;
+  background-color: #7cb4ce;
 }
 
 .our-work-1{
@@ -94,50 +137,24 @@ button {
 }
 
 .videos{
-  left: 60%;
+  /* left: 60%; */
+
 }
 
 .vid-txt{
   position: relative;
-  top: 10%;
-  left: 5%;
   background: black;
   width: 50vw;
 }
 
-.txt-container-1{
-  /* background-color: black; */
-  height: 300px;
-  z-index: 5;
-  position: absolute;
-  /* top: -50% */
+.vid-carousel{
+  width: 50vw;
 }
 
-.txt-container-2{
-  /* top: -5%; */
-  position: absolute;
-  opacity: 0;
-  background-color: black;
-  height: 100px;
-  z-index: 4;
-}
-.txt-container-3{
-  /* top: 15%; */
-  position: absolute;
-  opacity: 0;
-  background-color: black;
-  height: 100px;
-  z-index: 3;
-}
-.txt-container-4{
+.txt-container{
   position: absolute;
   opacity: 0;
   background-color: black;
   height: 100px;
 }
-.txt-container-5{
-  /* position: absolute; */
-  opacity: 0;
-  background-color: black;
-  height: 100px;
-}
+
