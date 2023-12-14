@@ -110,8 +110,8 @@ img{
     height: 100vh;
   }
   .contact-us-txt{
-    padding: 1rem;
-    font-size: 1.5rem;
+    /* padding: 1rem; */
+    font-size: 6vw !important;
   }
   .contact-us-details{
     grid-row: 1;
@@ -123,8 +123,11 @@ img{
   .iframe-rwd iframe{
     grid-row: 3;
   }
-  img{
-    /* width: 1.5rem; */
+  .idea{
+    font-size: 3vw !important;
+  }
+  .contact, .mail{
+    font-size: 3.5vw !important;
   }
 }
 
@@ -156,7 +159,7 @@ img{
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 55vh;
+  height: 70vh;
 }
 
 .contact-us-hero{
