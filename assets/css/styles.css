@@ -212,7 +212,7 @@ section {
   .nav-menu ul li {
     text-align: center;
     padding: 1rem !important;
-    font-size: 1.5rem !important;
+    font-size: 6vw !important;
   }
   .social-lists{
     column-gap: 12vw !important;
@@ -249,6 +249,9 @@ section {
   }
   .col-1, .col-2{
     font-size: 4vw !important;
+  }
+  .nav-icon{
+    width: 6vw !important;
   }
 }
 
