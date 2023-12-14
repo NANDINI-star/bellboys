@@ -16,6 +16,7 @@
       /* max-width: 1044px; */
       margin: 0 auto;
       /* padding: 0 20px; */
+      display: block !important;
   }
   
   .carousel {
@@ -121,7 +122,9 @@
     font-size: 3vw !important;
   }
 }
-
+.container{
+  display: none;
+}
 .our-work-txt{
   padding: 5vw;
   font-size: 4vw;
