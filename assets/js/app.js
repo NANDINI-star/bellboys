@@ -136,7 +136,8 @@ class Node {
   }
 }
 
-let items = document.querySelectorAll('.carousel .card');
+let items = document.querySelectorAll('.carousel-c .card');
+let carousel = document.querySelector('.carousel-c');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 
@@ -161,6 +162,7 @@ tail.next = head; // Make the list circular
 head.prev = tail;
 
 let active = head;
+var width = window.innerWidth;
 
 let count = 0;
 while(count<2){
@@ -179,26 +181,50 @@ function loadshow() {
   let stt = 0;
   let current = active.next;
 
-  while (current !== head) {
-    stt++;
-    current.element.style.transform = `translateX(${12 * stt}vw) translateY(${3 * stt}vw)`;
-    current.element.style.zIndex = -stt;
-    current.element.style.filter = 'contrast(60%)';
-    console.log(current.element, stt);
-    current = current.next;
+  if(width<= 465){
+    while (current !== head.prev) {
+      stt++;
+      current.element.style.transform = `translateX(${17 * stt}vw) scale(${1-0.2*stt}) perspective(16px) rotateY(-2deg)`;
+      current.element.style.zIndex = -stt;
+      current.element.style.filter = 'contrast(60%)';
+      console.log(current.element, stt);
+      current = current.next;
+    }
+  }
+  else{
+    while (current !== head) {
+      stt++;
+      current.element.style.transform = `translateX(${12 * stt}vw) translateY(${3 * stt}vw)`;
+      current.element.style.zIndex = -stt;
+      current.element.style.filter = 'contrast(60%)';
+      console.log(current.element, stt);
+      current = current.next;
+    }
   }
 
   stt = 0;
   current = active.prev;
-
-  while (current !== tail) {
-    stt++;
-    current.element.style.transform = `translateX(${-12 * stt}vw) translateY(${3 * stt}vw)`;
-    current.element.style.zIndex = -stt;
-    current.element.style.filter = 'contrast(60%)';
-    console.log(current.element, stt);
-    current = current.prev;
+  if(width <= 465){
+    while (current !== tail.next) {
+      stt++;
+      current.element.style.transform = `translateX(${-17 * stt}vw) scale(${1-0.2*stt}) perspective(16px) rotateY(2deg)`;
+      current.element.style.zIndex = -stt;
+      current.element.style.filter = 'contrast(60%)';
+      console.log(current.element, stt);
+      current = current.prev;
+    }
   }
+  else{
+    while (current !== tail) {
+      stt++;
+      current.element.style.transform = `translateX(${-12 * stt}vw) translateY(${3 * stt}vw)`;
+      current.element.style.zIndex = -stt;
+      current.element.style.filter = 'contrast(60%)';
+      console.log(current.element, stt);
+      current = current.prev;
+    }
+  }
+
 }
 
 loadshow();
@@ -217,6 +243,40 @@ prev.onclick = function () {
   tail = tail.prev;
   loadshow();
 };
+
+// Touch slider functionality
+if(width <= 465){
+  let touchStartX = 0;
+  let touchEndX = 0;
+  
+  carousel.addEventListener('touchstart', function (e) {
+    touchStartX = e.touches[0].clientX;
+  });
+  
+  carousel.addEventListener('touchmove', function (e) {
+    touchEndX = e.touches[0].clientX;
+  });
+  
+  carousel.addEventListener('touchend', function () {
+    // Determine the swipe direction
+    let deltaX = touchEndX - touchStartX;
+  
+    if (deltaX > 0) {
+      // Swipe right
+      active = active.prev;
+      head = head.prev;
+      tail = tail.prev;
+      loadshow();
+    } else if (deltaX < 0) {
+      // Swipe left
+      active = active.next;
+      head = head.next;
+      tail = tail.next;
+      loadshow();
+    }
+  });
+}
+
 
 // //ourwork
 // var tl = gsap.timeline({
