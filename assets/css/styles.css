@@ -52,7 +52,7 @@ section {
 
 .hero{
   position: relative;
-  height: 100vh;
+  height: 60vw;
   /* padding: 2rem; */
   text-align: left;
   isolation: isolate;
@@ -201,6 +201,21 @@ section {
   .line-2{
     /* width: 60vw !important; */
   }
+  .ga-6{
+    left: unset !important;
+  }
+  .h3-2{
+    display: none;
+  }
+  .circles{
+    filter: none !important;
+    row-gap: 10vw !important;
+  }
+  .circles-clr-m{
+    filter: none !important;
+    row-gap: 10vw !important;
+  }
+
 }
 
 /* xs */
@@ -230,6 +245,7 @@ section {
   }
   .top-nav{
     padding: 3rem 3rem 0 3rem;
+    position: relative
   }
   .home-8{
    padding-top: 6.5vw !important;
@@ -255,6 +271,35 @@ section {
   .nav-icon{
     width: 6vw !important;
   }
+  .h3-2{
+    display: none;
+  }
+  .circles{
+    filter: none !important;
+    row-gap: 10vw !important;
+  }
+  .circles-clr-m{
+    filter: none !important;
+    row-gap: 10vw !important;
+  }
+  .ga-6{
+    left: unset !important;
+  }
+  #next, #prev{
+    display: none !important;
+  }
+  .card{
+    height: 30vw !important;
+    width: 22vw !important;
+    border-radius: 3vw !important;
+  }
+}
+
+.our-work-txt-h{
+  padding: 5vw;
+  font-size: 4vw;
+  display: flex;
+  justify-content: center;
 }
 
 .line-3{
@@ -264,7 +309,7 @@ section {
 }
 
 .nav-menu{
-  background-color: #060606;
+  background-color: #010101;
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -574,6 +619,15 @@ section {
   height: 35vw;
   overflow: hidden;
 }
+.carousel-c{
+  width: 90%;
+  padding: 3rem;
+  margin: 0 auto;
+  background-color: transparent;
+  position: relative;
+  height: 35vw;
+  overflow: hidden;
+}
 
 .card{
   width: 20vw;
@@ -637,9 +691,9 @@ section {
   
 }
 
-/* OUR WORK */
+/* OUR WORK ***************************************************************/
 .our-work{
-  height: 95vh;
+  height: auto;
   position: relative;
   z-index: 5;
   background-color: #010101;

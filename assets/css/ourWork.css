@@ -55,7 +55,40 @@
     &:nth-of-type(4):checked ~ .carousel__thumbnails li:nth-of-type(4) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
     &:nth-of-type(5):checked ~ .carousel__thumbnails li:nth-of-type(5) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
     &:nth-of-type(6):checked ~ .carousel__thumbnails li:nth-of-type(6) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
-}
+  }
+  .carousel-c {
+    display: block;
+    text-align: left;
+    position: relative;
+    margin-bottom: 22px;
+    height: 50vw;
+    padding: 0 ;
+  }
+
+  .carousel-c > input {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    
+    &:nth-of-type(6):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -500%; }
+    &:nth-of-type(5):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -400%; }
+    &:nth-of-type(4):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -300%; }
+    &:nth-of-type(3):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -200%; }
+    &:nth-of-type(2):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -100%; }
+    &:nth-of-type(1):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: 0%; }
+    
+    &:nth-of-type(1):checked ~ .carousel__thumbnails li:nth-of-type(1) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+    &:nth-of-type(2):checked ~ .carousel__thumbnails li:nth-of-type(2) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+    &:nth-of-type(3):checked ~ .carousel__thumbnails li:nth-of-type(3) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+    &:nth-of-type(4):checked ~ .carousel__thumbnails li:nth-of-type(4) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+    &:nth-of-type(5):checked ~ .carousel__thumbnails li:nth-of-type(5) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+    &:nth-of-type(6):checked ~ .carousel__thumbnails li:nth-of-type(6) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+  }
   
   .carousel__slides {
       position: relative;
@@ -89,6 +122,7 @@
       
       margin: 0 -10px 0 10px;
       overflow-x: scroll;
+      overflow-y: hidden;
       position: relative;
       left: -3vw;
   }
@@ -122,6 +156,9 @@
   .title{
     font-size: 4vw !important;
   }
+  .title-owr{
+    font-size: 3vw !important;
+  }
   .desc{
     font-size: 3vw !important;
   }
@@ -143,7 +180,7 @@
 .ow-content{
   position: relative;
   display: flex;
-  height: 70vh;
+  height: auto;
   column-gap: 10vw;
   padding: 0 10vw 10vw 10vw;
 }
@@ -291,6 +328,10 @@ button {
 }
 
 .title{
+  font-family: Black Mango;
+  font-size: 2vw;
+}
+.title-owr{
   font-family: Black Mango;
   font-size: 2vw;
 }

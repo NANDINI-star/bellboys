@@ -11,50 +11,51 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
-    <section class="hero">
-      <div class="top-nav">
-        <ul>
-          <li>
-            <a href="./index.html" class="logo">
-              <div style="color: white; font-size: 40px; font-family: Poppins; font-weight: 800; word-wrap: break-word">LOGO</div>
-            </a>
-          </li>
-          <li onclick="handleNavClick()">
-            <img class="nav-icon" src="assets/images/nav-icon.svg"></img>
-          </li>
-        </ul>
-        
+    <div class="top-nav">
+      <ul>
+        <li>
+          <a href="./index.html" class="logo">
+            <div style="color: white; font-size: 40px; font-family: Poppins; font-weight: 800; word-wrap: break-word">LOGO</div>
+          </a>
+        </li>
+        <li onclick="handleNavClick()">
+          <img class="nav-icon" src="assets/images/nav-icon.svg"></img>
+        </li>
+      </ul>
+      
+    </div>
+    
+    <nav class="navbar vertical-center line line-vertical">
+      <div class="navbar-inner">
+        <div class="nav-menu">
+          <ul>
+            
+            <li>
+              <a href="./index.html" class="link" style="font-family: 'Poppins'">
+                <div style="font-family: Poppins;">
+                  Home
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="./about.html" class="link">About Us</a>
+            </li>
+            <li>
+              <a href="./ourwork.html" class="link">Our Work</a>
+            </li>
+            <li>
+              <a href="./team.html" class="link">Meet the Team</a>
+            </li>
+            <li>
+              <a href="./contactus.html" class="link">Contact Us</a>
+            </li>
+          </ul>
+        </div>
       </div>
       
-      <nav class="navbar vertical-center line line-vertical">
-        <div class="navbar-inner">
-          <div class="nav-menu">
-            <ul>
-              
-              <li>
-                <a href="./index.html" class="link" style="font-family: 'Poppins'">
-                  <div style="font-family: Poppins;">
-                    Home
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="./about.html" class="link">About Us</a>
-              </li>
-              <li>
-                <a href="./ourwork.html" class="link">Our Work</a>
-              </li>
-              <li>
-                <a href="./team.html" class="link">Meet the Team</a>
-              </li>
-              <li>
-                <a href="./contactus.html" class="link">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        
-      </nav>
+    </nav>
+    <section class="hero">
+      
 
       <div class="home-1">
         <img src="./assets/images/horz-rect.svg" alt="" class="horz-rect-1">
@@ -294,7 +295,7 @@
       <div class="text-6">
         <div style="color: white; font-family: Black Mango;  word-wrap: break-word">Artist Collaboration</div>
       </div>
-      <div class="carousel">
+      <div class="carousel-c">
         <div class="card">
           <img class="tranding-slide-img" src="assets/images/Ellipse 11.png" alt="">
           <div class="card-content">
@@ -340,9 +341,13 @@
       </div>
     </section>
 
+    <section class="home-5-r">
+  
+    </section>
+
     <!-- OUR WORK -->
     <div class="our-work">
-      <div class="our-work-txt">
+      <div class="our-work-txt-h">
         <div style="color: white; font-family: Black Mango; font-weight: 700; word-wrap: break-word">Our Work</div>
       </div>
       <div class="ow-content">
@@ -446,7 +451,7 @@
                               </video>
                             </div>
                             <figcaption>
-                              <div class="title">
+                              <div class="title-owr">
                                 <div style="color: white;  font-family: Black Mango; font-weight: 700; word-wrap: break-word">Project 111111 <br/></div>
                               </div>
                               <div class="desc">
@@ -464,7 +469,7 @@
                               </video>
                             </div>
                             <figcaption>
-                              <div class="title">
+                              <div class="title-owr">
                                 <div style="color: white;  font-family: Black Mango; font-weight: 700; word-wrap: break-word">Project 111111 <br/></div>
                               </div>
                               <div class="desc">
@@ -482,7 +487,7 @@
                               </video>
                             </div>
                             <figcaption>
-                              <div class="title">
+                              <div class="title-owr">
                                 <div style="color: white;  font-family: Black Mango; font-weight: 700; word-wrap: break-word">Project 111111 <br/></div>
                               </div>
                               <div class="desc">
@@ -500,7 +505,7 @@
                               </video>
                             </div>
                             <figcaption>
-                              <div class="title">
+                              <div class="title-owr">
                                 <div style="color: white;  font-family: Black Mango; font-weight: 700; word-wrap: break-word">Project 111111 <br/></div>
                               </div>
                               <div class="desc">
@@ -518,7 +523,7 @@
                               </video>
                             </div>
                             <figcaption>
-                              <div class="title">
+                              <div class="title-owr">
                                 <div style="color: white;  font-family: Black Mango; font-weight: 700; word-wrap: break-word">Project 111111 <br/></div>
                               </div>
                               <div class="desc">
@@ -578,7 +583,7 @@
       <div class="footer-menu">
         <div class="col-1">
           <div class="home-txt">
-            <div style="width: 100%; height: 100%; color: white; font-family: Poppins; font-weight: 300; word-wrap: break-word"><a href="./index.html">Home</a></div>
+            <div style="width: 100%; height: 100%; color: #FFEB5B; font-family: Poppins; font-weight: 300; word-wrap: break-word"><a href="./index.html">Home</a></div>
           </div>
           <div class="aboutUs-txt">
             <div style="width: 100%; height: 100%; color: white; font-family: Poppins; font-weight: 300; word-wrap: break-word"><a href="./about.html">About Us</a> </div>
@@ -589,7 +594,7 @@
         </div>
         <div class="col-2">
           <div class="meetTeam-txt">
-            <div style="color: #FFEB5B; font-family: Poppins; font-weight: 300; word-wrap: break-word">
+            <div style="color: white; font-family: Poppins; font-weight: 300; word-wrap: break-word">
               <a href="./team.html">Meet the Team</a>
               
             </div>          
