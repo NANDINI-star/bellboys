@@ -88,9 +88,11 @@ function updateDotPosition(e){
   var width = window.innerWidth;
   console.log(width);
   var mouseX, mouseY;
+  mouseX = x - 80;
+  mouseY = y - 80 -rect.top;
   if(width <= 768){
-    mouseX = x - 80;
-    mouseY = y - 100 -rect.top;
+    mouseX = x - 50;
+    mouseY = y - 50 -rect.top;
   }
   else if(width <= 1024){
     mouseX = x - 100;
@@ -98,11 +100,11 @@ function updateDotPosition(e){
   }
   else if(width <= 1280){
     mouseX = x - 120;
-    mouseY = y - 100 -rect.top;
+    mouseY = y - 120 -rect.top;
   }
   else if(width <= 1536){
     mouseX = x - 150;
-    mouseY = y - 100 -rect.top;
+    mouseY = y - 120 -rect.top;
   }
   
   // mouseX = x - 120;
