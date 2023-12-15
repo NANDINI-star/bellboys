@@ -26,6 +26,7 @@ function handleNavClick() {
 
 
 //custom-cursor
+const mask = document.querySelector(".h3-2");
 var cursor = document.querySelector('#cursor');
 var circle = document.querySelector('.circle');
 var circleClr = document.querySelector('.circle-clr');
@@ -35,17 +36,85 @@ var scrollTopDiff = 0;
 console.log(1, scrollTopDiff);
 
 home3.addEventListener("mousemove", updateDotPosition);
+home3.addEventListener("wheel", updateDotPosition);
 
-function updateDotPosition(dets){
+// function updateDotPosition(dets){
 
-  gsap.to(cursor, {
-    x: dets.clientX-180,
-    y: dets.clientY-180,
-    duration: 0.2,
-    ease: Expo,
-    opacity: 1,
-  })
+//   gsap.to(cursor, {
+//     x: dets.clientX-180,
+//     y: dets.clientY-180,
+//     duration: 0.2,
+//     ease: Expo,
+//     opacity: 1,
+//   })
+// }
+
+// function updateDotPosition(dets){
+//   document.documentElement.style.setProperty('--pointerX', e.clientX + "px");
+//   document.documentElement.style.setProperty('--pointerY', e.clientY + "px");
+
+// }
+
+
+// const light = document.querySelector('.light');
+// const roomPosition = { 
+//     'top': home3.offsetTop,
+//     'left': home3.offsetLeft
+// };
+
+// const topMargin = roomPosition.top + (window.innerHeight * Math.random());
+// const position = {
+//     left:  Math.random() * roomPosition.left,
+//     top: topMargin + 150 < window.innerHeight ? topMargin : topMargin - 350
+// };
+
+// function update(e) {
+
+//     var x = ( e.clientX - 150) || (e.touches[0].clientX - 150);
+//     var y = (e.clientY - 150) || (e.touches[0].clientY - 150);
+
+//     light.style.left = x + "px";
+//     light.style.top = y + "px";
+
+// }
+
+// document.addEventListener('mousemove', update);
+// document.addEventListener('touchmove', update);
+// let size = 10;
+function updateDotPosition(e){
+  var rect = home3.getBoundingClientRect();
+  let x = e.clientX;
+  let y = e.clientY;
+  // // let scrollX = window.scrollX || window.pageXOffset;
+  // // let scrollY = home3.scrollY || home3.pageYOffset;
+
+  // console.log(scrollX);
+  // console.log(scrollY);
+
+  console.log(rect.top);
+  let mouseX = x - 250;
+  let mouseY = y - 100 -rect.top;
+
+  // mask.style.maskPosition = `${mouseX}px ${mouseY}px`
+  // mask.style.webkitMaskPosition = `${mouseX}px ${mouseY}px`
+
+  gsap.set(mask, {
+    maskPosition: `${mouseX}px ${mouseY}px`,
+    webkitMaskPosition: `${mouseX}px ${mouseY}px`,
+        // duration: 0.2,
+        ease: Expo,
+        opacity: 1,
+      })
+
 }
+
+// function updateSize() {
+//   mask.style.maskSize = size + "px";
+//   mask.style.webkitMaskSize = size + "px";
+
+// }
+
+
 
 // ARTIST COLLAB
 class Node {
