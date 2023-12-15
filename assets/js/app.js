@@ -85,23 +85,32 @@ function updateDotPosition(e){
   var rect = home3.getBoundingClientRect();
   let x = e.clientX;
   let y = e.clientY;
-  // // let scrollX = window.scrollX || window.pageXOffset;
-  // // let scrollY = home3.scrollY || home3.pageYOffset;
-
-  // console.log(scrollX);
-  // console.log(scrollY);
-
-  console.log(rect.top);
-  let mouseX = x - 250;
-  let mouseY = y - 100 -rect.top;
-
-  // mask.style.maskPosition = `${mouseX}px ${mouseY}px`
-  // mask.style.webkitMaskPosition = `${mouseX}px ${mouseY}px`
+  var width = window.innerWidth;
+  console.log(width);
+  var mouseX, mouseY;
+  if(width <= 768){
+    mouseX = x - 80;
+    mouseY = y - 100 -rect.top;
+  }
+  else if(width <= 1024){
+    mouseX = x - 100;
+    mouseY = y - 100 -rect.top;
+  }
+  else if(width <= 1280){
+    mouseX = x - 120;
+    mouseY = y - 100 -rect.top;
+  }
+  else if(width <= 1536){
+    mouseX = x - 150;
+    mouseY = y - 100 -rect.top;
+  }
+  
+  // mouseX = x - 120;
+  // mouseY = y - 100 -rect.top;
 
   gsap.set(mask, {
     maskPosition: `${mouseX}px ${mouseY}px`,
     webkitMaskPosition: `${mouseX}px ${mouseY}px`,
-        // duration: 0.2,
         ease: Expo,
         opacity: 1,
       })
