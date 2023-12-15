@@ -68,6 +68,10 @@ section {
 
 }
 
+.home-1{
+  width: 100vw;
+}
+
 .top-nav{
   width: 100vw;
   padding: 6rem 6rem 0 6rem;
@@ -110,7 +114,6 @@ section {
 /* lg */
 @media (max-width: 1024px) {
   .nav-menu{
-    /* justify-content: center; */
     height: 100vh !important;
   }
   .nav-menu ul li {
@@ -122,20 +125,15 @@ section {
     width: 3rem;
   }
   img{
-    /* width: 3rem; */
   }
   .footer-menu, .home-8{
-    /* font-size: 2rem !important; */
-    /* padding: 3rem; */
   }
   .top-nav{
     padding: 3rem 3rem 0 3rem;
   }
   .home-7{
-    /* padding: 0 3rem 3rem 3rem !important; */
   }
   .line-2{
-    /* width: 60vw !important; */
   }
 }
 
@@ -338,35 +336,41 @@ section {
 
 .text-2{
   position: absolute;
+  /* padding: 5vw; */
+  font-size: 4vw;
+  text-align: center;
 }
 
 .text-3{
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 5vw;
   transform: translate(-50%, -50%);
 }
 
+/* TRUSTED BY CORPS */
 .home-3{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 155vh;
+  height: auto;
   position: relative;
 }
 
 .text-4{
   flex-direction: flex-start;
-  padding: 10rem;
+  padding: 5vw;
+  font-size: 4vw;
 }
 
 .circles{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 7rem;
-  column-gap: 9rem;
-  width: 60%;
+  /* column-gap: 3vw; */
+  width: 80vw;
   justify-items: center;
 }
 
@@ -374,8 +378,8 @@ section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 7rem;
-  column-gap: 9rem;
-  width: 60%;
+  /* column-gap: 9rem; */
+  width: 80vw;
   justify-items: center;
   z-index: -1
 }
@@ -390,7 +394,9 @@ section {
 
 .text-5{
   flex-direction: flex-start;
-  padding: 10rem;
+  margin-top: 5vw;
+  padding: 5vw;
+  font-size: 4vw;
 }
 
 #cursor{
@@ -408,8 +414,6 @@ section {
   mix-blend-mode: difference;
 }
 
-
-
 .corp{
   /* mix-blend-mode: difference; */
   opacity: 1;
@@ -420,19 +424,61 @@ section {
 }
 
 .corp-clr{
-  height: 140px;
-  width: 140px;
+  width: 9vw !important;
+  /* height: 5vw; */
   background-color: white;
   border-radius: 50%;
   /* z-index: 1; */
 }
 
+.c-1{
+  /* width: 9vw !important; */
+}
+
+.c-3{
+  border-radius: 0 !important;
+  width: 5.5vw !important;
+}
+
+.ca-5{
+  border-radius: 0 !important;
+  width: 8.5vw !important;
+}
+
+#circle{
+  width: 10vw;
+  height: 10vw;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#circle-b{
+  background-color: #010101;
+}
+
+#circle img{
+  width: 6.5vw;
+}
+
+.ga-6{
+  position: relative;
+  left: 3px;
+}
+
+.ga-10{
+  width: 5vw !important;
+}
+
+/* COLLAB *******************************************************/
 .home-5{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 85vh;
+  height: auto;
   position: relative;
   z-index: 5;
   background-color: #010101;
@@ -440,24 +486,25 @@ section {
 
 .text-6{
   justify-content: flex-start;
-  padding: 7rem;
+  margin-top: 5vw;
+  padding: 5vw;
+  font-size: 4vw;
 }
 
-/* collab */
 .carousel{
   width: 90%;
   padding: 3rem;
   margin: 0 auto;
   background-color: transparent;
   position: relative;
-  height: 100%;
+  height: 35vw;
   overflow: hidden;
 }
 
 .card{
-  width: 300px;
-  height: 385px;
-  border-radius: 55px;
+  width: 20vw;
+  height: 25vw;
+  border-radius: 5vw;
   position: absolute;
   background: linear-gradient(180deg, #93A5CF 0%, #E4EFE9 100%);
   display: flex;
@@ -466,13 +513,13 @@ section {
   align-items: center;
   flex-direction: column;
   transition: 0.5s;
-  left: calc(50% - 140px);
+  left: calc(50% - 9vw);
   top: 0;
 }
 
 .card img{
-  padding-top: 6rem;
-  width: 20rem;
+  padding-top: 4vw;
+  width: 12vw;
 }
 
 .card-content{
@@ -484,18 +531,22 @@ section {
 #next, #prev{
   position: absolute;
   color: white;
-  top: 40%;
+  top: 13vw;
   background-color: transparent;
   border: none;
-  font-size: xxx-large;
+  /* font-size: xxx-large; */
   font-family: monospace;
   font-weight: bold;
-  left: 50px;
+  left: 0;
+  width: 5vw;
 }
 
 #next{
-  left: unset;
-  right: 50px;
+  left: 81vw;
+}
+
+#next img, #prev img{
+  width: 7vw;
 }
 
 .home-6{
@@ -510,6 +561,14 @@ section {
 .text-7{
   padding: 15rem;
   
+}
+
+/* OUR WORK */
+.our-work{
+  height: 95vh;
+  position: relative;
+  z-index: 5;
+  background-color: #010101;
 }
 
 .video-content{
@@ -578,8 +637,6 @@ position: absolute;
 
 .video-2{
   position: absolute;
-
-  /* scroll-snap-align: start; */
 }
 
 .video-out {
