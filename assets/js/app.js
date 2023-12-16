@@ -1,3 +1,59 @@
+var width = window.innerWidth;
+const homeLink = document.querySelector(".home-link");
+// homeLink.addEventListener("click", (e) => {
+//   console.log("yooo1")
+//   e.preventDefault();
+//   window.location.href = "/bellboys/index.html";
+//   if(width <= 475){
+//     console.log("yoooooooo");
+//     const tl = gsap.timeline({
+//     });
+//      tl.fromTo(".hero", {y: '40vh', duration: 2}, {y: 0, duration: 2}, "start");
+    
+//     tl.fromTo(".hero-anim", {height: "100vh",duration: 2}, {height: "0px", duration: 2}, "start");
+//     tl.fromTo(".arrow", {height: "40vw", duration: 2}, {height: "15vw", duration: 2},"start");
+//     tl.fromTo(".text-3", {width: "50vw", duration: 2}, {width: "40vw",  duration: 2}, "start");
+    
+//   }
+  
+// })
+homeLink.addEventListener("click", (e) => {
+  console.log("yooo1")
+  e.preventDefault();
+  // window.location.href = "/bellboys/index.html";
+  if(width <= 475){
+    const navIcon = document.querySelector('.nav-icon');
+
+    e.preventDefault();
+
+    const tl = gsap.timeline({
+      onComplete: function () {
+        console.log("yooo1");
+        // window.location.href = "/bellboys/index.html";
+      },
+    });
+    tl.to(".navbar", {display: "none"})
+    navIcon.src = 'assets/images/nav-icon.svg';
+    tl.fromTo(".right", {top: "10vw", duration: 2}, {top: "30vw", duration: 2}, "start");
+    tl.fromTo(".left", {top: "8vw", duration: 2}, {top: "15vw", duration: 2}, "start");
+    // tl.to(".right", {top: "10vw"});
+    // tl.to(".left", {top: "8vw"});
+    tl.fromTo(".hero", { y: '40vh', duration: 2 }, { y: 0, duration: 2 }, "start");
+    // tl.to(".hero", { y: '30vh', duration: 2 });
+    tl.fromTo(".hero-anim", { height: "100vh", duration: 2 }, { height: "0px", duration: 2 }, "start");
+    // tl.to(".hero-anim", { height: "100vh", duration: 2 });
+    tl.fromTo(".arrow", { height: "40vw", duration: 2 }, { height: "15vw", duration: 2 }, "start");
+    // tl.to(".arrow", { height: "40vw", duration: 2 });
+    tl.fromTo(".text-3", { width: "50vw", duration: 1 }, { width: "40vw", duration: 1 }, "start");
+    // tl.to(".text-3", { width: "50vw", duration: 2 });
+  
+  }else{
+    window.location.href = "/bellboys/index.html";
+  }
+  
+})
+
+
 
 function handleNavClick() {
   const navIcon = document.querySelector('.nav-icon');
