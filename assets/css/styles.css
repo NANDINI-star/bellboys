@@ -364,9 +364,29 @@ section {
     display: none !important;
   }
   .card{
-    height: 30vw !important;
-    width: 22vw !important;
+    height: 40vw !important;
+    width: 32vw !important;
     border-radius: 3vw !important;
+    left: calc(50% - 15vw) !important;
+  }
+  .card img{
+    width: 18vw !important;
+  }
+  #circle{
+    width: 13vw !important;
+    height: 13vw !important;
+  }
+  .corp-clr{
+    width: 12vw !important;
+  }
+  .govt-agc{
+    width: 8vw !important;
+  }
+  .cc-title{
+    font-size: 3vw !important;
+  }
+  .cc-desig{
+    font-size: 2.5vw !important;
   }
 }
 
@@ -612,10 +632,18 @@ section {
 }
 
 .corp-clr{
-  width: 9vw !important;
+  width: 9vw ;
   /* height: 5vw; */
   background-color: white;
   border-radius: 50%;
+  /* z-index: 1; */
+}
+
+.govt-agc{
+  width: 6.5vw ;
+  /* height: 5vw; */
+  background-color: white;
+  /* border-radius: 50%; */
   /* z-index: 1; */
 }
 
@@ -759,6 +787,14 @@ section {
 .text-7{
   padding: 15rem;
   
+}
+
+.cc-title{
+  font-size: 2vw;
+}
+
+.cc-desig{
+  font-size: 1.5vw;
 }
 
 /* OUR WORK ***************************************************************/
