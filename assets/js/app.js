@@ -1,24 +1,9 @@
 var width = window.innerWidth;
 const homeLink = document.querySelector(".home-link");
-// homeLink.addEventListener("click", (e) => {
-//   console.log("yooo1")
-//   e.preventDefault();
-//   window.location.href = "/bellboys/index.html";
-//   if(width <= 475){
-//     console.log("yoooooooo");
-//     const tl = gsap.timeline({
-//     });
-//      tl.fromTo(".hero", {y: '40vh', duration: 2}, {y: 0, duration: 2}, "start");
-    
-//     tl.fromTo(".hero-anim", {height: "100vh",duration: 2}, {height: "0px", duration: 2}, "start");
-//     tl.fromTo(".arrow", {height: "40vw", duration: 2}, {height: "15vw", duration: 2},"start");
-//     tl.fromTo(".text-3", {width: "50vw", duration: 2}, {width: "40vw",  duration: 2}, "start");
-    
-//   }
-  
-// })
+const homeLinkC = document.querySelector(".home-link-c");
+
 homeLink.addEventListener("click", (e) => {
-  console.log("yooo1")
+  console.log("yooo2222")
   e.preventDefault();
   // window.location.href = "/bellboys/index.html";
   if(width <= 475){
@@ -28,7 +13,7 @@ homeLink.addEventListener("click", (e) => {
 
     const tl = gsap.timeline({
       onComplete: function () {
-        console.log("yooo1");
+        console.log("yooo2");
         // window.location.href = "/bellboys/index.html";
       },
     });
@@ -46,6 +31,28 @@ homeLink.addEventListener("click", (e) => {
     // tl.to(".arrow", { height: "40vw", duration: 2 });
     tl.fromTo(".text-3", { width: "50vw", duration: 1 }, { width: "40vw", duration: 1 }, "start");
     // tl.to(".text-3", { width: "50vw", duration: 2 });
+  
+  }else{
+    window.location.href = "/bellboys/index.html";
+  }
+  
+})
+homeLinkC.addEventListener("click", (e) => {
+  console.log("yooo1")
+  e.preventDefault();
+  if(width <= 475){
+    document.documentElement.scrollTop = 0;
+    e.preventDefault();
+
+    const tl = gsap.timeline({
+    });
+    tl.fromTo(".right", {top: "10vw", duration: 2}, {top: "30vw", duration: 2}, "start");
+    tl.fromTo(".left", {top: "8vw", duration: 2}, {top: "15vw", duration: 2}, "start");
+   
+    tl.fromTo(".hero", { y: '40vh', duration: 2 }, { y: 0, duration: 2 }, "start");
+    tl.fromTo(".hero-anim", { height: "100vh", duration: 2 }, { height: "0px", duration: 2 }, "start");
+    tl.fromTo(".arrow", { height: "40vw", duration: 2 }, { height: "15vw", duration: 2 }, "start");
+    tl.fromTo(".text-3", { width: "50vw", duration: 1 }, { width: "40vw", duration: 1 }, "start");
   
   }else{
     window.location.href = "/bellboys/index.html";
@@ -240,7 +247,7 @@ function loadshow() {
   if(width<= 465){
     while (current !== head.prev) {
       stt++;
-      current.element.style.transform = `translateX(${17 * stt}vw) scale(${1-0.2*stt}) perspective(16px) rotateY(-2deg)`;
+      current.element.style.transform = `translateX(${27 * stt}vw) scale(${1-0.2*stt}) perspective(16px) rotateY(-2deg)`;
       current.element.style.zIndex = -stt;
       current.element.style.filter = 'contrast(60%)';
       console.log(current.element, stt);
@@ -263,7 +270,7 @@ function loadshow() {
   if(width <= 465){
     while (current !== tail.next) {
       stt++;
-      current.element.style.transform = `translateX(${-17 * stt}vw) scale(${1-0.2*stt}) perspective(16px) rotateY(2deg)`;
+      current.element.style.transform = `translateX(${-27 * stt}vw) scale(${1-0.2*stt}) perspective(16px) rotateY(2deg)`;
       current.element.style.zIndex = -stt;
       current.element.style.filter = 'contrast(60%)';
       console.log(current.element, stt);
