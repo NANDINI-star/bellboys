@@ -28,7 +28,8 @@
     text-align: left;
     position: relative;
     margin-bottom: 22px;
-    height: 100vh;
+    /* height: 100vh; */
+    height: auto;
     padding: 0 ;
   }
 
