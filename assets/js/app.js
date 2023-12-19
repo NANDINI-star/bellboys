@@ -7,7 +7,7 @@ homeLink.addEventListener("click", (e) => {
   e.preventDefault();
   // window.location.href = "/bellboys/index.html";
   if(!window.location.href.endsWith("index.html")){
-    window.location.href = "/bellboys/index.html";
+    window.location.href = "/index.html";
   }
   if(width <= 475 && (window.location.pathname.endsWith("/bellboys/index.html"))){
     
@@ -37,7 +37,7 @@ homeLink.addEventListener("click", (e) => {
     // tl.to(".text-3", { width: "50vw", duration: 2 });
   
   }else{
-    window.location.href = "/bellboys/index.html";
+    window.location.href = "/index.html";
   }
   
 })
@@ -45,13 +45,13 @@ homeLinkC.addEventListener("click", (e) => {
   console.log("yooo1")
   e.preventDefault();
   if(!window.location.href.endsWith("index.html")){
-    window.location.href = "/bellboys/index.html";
+    window.location.href = "/index.html";
   }
   if(width <= 475 && (window.location.pathname.endsWith("/bellboys/index.html"))){
     setTimeout(()=>{
       console.log("TTTTT");
       if(!window.location.href.endsWith("index.html")){
-        window.location.href = "/bellboys/index.html";
+        window.location.href = "/index.html";
       }
   
       document.documentElement.scrollTop = 0;
@@ -70,7 +70,7 @@ homeLinkC.addEventListener("click", (e) => {
       }, 2000);
     }
     else{
-      window.location.href = "/bellboys/index.html";
+      window.location.href = "/index.html";
     }
     
   
