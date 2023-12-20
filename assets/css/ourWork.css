@@ -240,34 +240,78 @@ button {
 }
 
 .vid-1{
-  z-index: 5;
+  z-index: 12;
   background-color: #cbce7c;
 }
 
 .vid-2{
   /* top: 3vw; */
   /* scale: 0.9; */
-  z-index: 4;
+  z-index: 11;
   background-color: #9d7cce;
 }
 .vid-3{
   /* top: 6vw; */
   /* scale: 0.8; */
-  z-index: 3;
+  z-index: 10;
   background-color: #82ce7c;
 }
 .vid-4{
   /* top: 8vw; */
   /* scale: 0.7; */
-  z-index: 2;
+  z-index: 9;
   background-color: #ce7c7c;
 }
 .vid-5{
   /* top: 10vw; */
   /* scale: 0.6; */
+  z-index: 8;
+  background-color: #7cb4ce;
+}
+.vid-6{
+  /* top: 10vw; */
+  /* scale: 0.6; */
+  z-index: 7;
+  background-color: #7cb4ce;
+}
+.vid-7{
+  /* top: 10vw; */
+  /* scale: 0.6; */
+  z-index: 6;
+  background-color: #7cb4ce;
+}
+.vid-8{
+  /* top: 10vw; */
+  /* scale: 0.6; */
+  z-index: 5;
+  background-color: #7cb4ce;
+}
+.vid-9{
+  /* top: 10vw; */
+  /* scale: 0.6; */
+  z-index: 4;
+  background-color: #7cb4ce;
+}
+.vid-10{
+  /* top: 10vw; */
+  /* scale: 0.6; */
+  z-index: 3;
+  background-color: #7cb4ce;
+}
+.vid-11{
+  /* top: 10vw; */
+  /* scale: 0.6; */
+  z-index: 2;
+  background-color: #7cb4ce;
+}
+.vid-12{
+  /* top: 10vw; */
+  /* scale: 0.6; */
   z-index: 1;
   background-color: #7cb4ce;
 }
+
+
 .vid-12{
   z-index: 5;
   background-color: #cbce7c;
@@ -343,20 +387,22 @@ button {
 
 .thumbnail-container {
   position: absolute;
+  opacity: 0;
   /* width: 800px; Adjust width as needed */
   /* height: 600px; Adjust height as needed */
 }
 
 .thumbnail-container img {
+  position: absolute;
   /* width: 100%;
   height: 100%; */
   object-fit: cover; /* Preserve aspect ratio and cover the container */
 }
 
 .thumbnail-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+  /* position: absolute; */
+  /* top: 0;
+  left: 0; */
   /* width: 100%;
   height: 100%; */
   display: none; /* Hide the iframe initially if you want to show only the thumbnail */
