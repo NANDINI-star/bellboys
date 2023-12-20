@@ -341,3 +341,31 @@ button {
   font-size: 1.5vw;
 }
 
+.thumbnail-container {
+  position: absolute;
+  /* width: 800px; Adjust width as needed */
+  /* height: 600px; Adjust height as needed */
+}
+
+.thumbnail-container img {
+  /* width: 100%;
+  height: 100%; */
+  object-fit: cover; /* Preserve aspect ratio and cover the container */
+}
+
+.thumbnail-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* width: 100%;
+  height: 100%; */
+  display: none; /* Hide the iframe initially if you want to show only the thumbnail */
+}
+
+.thumbnail-container:hover img {
+  opacity: 0; /* Hide the image on hover */
+}
+
+.thumbnail-container:hover iframe {
+  display: block; /* Display the iframe on hover */
+}

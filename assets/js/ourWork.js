@@ -1,6 +1,6 @@
 gsap.registerPlugin(Observer);
 
-const sections = document.querySelectorAll('.videos1 video');
+const sections = document.querySelectorAll('.videos1 .thumbnail-container');
 const txts = document.querySelectorAll('.txt-container');
 let currentIndex = -1;
 let animating;
