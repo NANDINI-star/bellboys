@@ -2,6 +2,7 @@ gsap.registerPlugin(Observer);
 
 const sections = document.querySelectorAll('.videos1 .thumbnail-container');
 const txts = document.querySelectorAll('.txt-container');
+const imgs = document.querySelectorAll('.videos1 .thumbnail-container img');
 let currentIndex = -1;
 let animating;
 
@@ -9,8 +10,8 @@ const translateAmount = 0;
 
 const wrap = gsap.utils.wrap(0, sections.length);
 
-const goTo = (index, direction = 'down') => {
-  
+const goTo = (index, direction = 'first') => {
+  console.log(index, sections[0], txts[0], imgs[0]);
   index = wrap(index);
   animating = true;
   let leave, enter;
@@ -30,10 +31,12 @@ const goTo = (index, direction = 'down') => {
       leave = { y: -translateAmount+"vw"};
       enter = { y: translateAmount+"vw"};
       break;
+    case 'first': break;
   }
   
   tl.fromTo(sections[index], enter, defaultPos);
   tl.fromTo(txts[index], enter, defaultPos);
+  tl.fromTo(imgs[index], enter, defaultPos);
   
   if(currentIndex > -1) {
     tl
@@ -42,6 +45,9 @@ const goTo = (index, direction = 'down') => {
     tl
       .to(txts[currentIndex], leave, 0)
       .set(txts[currentIndex], { transform: 'none' });
+    tl
+      .to(imgs[currentIndex], leave, 0)
+      .set(imgs[currentIndex], { transform: 'none' });
   }
   
   currentIndex = index;
