@@ -92,39 +92,39 @@ ScrollTrigger.matchMedia({
     tl4.add('start1')
     tl4.to(".one", {
       top: "4vw",
-      left: "31vw",
+      left: "27vw",
     }, 'start1')
     
     tl4.to(".two",{
       top: "-2vw",
-      left: "37vw"
+      left: "33vw"
     }, 'start1')
     
     tl4.to(".three",{
       top: "3.5vw",
-      left: "56vw"
+      left: "52vw"
     }, 'start1')
     
     tl4.to(".four",{
       top: "5.5vw",
-      left: "23vw"
+      left: "19vw"
     }, 'start1')
     
     tl4.to(".five",{
       top: "4.5vw",
-      left: "69vw"
+      left: "65vw"
     }, 'start1')
     
     tl4.to(".six",{
       // opacity: 0
       top: "8vw",
-      left: "79vw"
+      left: "75vw"
     }, 'start1')
 
     tl4.to(".seven",{
       // opacity: 0
       top: "7.5vw",
-      left: "15vw"
+      left: "11vw"
     }, 'start1')
 
     tl4.to(".team-txt", {
