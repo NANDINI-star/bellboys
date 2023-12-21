@@ -58,6 +58,22 @@ ScrollTrigger.matchMedia({
       rotateY: 360,
       duration: 10
     }, 'start')
+    tl2.to(".six",{
+      x: 200,
+      y: 200,
+      delay: 1,
+      opacity: 0,
+      rotateY: 360,
+      duration: 10
+    }, 'start')
+    tl2.to(".seven",{
+      x: 200,
+      y: 200,
+      delay: 1,
+      opacity: 0,
+      rotateY: 360,
+      duration: 10
+    }, 'start')
     
     
     tl2.to(".person-container1",{
@@ -100,7 +116,13 @@ ScrollTrigger.matchMedia({
     }, 'start1')
     
     tl4.to(".six",{
-      opacity: 0
+      // opacity: 0
+    }, 'start1')
+
+    tl4.to(".seven",{
+      // opacity: 0
+      top: "8.5vw",
+      left: "14vw"
     }, 'start1')
 
     tl4.to(".team-txt", {

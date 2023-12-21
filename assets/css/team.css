@@ -92,7 +92,7 @@
   }
 
   .two{
-    top: 20vw; 
+    top: 15vw; 
     left: 10vw; 
     z-index: 3;
     position: absolute;
@@ -119,14 +119,32 @@
     left: 58vw
   }
 
+  .six{
+    z-index: 0;
+    position: absolute;
+    top: 9vw; 
+    left: 75vw;
+  }
+
+  .seven{
+    z-index: 0;
+    position: absolute;
+    top: 5vw; 
+    left: 20vw;
+  }
+
+  .six img, .seven img{
+    height: 11.6vw;width: 11.6vw;
+  }
+
   .one img, .three img{
-    height: 17.3vw;
+    /* height: 17.3vw; */
     width: 17.3vw;
   }
   
   .two img{
-    height: 24vw;
-    width: 24vw;
+    /* height: 24vw; */
+    width: 28vw;
   }
   
   .four img, .five img{
@@ -148,7 +166,7 @@
   font-size: 4vw;
 }
 
-.six{
+/* .six{
   z-index: 1;
   position: absolute;
   top: 15vw; 
@@ -157,7 +175,7 @@
 
 .six img{
   height: 11.6vw;width: 11.6vw;
-}
+} */
 
 .team-txt{
   opacity: 0;
