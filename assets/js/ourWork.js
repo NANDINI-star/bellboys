@@ -64,3 +64,5 @@ Observer.create({
   onUp: () => !animating && goTo(currentIndex + 1, 'down' ),
   preventDefault: true,
 })
+
+console.log(document.querySelector(':nth-of-type(6):checked'));
