@@ -189,6 +189,22 @@ ScrollTrigger.matchMedia({
       rotateY: 360,
       duration: 10
     }, 'start')
+    tl1.to(".six",{
+      x: 200,
+      y: 200,
+      delay: 1,
+      opacity: 0,
+      rotateY: 360,
+      duration: 10
+    }, 'start')
+    tl1.to(".seven",{
+      x: 200,
+      y: 200,
+      delay: 1,
+      opacity: 0,
+      rotateY: 360,
+      duration: 10
+    }, 'start')
 
     tl1.to(".person-container2",{
       opacity: 1,
@@ -202,30 +218,42 @@ ScrollTrigger.matchMedia({
     tl.add('start1')
     tl.to(".one", {
       top: "15vw",
-      left: "8vw",
+      left: "27vw",
+      // scale: 1.2
     }, 'start1')
-    
+    tl.from(".two",{
+      scale: 1.8
+    }, 'start1')
     tl.to(".two",{
       top: "15vw",
-      left: "23vw",
-      scale: 1.2
+      left: "41vw",
+      scale: 1.8
     }, 'start1')
     
     tl.to(".three",{
-      top: "15vw",
-      left: "41vw",
-      scale: 1.6
+      top: "14vw",
+      left: "56vw",
+      // scale: 1.2
     }, 'start1')
     
     tl.to(".four",{
       top: "15vw",
-      left: "58vw",
-      scale: 1.2
+      left: "16vw",
+      // scale: 1.2
     }, 'start1')
     
     tl.to(".five",{
-      top: "15vw",
-      left: "72vw"
+      top: "13vw",
+      left: "70vw"
+    }, 'start1')
+
+    tl.to(".six",{
+      top: "14vw",
+      left: "82vw"
+    }, 'start1')
+    tl.to(".seven",{
+      top: "14vw",
+      left: "3vw"
     }, 'start1')
 
   }
