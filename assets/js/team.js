@@ -221,9 +221,9 @@ ScrollTrigger.matchMedia({
       left: "27vw",
       scale: 1.2
     }, 'start1')
-    tl.from(".two",{
-      scale: 1.8
-    }, 'start1')
+    // tl.from(".two",{
+    //   scale: 1.8
+    // }, 'start1')
     tl.to(".two",{
       top: "15vw",
       left: "41vw",
