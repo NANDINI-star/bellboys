@@ -52,7 +52,7 @@ section {
 
 .hero{
   position: relative;
-  height: 60vw;
+  height: auto;
   /* padding: 2rem; */
   text-align: left;
   isolation: isolate;

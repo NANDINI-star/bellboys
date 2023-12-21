@@ -134,7 +134,8 @@
   }
 
   .six img, .seven img{
-    height: 11.6vw;width: 11.6vw;
+    /* height: 11.6vw; */
+    width: 11.6vw;
   }
 
   .one img, .three img{
@@ -148,7 +149,8 @@
   }
   
   .four img, .five img{
-    height: 15vw;width: 15vw;
+    /* height: 15vw; */
+    width: 15vw;
   }
   
 }
@@ -188,6 +190,7 @@
 }
 
 .team-content{
+  position: relative;
 }
 
 .team-img{
@@ -235,7 +238,7 @@
 .person-container{
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
   opacity: 0;
@@ -262,7 +265,7 @@
   flex-direction: row;
   opacity: 0;
   background-color: #010101;
-  padding: 5rem;
+  padding: 5rem 5rem 0 5rem;
 }
 
 .person-container-flip{
