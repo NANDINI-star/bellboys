@@ -219,7 +219,7 @@ ScrollTrigger.matchMedia({
     tl.to(".one", {
       top: "15vw",
       left: "27vw",
-      // scale: 1.2
+      scale: 1.2
     }, 'start1')
     tl.from(".two",{
       scale: 1.8
@@ -233,7 +233,7 @@ ScrollTrigger.matchMedia({
     tl.to(".three",{
       top: "14vw",
       left: "56vw",
-      // scale: 1.2
+      scale: 1.2
     }, 'start1')
     
     tl.to(".four",{
