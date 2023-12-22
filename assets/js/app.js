@@ -16,6 +16,60 @@ if(width <= 475){
 
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  var sections = document.querySelectorAll('.home-3');
+
+  function handleScroll() {
+      console.log(sections)
+      sections.forEach(function (section) {
+        
+          var rect = section.getBoundingClientRect();
+          console.log(section, rect.top);
+          var isInViewport = (rect.top >= 550 && rect.bottom <= window.innerHeight);
+          
+          if (isInViewport) {
+            console.log("IN VIEW PORT ***********", section)
+              section.style.opacity = 1;
+              section.style.transform = 'translateY(-300px)';
+          }
+      });
+  }
+
+  // Initial check in case sections are already in view on page load
+  handleScroll();
+
+  // Listen for scroll events
+  window.addEventListener('scroll', handleScroll);
+});
+
+var tl_anim = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".home-3",
+    // scrub: 1,
+    markers: true,
+    end: "top 0"
+  }
+});
+var tl_anim2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".home-5",
+    // scrub: 1,
+    markers: true,
+    end: "top 0"
+  }
+});
+var tl_anim3 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".our-work",
+    // scrub: 1,
+    markers: true,
+    end: "top 0"
+  }
+});
+
+tl_anim.to(".home-3",{y: "-10vw"});
+tl_anim2.to(".home-5",{y: "-10vw"});
+tl_anim3.to(".our-work",{y: "-10vw"});
 
 // homeLink.addEventListener("click", (e) => {
 //   console.log(window.location.href)
@@ -100,7 +154,7 @@ function handleNavClick() {
 
   if (navIcon.src.endsWith('nav-icon.svg')) {
     navIcon.addEventListener('click', function () {
-      console.log("upup")
+      // console.log("upup")
       navIcon.src = './assets/images/close-icon.svg';
       navbar.style.display = 'block';
       // navIcon.style.display = 'none';
@@ -109,7 +163,7 @@ function handleNavClick() {
     });
   } else {
     navIcon.addEventListener('click', function () {
-      console.log("opp")
+      // console.log("opp")
       navIcon.src = 'assets/images/nav-icon.svg'; // Change back to the first image
       navbar.style.display = 'none';
       navIcon.style.display = 'block';
@@ -127,7 +181,7 @@ var circleClr = document.querySelector('.circle-clr');
 var home3 = document.querySelector('.home-3');
 var home4 = document.querySelector('.home-4');
 var scrollTopDiff = 0;
-console.log(1, scrollTopDiff);
+// console.log(1, scrollTopDiff);
 
 home3.addEventListener("mousemove", updateDotPosition);
 home3.addEventListener("wheel", updateDotPosition);
@@ -180,7 +234,7 @@ function updateDotPosition(e){
   let x = e.clientX;
   let y = e.clientY;
   var width = window.innerWidth;
-  console.log(width);
+  // console.log(width);
   var mouseX, mouseY;
   mouseX = x - 80;
   mouseY = y - 80 -rect.top;
@@ -265,7 +319,7 @@ while(count<8){
 }
 
 function loadshow() {
-  console.log(active.element);
+  // console.log(active.element);
 
   active.element.style.transform = `none`;
   active.element.style.zIndex = 1;
@@ -281,7 +335,7 @@ function loadshow() {
       current.element.style.transform = `translateX(${27 * stt}vw) scale(${1-0.2*stt}) perspective(16px) rotateY(-2deg)`;
       current.element.style.zIndex = -stt;
       current.element.style.filter = 'contrast(60%)';
-      console.log(current.element, stt);
+      // console.log(current.element, stt);
       current = current.next;
     }
   }
@@ -293,7 +347,7 @@ function loadshow() {
       current.element.style.transform = `translateX(${12 * stt}vw) translateY(${3 * stt}vw)`;
       current.element.style.zIndex = -stt;
       current.element.style.filter = 'contrast(60%)';
-      console.log(current.element, stt);
+      // console.log(current.element, stt);
       current = current.next;
       i++;
     }
@@ -307,7 +361,7 @@ function loadshow() {
       current.element.style.transform = `translateX(${-27 * stt}vw) scale(${1-0.2*stt}) perspective(16px) rotateY(2deg)`;
       current.element.style.zIndex = -stt;
       current.element.style.filter = 'contrast(60%)';
-      console.log(current.element, stt);
+      // console.log(current.element, stt);
       current = current.prev;
     }
   }
@@ -319,7 +373,7 @@ function loadshow() {
       current.element.style.transform = `translateX(${-12 * stt}vw) translateY(${3 * stt}vw)`;
       current.element.style.zIndex = -stt;
       current.element.style.filter = 'contrast(60%)';
-      console.log(current.element, stt);
+      // console.log(current.element, stt);
       current = current.prev;
       i++
     }
@@ -331,7 +385,7 @@ loadshow();
 
 next.onclick = function () {
   active = active.next;
-  console.log(active.element);
+  // console.log(active.element);
   head = head.next;
   tail = tail.next;
   loadshow();
