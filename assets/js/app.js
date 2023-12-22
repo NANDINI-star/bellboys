@@ -244,7 +244,7 @@ let active = head;
 var width = window.innerWidth;
 
 let count = 0;
-while(count<2){
+while(count<8){
   active = active.next;
   count++;
 }
@@ -271,13 +271,16 @@ function loadshow() {
     }
   }
   else{
-    while (current !== head) {
+    let i = 0;
+    // while (current !== head) {
+    while (i < 2) {
       stt++;
       current.element.style.transform = `translateX(${12 * stt}vw) translateY(${3 * stt}vw)`;
       current.element.style.zIndex = -stt;
       current.element.style.filter = 'contrast(60%)';
       console.log(current.element, stt);
       current = current.next;
+      i++;
     }
   }
 
@@ -294,13 +297,16 @@ function loadshow() {
     }
   }
   else{
-    while (current !== tail) {
+    let i = 0;
+    // while (current !== tail) {
+    while (i < 2) {
       stt++;
       current.element.style.transform = `translateX(${-12 * stt}vw) translateY(${3 * stt}vw)`;
       current.element.style.zIndex = -stt;
       current.element.style.filter = 'contrast(60%)';
       console.log(current.element, stt);
       current = current.prev;
+      i++
     }
   }
 
