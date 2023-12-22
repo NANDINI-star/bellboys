@@ -191,7 +191,12 @@
   .desc{
     font-size: 3vw !important;
   }
+  iframe{
+    background-image: url("../images/buffer2.png");
+    background-size: 90vw;
+  }
 }
+
 .container{
   display: none;
 }
@@ -271,8 +276,10 @@ button {
 .vid-6, .vid-7, .vid-8, .vid-9, .vid-10,
 .vid-11, .vid-12{
   background-image: url("../images/buffer2.png");
-  background-size: 75rem;
+  background-size: 33vw;
 }
+
+
 
 .vid-1{
   z-index: 12;
