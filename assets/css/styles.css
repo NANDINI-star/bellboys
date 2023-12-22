@@ -350,7 +350,7 @@ section {
 
 @media (min-width: 475px){
   .home-3{
-    transform: translateY(100px);
+    transform: translateY(200px);
   }
 
   .home-5{
