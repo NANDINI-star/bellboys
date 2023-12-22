@@ -13,7 +13,6 @@ const wrap = gsap.utils.wrap(0, sections.length);
 const goTo = (index, direction = 'first') => {
   console.log(index, sections[0], txts[0], imgs[0]);
   index = wrap(index);
-  console.log(index);
   animating = true;
   let leave, enter;
   const defaultPos = { transform: 'none', autoAlpha: 1 };
@@ -40,7 +39,6 @@ const goTo = (index, direction = 'first') => {
   // tl.fromTo(imgs[index], enter, defaultPos);
   
   if(currentIndex > -1) {
-    console.log("idhr", currentIndex, direction);
     tl
       .to(sections[currentIndex], leave, 0)
       .set(sections[currentIndex], { transform: 'none' });
@@ -62,7 +60,7 @@ Observer.create({
   target: ".ow-content",
   wheelSpeed: -1,
   tolerance: 20,
-  // onDown: () => !animating && goTo(currentIndex - 1, 'up'),
+  onDown: () => !animating && goTo(currentIndex - 1, 'up'),
   onUp: () => !animating && goTo(currentIndex + 1, 'down' ),
   preventDefault: true,
 })
