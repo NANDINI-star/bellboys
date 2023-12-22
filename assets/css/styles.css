@@ -348,6 +348,20 @@ section {
   }
 }
 
+@media (min-width: 475px){
+  .home-3{
+    transform: translateY(100px);
+  }
+
+  .home-5{
+    transform: translateY(100px);
+  }
+
+  .our-work{
+    transform: translateY(100px);
+  }
+}
+
 .our-work-txt-h{
   padding: 5vw;
   font-size: 4vw;
@@ -455,7 +469,6 @@ section {
   align-items: center;
   height: auto;
   position: relative;
-
 }
 
 .light {
@@ -769,6 +782,7 @@ section {
   position: relative;
   z-index: 5;
   background-color: #010101;
+
 }
 
 .video-content{
