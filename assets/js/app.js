@@ -46,7 +46,7 @@ var tl_anim = gsap.timeline({
   scrollTrigger: {
     trigger: ".home-3",
     // scrub: 1,
-    markers: true,
+    // markers: true,
     end: "top 0"
   }
 });
@@ -54,7 +54,7 @@ var tl_anim2 = gsap.timeline({
   scrollTrigger: {
     trigger: ".home-5",
     // scrub: 1,
-    markers: true,
+    // markers: true,
     end: "top 0"
   }
 });
@@ -62,12 +62,12 @@ var tl_anim3 = gsap.timeline({
   scrollTrigger: {
     trigger: ".our-work",
     // scrub: 1,
-    markers: true,
+    // markers: true,
     end: "top 0"
   }
 });
 
-tl_anim.to(".home-3",{y: "-10vw"});
+tl_anim.to(".home-3",{y: "-10vw", duration: 1});
 tl_anim2.to(".home-5",{y: "-10vw"});
 tl_anim3.to(".our-work",{y: "-10vw"});
 
