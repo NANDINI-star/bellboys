@@ -267,9 +267,17 @@ button {
   overflow-y: hidden;
 }
 
+.vid-1, .vid-2, .vid-3, .vid-4, .vid-5, 
+.vid-6, .vid-7, .vid-8, .vid-9, .vid-10,
+.vid-11, .vid-12{
+  background-image: url("../images/buffer2.png");
+  background-size: 75rem;
+}
+
 .vid-1{
   z-index: 12;
   background-color: #cbce7c;
+  
 }
 
 .vid-2{
@@ -402,6 +410,7 @@ button {
 
 .title{
   font-family: Black Mango;
+  font-size: 2vw;
 }
 .title-owr{
   font-family: Black Mango;

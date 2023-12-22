@@ -36,7 +36,7 @@ const goTo = (index, direction = 'first') => {
   
   tl.fromTo(sections[index], enter, defaultPos);
   tl.fromTo(txts[index], enter, defaultPos);
-  tl.fromTo(imgs[index], enter, defaultPos);
+  // tl.fromTo(imgs[index], enter, defaultPos);
   
   if(currentIndex > -1) {
     tl
@@ -45,9 +45,9 @@ const goTo = (index, direction = 'first') => {
     tl
       .to(txts[currentIndex], leave, 0)
       .set(txts[currentIndex], { transform: 'none' });
-    tl
-      .to(imgs[currentIndex], leave, 0)
-      .set(imgs[currentIndex], { transform: 'none' });
+    // tl
+    //   .to(imgs[currentIndex], leave, 0)
+    //   .set(imgs[currentIndex], { transform: 'none' });
   }
   
   currentIndex = index;
@@ -64,5 +64,3 @@ Observer.create({
   onUp: () => !animating && goTo(currentIndex + 1, 'down' ),
   preventDefault: true,
 })
-
-console.log(document.querySelector(':nth-of-type(6):checked'));
