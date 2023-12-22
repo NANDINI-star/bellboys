@@ -2,79 +2,94 @@ var width = window.innerWidth;
 const homeLink = document.querySelector(".home-link");
 const homeLinkC = document.querySelector(".home-link-c");
 
-homeLink.addEventListener("click", (e) => {
-  console.log(window.location.href)
-  e.preventDefault();
-  // window.location.href = "/bellboys/index.html";
-  if(!window.location.href.endsWith("index.html")){
-    window.location.href = "/bellboys/index.html";
-  }
-  if(width <= 475 && (window.location.pathname.endsWith("/bellboys/index.html"))){
+const tl = gsap.timeline();
+if(width <= 475){
+  tl.to(".hero-anim", {display: "block"});
+  tl.to(".hero-anim", {height: "70vw", duration: 1}, "start");
+  tl.to(".left", {top: "20vw", height: "15vw", duration: 1}, "start");
+  tl.to(".right", {top: "35vw", height: "15vw",duration: 1}, "start");
+  tl.to(".hero-anim", {display: "none"}, "start2");
+  tl.to(".left", {display: "none"}, "start2");
+  tl.to(".right", {display: "none"}, "start2");
+  tl.to(".hero-anim", {opacity: "0", duration: 0}, "start3");
+  tl.to(".left", {opacity: "0", duration: 0}, "start3");
+  tl.to(".right", {opacity: "0", duration: 0}, "start3");
+}
+
+
+// homeLink.addEventListener("click", (e) => {
+//   console.log(window.location.href)
+//   e.preventDefault();
+//   // window.location.href = "/bellboys/index.html";
+//   if(!window.location.href.endsWith("index.html")){
+//     window.location.href = "/bellboys/index.html";
+//   }
+//   if(width <= 475 && (window.location.pathname.endsWith("/bellboys/index.html"))){
     
-    const navIcon = document.querySelector('.nav-icon');
+//     const navIcon = document.querySelector('.nav-icon');
 
-    e.preventDefault();
+//     e.preventDefault();
 
-    const tl = gsap.timeline({
-      onComplete: function () {
-        console.log("yooo2");
-        // window.location.href = "/bellboys/index.html";
-      },
-    });
-    tl.to(".navbar", {display: "none"})
-    navIcon.src = 'assets/images/nav-icon.svg';
-    tl.fromTo(".right", {top: "10vw", duration: 2}, {top: "30vw", duration: 2}, "start");
-    tl.fromTo(".left", {top: "8vw", duration: 2}, {top: "15vw", duration: 2}, "start");
-    // tl.to(".right", {top: "10vw"});
-    // tl.to(".left", {top: "8vw"});
-    tl.fromTo(".hero", { y: '40vh', duration: 2 }, { y: 0, duration: 2 }, "start");
-    // tl.to(".hero", { y: '30vh', duration: 2 });
-    tl.fromTo(".hero-anim", { height: "100vh", duration: 2 }, { height: "0px", duration: 2 }, "start");
-    // tl.to(".hero-anim", { height: "100vh", duration: 2 });
-    tl.fromTo(".arrow", { height: "40vw", duration: 2 }, { height: "15vw", duration: 2 }, "start");
-    // tl.to(".arrow", { height: "40vw", duration: 2 });
-    tl.fromTo(".text-3", { width: "50vw", duration: 1 }, { width: "40vw", duration: 1 }, "start");
-    // tl.to(".text-3", { width: "50vw", duration: 2 });
+//     const tl = gsap.timeline({
+//       onComplete: function () {
+//         console.log("yooo2");
+//         // window.location.href = "/bellboys/index.html";
+//       },
+//     });
+//     tl.to(".navbar", {display: "none"})
+//     navIcon.src = 'assets/images/nav-icon.svg';
+//     tl.fromTo(".right", {top: "10vw", duration: 2}, {top: "30vw", duration: 2}, "start");
+//     tl.fromTo(".left", {top: "8vw", duration: 2}, {top: "15vw", duration: 2}, "start");
+//     // tl.to(".right", {top: "10vw"});
+//     // tl.to(".left", {top: "8vw"});
+//     tl.fromTo(".hero", { y: '40vh', duration: 2 }, { y: 0, duration: 2 }, "start");
+//     // tl.to(".hero", { y: '30vh', duration: 2 });
+//     tl.fromTo(".hero-anim", { height: "100vh", duration: 2 }, { height: "0px", duration: 2 }, "start");
+//     // tl.to(".hero-anim", { height: "100vh", duration: 2 });
+//     tl.fromTo(".arrow", { height: "40vw", duration: 2 }, { height: "15vw", duration: 2 }, "start");
+//     // tl.to(".arrow", { height: "40vw", duration: 2 });
+//     tl.fromTo(".text-3", { width: "50vw", duration: 1 }, { width: "40vw", duration: 1 }, "start");
+//     // tl.to(".text-3", { width: "50vw", duration: 2 });
   
-  }else{
-    window.location.href = "/bellboys/index.html";
-  }
+//   }else{
+//     window.location.href = "/bellboys/index.html";
+//   }
   
-})
-homeLinkC.addEventListener("click", (e) => {
-  console.log("yooo1")
-  e.preventDefault();
-  if(!window.location.href.endsWith("index.html")){
-    window.location.href = "/bellboys/index.html";
-  }
-  if(width <= 475 && (window.location.pathname.endsWith("/bellboys/index.html"))){
-    setTimeout(()=>{
-      console.log("TTTTT");
-      if(!window.location.href.endsWith("index.html")){
-        window.location.href = "/bellboys/index.html";
-      }
+// })
+// homeLinkC.addEventListener("click", (e) => {
+//   console.log("yooo1")
+//   e.preventDefault();
+//   if(!window.location.href.endsWith("index.html")){
+//     window.location.href = "/bellboys/index.html";
+//   }
+//   if(width <= 475 && (window.location.pathname.endsWith("/bellboys/index.html"))){
+//     setTimeout(()=>{
+//       console.log("TTTTT");
+//       if(!window.location.href.endsWith("index.html")){
+//         window.location.href = "/bellboys/index.html";
+//       }
   
-      document.documentElement.scrollTop = 0;
-      e.preventDefault();
+//       document.documentElement.scrollTop = 0;
+//       e.preventDefault();
   
-      const tl = gsap.timeline({
-      });
-      tl.fromTo(".right", {top: "10vw", duration: 2}, {top: "30vw", duration: 2}, "start");
-      tl.fromTo(".left", {top: "8vw", duration: 2}, {top: "15vw", duration: 2}, "start");
+//       const tl = gsap.timeline({
+//       });
+//       tl.fromTo(".right", {top: "10vw", duration: 2}, {top: "30vw", duration: 2}, "start");
+//       tl.fromTo(".left", {top: "8vw", duration: 2}, {top: "15vw", duration: 2}, "start");
      
-      tl.fromTo(".hero", { y: '40vh', duration: 2 }, { y: 0, duration: 2 }, "start");
-      tl.fromTo(".hero-anim", { height: "100vh", duration: 2 }, { height: "0px", duration: 2 }, "start");
-      tl.fromTo(".arrow", { height: "40vw", duration: 2 }, { height: "15vw", duration: 2 }, "start");
-      tl.fromTo(".text-3", { width: "50vw", duration: 1 }, { width: "40vw", duration: 1 }, "start");
+//       tl.fromTo(".hero", { y: '40vh', duration: 2 }, { y: 0, duration: 2 }, "start");
+//       tl.fromTo(".hero-anim", { height: "100vh", duration: 2 }, { height: "0px", duration: 2 }, "start");
+//       tl.fromTo(".arrow", { height: "40vw", duration: 2 }, { height: "15vw", duration: 2 }, "start");
+//       tl.fromTo(".text-3", { width: "50vw", duration: 1 }, { width: "40vw", duration: 1 }, "start");
     
-      }, 2000);
-    }
-    else{
-      window.location.href = "/bellboys/index.html";
-    }
+//       }, 2000);
+//     }
+//     else{
+//       window.location.href = "/bellboys/index.html";
+//     }
     
   
-})
+// })
 
 
 
