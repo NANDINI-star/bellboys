@@ -748,7 +748,8 @@ section {
 }
 
 .card img{
-  padding-top: 4vw;
+  /* padding-top: 4vw; */
+  margin-top: 4vw;
   width: 12vw;
 }
 
@@ -794,11 +795,15 @@ section {
 }
 
 .cc-title{
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 
 .cc-desig{
-  font-size: 1.5vw;
+  font-size: 1vw;
+}
+
+.tranding-slide-img{
+  border-radius: 100%;
 }
 
 /* OUR WORK ***************************************************************/
