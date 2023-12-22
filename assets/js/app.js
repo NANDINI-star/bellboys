@@ -46,7 +46,7 @@ var tl_anim = gsap.timeline({
   scrollTrigger: {
     trigger: ".home-3",
     // scrub: 1,
-    markers: true,
+    // markers: true,
     end: "top 0"
   }
 });
@@ -54,7 +54,7 @@ var tl_anim2 = gsap.timeline({
   scrollTrigger: {
     trigger: ".home-5",
     // scrub: 1,
-    markers: true,
+    // markers: true,
     end: "top 0"
   }
 });
@@ -62,7 +62,7 @@ var tl_anim3 = gsap.timeline({
   scrollTrigger: {
     trigger: ".our-work",
     // scrub: 1,
-    markers: true,
+    // markers: true,
     end: "top 0"
   }
 });
