@@ -1,19 +1,19 @@
 var width = window.innerWidth;
-const homeLink = document.querySelector(".home-link");
-const homeLinkC = document.querySelector(".home-link-c");
 
 const tl = gsap.timeline();
 if(width <= 475){
   tl.to(".hero-anim", {display: "block"});
   tl.to(".hero-anim", {height: "70vw", duration: 1}, "start");
-  tl.to(".left", {top: "20vw", height: "15vw", duration: 1}, "start");
-  tl.to(".right", {top: "35vw", height: "15vw",duration: 1}, "start");
+  tl.to(".left", {top: "30vw", height: "15vw", duration: 1}, "start");
+  tl.to(".right", {top: "45vw", height: "15vw",duration: 1}, "start");
+  tl.to(".text-3", {top: "45vw", duration: 1}, "start");
+  tl.to(".hero-anim", {opacity: "0", duration: 2}, "start3");
+  tl.to(".left", {opacity: "0", duration: 2}, "start3");
+  tl.to(".right", {opacity: "0", duration: 2}, "start3");
   tl.to(".hero-anim", {display: "none"}, "start2");
   tl.to(".left", {display: "none"}, "start2");
   tl.to(".right", {display: "none"}, "start2");
-  tl.to(".hero-anim", {opacity: "0", duration: 0}, "start3");
-  tl.to(".left", {opacity: "0", duration: 0}, "start3");
-  tl.to(".right", {opacity: "0", duration: 0}, "start3");
+
 }
 
 
