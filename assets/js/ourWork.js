@@ -62,7 +62,7 @@ Observer.create({
   target: ".ow-content",
   wheelSpeed: -1,
   tolerance: 20,
-  onDown: () => !animating && goTo(currentIndex - 1, 'up'),
+  // onDown: () => !animating && goTo(currentIndex - 1, 'up'),
   onUp: () => !animating && goTo(currentIndex + 1, 'down' ),
   preventDefault: true,
 })
