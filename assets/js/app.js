@@ -254,6 +254,10 @@ function updateDotPosition(e){
     mouseX = x - 150;
     mouseY = y - 120 -rect.top;
   }
+  else if(width >= 1700){
+    mouseX = x - 150;
+    mouseY = y - 120 -rect.top;
+  }
   
   // mouseX = x - 120;
   // mouseY = y - 100 -rect.top;
@@ -261,7 +265,7 @@ function updateDotPosition(e){
   gsap.set(mask, {
     maskPosition: `${mouseX}px ${mouseY}px`,
     webkitMaskPosition: `${mouseX}px ${mouseY}px`,
-        ease: Expo,
+        ease: "power2.out",
         opacity: 1,
       })
 
