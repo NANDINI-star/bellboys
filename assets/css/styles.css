@@ -750,6 +750,26 @@ section {
 #next img, #prev img{
   width: 7vw;
 }
+#next-ow, #prev-ow{
+  position: absolute;
+  color: white;
+  /* top: 18vw; */
+  background-color: transparent;
+  border: none;
+  /* font-size: xxx-large; */
+  font-family: monospace;
+  font-weight: bold;
+  left: 0;
+  width: 5vw;
+}
+
+#next-ow{
+  left: 5vw;
+}
+
+#next-ow img, #prev-ow img{
+  width: 7vw;
+}
 
 .home-6{
   display: flex;
@@ -823,8 +843,8 @@ section {
 .videos1{
   position: absolute;
   overflow: hidden;
-  height: 100%;
-  width: 40vw;
+  height: 31vw;
+  width: 50vw;
   /* top: 0; */
 }
 .videos2{
@@ -839,8 +859,8 @@ section {
   /* position: absolute; */
   border: 2px solid white;
   background: #060606;
-  width: 35vw;
-  height: 20vw;
+  width: 48vw;
+  height: 27vw;
   /* transition: 0.2s;
   transform: scale(1) translateY(0); */
   transition: transform 0.2s ease-in-out;

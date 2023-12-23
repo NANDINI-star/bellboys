@@ -409,148 +409,126 @@ if(width <= 465){
   });
 }
 
+// OUR WORK BUTTON
+let itemsOw = document.querySelectorAll('.thumbnail-container');
+let itemsTextOw = document.querySelectorAll('.txt-container');
+let nextOw = document.getElementById('next-ow');
+let prevOw = document.getElementById('prev-ow');
 
-// //ourwork
-// var tl = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".our-work-1",
-//     scrub: 1,
-//     end: "100%",
-//     pin: true,
-//   }
-// });
-// tl.add("start");
-// tl.to(".vid-1",{
-//   opacity: 0,
-//   delay: 2,
-//   duration: 2
-// },"start")
-// tl.from(".txt-container-1",{
-//   opacity: 1,
-//   duration: 3
-// }, "start")
-// tl.to(".txt-container-1",{
-//   opacity: 0,
-//   delay: 2,
-//   duration: 2,
-// }, "start")
-// tl.set(".vid-1", {zIndex: -1})
+// Convert items to a circular linked list
+let headOw = null;
+let tailOw = null;
 
-// tl.add("start2")
-// tl.from(".vid-2", {
-//   scale: 0.9,
-// }, "start2")
-// tl.to(".vid-2", {
-//   scale: 1,
-//   y: -40
-// }, "start2")
-// tl.to(".txt-container-2",{
-//   opacity: 1,
-//   duration: 3
-// }, "start2")
-// tl.to(".vid-2", {
-//   opacity: 0,
-//   delay: 2,
-//   duration: 2
-// }, "start2")
-// tl.to(".txt-container-2",{
-//   opacity: 0,
-//   delay: 2,
-//   duration: 2
-// }, "start2")
-// tl.to(".vid-3", {
-//   y: -20
-// }, "start2")
-// tl.to(".vid-4", {
-//   y: -20
-// }, "start2")
-// tl.to(".vid-5", {
-//   y: -20
-// }, "start2")
-// tl.set(".vid-2", {zIndex: -1})
+let headTxtOw = null;
+let tailTxtOw = null;
 
-// tl.add("start3")
-// tl.from(".vid-3", {
-//   scale: 0.8,
-// }, "start3")
-// tl.to(".vid-3", {
-//   scale: 1,
-//   y: -80
-// }, "start3")
-// tl.to(".txt-container-3",{
-//   opacity: 1,
-//   duration: 3
-// }, "start3")
-// tl.to(".vid-3", {
-//   opacity: 0,
-//   delay: 2,
-//   duration: 2
-// }, "start3")
-// tl.to(".txt-container-3",{
-//   opacity: 0,
-//   delay: 2,
-//   duration: 2
-// }, "start3")
-// tl.to(".vid-4", {
-//   y: -70,
-//   scale: 0.9
-// }, "start3")
-// tl.to(".vid-5", {
-//   y: -70,
-//   scale: 0.8
-// }, "start3")
-// tl.set(".vid-3", {zIndex: -1})
+for (let i = 0; i < itemsOw.length; i++) {
+  console.log(itemsOw.length)
+  let newNode = new Node(itemsOw[i]);
 
-// tl.add("start4")
-// tl.from(".vid-4", {
-//   scale: 0.7,
-// }, "start4")
-// tl.to(".vid-4", {
-//   scale: 1,
-//   y: -110
-// }, "start4")
-// tl.to(".txt-container-4",{
-//   opacity: 1,
-//   duration: 3
-// }, "start4")
-// tl.to(".vid-4", {
-//   opacity: 0,
-//   delay: 2,
-//   duration: 2
-// }, "start4")
-// tl.to(".txt-container-4",{
-//   opacity: 0,
-//   delay: 2,
-//   duration: 2
-// }, "start4")
-// tl.to(".vid-5", {
-//   y: -100,
-//   scale: 0.9
-// }, "start4")
-// tl.set(".vid-4", {zIndex: -1})
+  if (!headOw) {
+    headOw = newNode;
+    tailOw = newNode;
+  } else {
+    tailOw.next = newNode;
+    newNode.prev = tailOw;
+    tailOw = newNode;
+  }
+}
+for (let i = 0; i < itemsOw.length; i++) {
+  console.log(itemsOw.length)
+  let newTxtNode = new Node(itemsTextOw[i]);
 
-// tl.add("start5")
-// tl.from(".vid-5", {
-//   scale: 0.6,
-// }, "start5")
-// tl.to(".vid-5", {
-//   scale: 1,
-//   y: -150
-// }, "start5")
-// tl.to(".txt-container-5",{
-//   opacity: 1,
-//   duration: 3
-// }, "start5")
-// tl.to(".vid-5", {
-//   opacity: 0,
-//   delay: 2,
-//   duration: 2
-// }, "start5")
-// tl.to(".txt-container-5",{
-//   opacity: 0,
-//   delay: 2,
-//   duration: 2
-// }, "start5")
-// tl.set(".vid-5", {zIndex: -1})
+  if (!headTxtOw) {
+    headTxtOw = newTxtNode;
+    tailTxtOw = newTxtNode;
+  } else {
+    tailTxtOw.next = newTxtNode;
+    newTxtNode.prev = tailTxtOw;
+    tailTxtOw = newTxtNode;
+  }
+}
 
+tailOw.next = headOw; // Make the list circular
+headOw.prev = tailOw;
 
+tailTxtOw.next = headTxtOw; // Make the list circular
+headTxtOw.prev = tailTxtOw;
+
+let activeOw = headOw;
+
+let activeTxtOw = headTxtOw;
+
+var width = window.innerWidth;
+
+let countOw = 0;
+
+function loadshowOw() {
+  console.log(activeOw.element);
+
+  activeOw.element.style.transform = `none`;
+  activeOw.element.style.zIndex = 1;
+  activeOw.element.style.filter = 'none';
+  activeOw.element.style.opacity = 1;
+
+  activeTxtOw.element.style.transform = `none`;
+  activeTxtOw.element.style.zIndex = 1;
+  activeTxtOw.element.style.filter = 'none';
+  activeTxtOw.element.style.opacity = 1;
+
+  let stt = 0;
+  let current = activeOw.next;
+  let currentTxt = activeTxtOw.next;
+
+    let i = 0;
+    // while (current !== head) {
+    while (current !== headOw) {
+      console.log(stt, current);
+      stt++;
+      current.element.style.transform = `translateX(${2 * stt}vw) translateY(${4 * stt}vw) scale(${1-0.1*stt})`;
+      current.element.style.zIndex = -stt;
+      current.element.style.filter = 'contrast(60%)';
+      // console.log(current.element, stt);
+      current = current.next;
+      i++;
+
+      console.log(stt, current);
+      // currentTxt.element.style.transform = `translateX(${2 * stt}vw) translateY(${3 * stt}vw) scale(${1-0.1*stt})`;
+      currentTxt.element.style.zIndex = -stt;
+      currentTxt.element.style.filter = 'contrast(60%)';
+      // console.log(current.element, stt);
+      currentTxt = currentTxt.next;
+  }
+
+}
+
+loadshowOw();
+
+nextOw.onclick = function () {
+  activeOw = activeOw.next;
+  activeTxtOw = activeTxtOw.next;
+  // console.log(active.element);
+  headOw = headOw.next;
+  tailOw = tailOw.next;
+
+  headTxtOw = headTxtOw.next;
+  tailTxtOw = tailTxtOw.next;
+  loadshowOw();
+};
+
+prevOw.onclick = function () {
+  activeOw = activeOw.prev;
+  activeTxtOw = activeTxtOw.prev;
+
+  headOw = headOw.prev;
+  tailOw = tailOw.prev;
+
+  headTxtOw = headTxtOw.prev;
+  tailTxtOw = tailTxtOw.prev;
+  loadshowOw();
+};
+
+//iframe video playing
+
+// const x = document.querySelector("#t-1");
+// console.log(x.style.opacity);

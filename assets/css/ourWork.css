@@ -215,7 +215,7 @@
   position: relative;
   display: flex;
   height: auto;
-  column-gap: 10vw;
+  column-gap: 2vw;
   padding: 0 10vw 10vw 10vw;
 }
 
@@ -276,7 +276,7 @@ button {
 .vid-6, .vid-7, .vid-8, .vid-9, .vid-10,
 .vid-11, .vid-12{
   background-image: url("../images/buffer2.png");
-  background-size: 33vw;
+  background-size: 45vw;
 }
 
 
@@ -400,8 +400,8 @@ button {
 .vid-txt{
   position: relative;
   background: #010101;
-  width: 50vw;
-  height: 30vh;
+  width: 32vw;
+  height: 30vw;
 }
 
 .vid-carousel{
@@ -412,7 +412,7 @@ button {
   position: absolute;
   opacity: 0;
   background-color: #010101;
-  
+  height: 25vw;
 }
 
 .title{
@@ -430,7 +430,7 @@ button {
 
 .thumbnail-container {
   position: absolute;
-  opacity: 0;
+  /* opacity: 0; */
   /* width: 800px; Adjust width as needed */
   /* height: 600px; Adjust height as needed */
 }
@@ -457,4 +457,12 @@ button {
 
 .thumbnail-container:hover iframe {
   display: block; /* Display the iframe on hover */
+}
+
+.owc-left{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 25vw;
+  justify-content: space-evenly;
 }
