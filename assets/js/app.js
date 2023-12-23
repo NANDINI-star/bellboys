@@ -16,32 +16,6 @@ if(width <= 475){
 
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  var sections = document.querySelectorAll('.home-3');
-
-  function handleScroll() {
-      console.log(sections)
-      sections.forEach(function (section) {
-        
-          var rect = section.getBoundingClientRect();
-          console.log(section, rect.top);
-          var isInViewport = (rect.top >= 550 && rect.bottom <= window.innerHeight);
-          
-          if (isInViewport) {
-            console.log("IN VIEW PORT ***********", section)
-              section.style.opacity = 1;
-              section.style.transform = 'translateY(-300px)';
-          }
-      });
-  }
-
-  // Initial check in case sections are already in view on page load
-  handleScroll();
-
-  // Listen for scroll events
-  window.addEventListener('scroll', handleScroll);
-});
-
 var tl_anim = gsap.timeline({
   scrollTrigger: {
     trigger: ".home-3",
