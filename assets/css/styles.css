@@ -286,8 +286,14 @@ section {
     /* padding: 3rem; */
   }
   .top-nav{
-    padding: 3rem 3rem 0 3rem;
-    position: relative
+    padding: 4vw 4vw 0 4vw;
+    position: fixed;
+
+  }
+  .lp{
+    position: relative;
+    top: 10vw;
+    height: 70vw !important;
   }
   .home-8{
    padding-top: 6.5vw !important;
@@ -363,6 +369,9 @@ section {
   }
   .logo-img img{
     width: 20vw !important;
+  }
+  .home-3{
+    transform: translate(0px, 0px) !important;
   }
 }
 

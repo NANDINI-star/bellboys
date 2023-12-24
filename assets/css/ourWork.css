@@ -3,6 +3,8 @@
 @media (max-width: 475px){
   .our-work-hero{
     height: 80vh !important;
+    /* position: relative; */
+    top: 20vw !important;
   }
   .our-work-txt{
     font-size: 6vw !important;

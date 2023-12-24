@@ -3,6 +3,8 @@
 @media (max-width: 475px){
   .hero{
     height: 60vh;
+    position: relative;
+    top: 20vw;
   }
   .home-1{
     justify-content: start !important;
