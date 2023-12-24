@@ -110,6 +110,8 @@ img{
   }
   .contact-us-hero {
     height: 100vh;
+    position: relative;
+    top: 20vw !important;
   }
   .contact-us-txt{
     /* padding: 1rem; */
