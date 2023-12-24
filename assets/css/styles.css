@@ -751,7 +751,7 @@ section {
   width: 7vw;
 }
 #next-ow, #prev-ow{
-  position: absolute;
+  /* position: absolute; */
   color: white;
   /* top: 18vw; */
   background-color: transparent;
@@ -760,7 +760,7 @@ section {
   font-family: monospace;
   font-weight: bold;
   left: 0;
-  width: 5vw;
+  width: 15vw;
 }
 
 #next-ow{
@@ -876,6 +876,13 @@ position: absolute;
 
 .video-out {
   transform: scale(1.2) translateY(-20%);
+}
+
+.buttons-group{
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  column-gap: 2vw;
 }
 
 .home-7{
