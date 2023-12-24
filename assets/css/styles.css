@@ -116,6 +116,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo{
@@ -154,7 +155,7 @@ section {
   .nav-menu ul li {
     text-align: center;
     padding: 1rem !important;
-    font-size: 3vw !important;
+    font-size: 2vw !important;
   }
   .social-lists img{
     width: 3rem;
@@ -346,6 +347,9 @@ section {
   .cc-desig{
     font-size: 2.5vw !important;
   }
+  .logo-img img{
+    width: 20vw !important;
+  }
 }
 
 @media (min-width: 475px){
@@ -398,7 +402,7 @@ section {
 
 .nav-menu ul li{
   padding: 3rem 6rem 3rem 3rem;
-  font-size: 3vw;
+  font-size: 2vw;
   font-family: 'Poppins';
   word-wrap: break-word;
 }
@@ -843,7 +847,7 @@ section {
 .videos1{
   position: absolute;
   overflow: hidden;
-  height: 31vw;
+  height: 32vw;
   width: 50vw;
   /* top: 0; */
 }

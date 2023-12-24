@@ -30,7 +30,7 @@
 }
 
 .a-card:hover{
-  transform: scale(1.3);
+  transform: scale(1.15);
   transition: 0.5s;
 }
 
