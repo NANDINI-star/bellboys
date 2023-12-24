@@ -5,6 +5,13 @@
   .a-desig{
     padding: 0 0 1vw 1vw !important;
   }
+  .collab-title,.a-title{
+    font-size: 6vw !important;
+  }
+  .a-content-section{
+    top: 20vw !important;
+    height: 100vh !important;
+  }
 }
 
 .collab-title{
