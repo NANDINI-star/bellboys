@@ -146,19 +146,30 @@ function handleNavClick() {
   }
 }
 
+console.log(window.location.href);
+// http://127.0.0.1:5500/bellboys/ourwork.html
 
-//custom-cursor
-const mask = document.querySelector(".h3-2");
-var cursor = document.querySelector('#cursor');
-var circle = document.querySelector('.circle');
-var circleClr = document.querySelector('.circle-clr');
-var home3 = document.querySelector('.home-3');
-var home4 = document.querySelector('.home-4');
-var scrollTopDiff = 0;
-// console.log(1, scrollTopDiff);
+// ARTIST COLLAB
+class Node {
+  constructor(element) {
+    this.element = element;
+    this.next = null;
+    this.prev = null;
+  }
+}
+if(window.location.href.endsWith("/index.html")){
+  //custom-cursor
+  const mask = document.querySelector(".h3-2");
+  var cursor = document.querySelector('#cursor');
+  var circle = document.querySelector('.circle');
+  var circleClr = document.querySelector('.circle-clr');
+  var home3 = document.querySelector('.home-3');
+  var home4 = document.querySelector('.home-4');
+  var scrollTopDiff = 0;
+  // console.log(1, scrollTopDiff);
 
-home3.addEventListener("mousemove", updateDotPosition);
-home3.addEventListener("wheel", updateDotPosition);
+  home3.addEventListener("mousemove", updateDotPosition);
+  home3.addEventListener("wheel", updateDotPosition);
 
 // function updateDotPosition(dets){
 
@@ -203,47 +214,199 @@ home3.addEventListener("wheel", updateDotPosition);
 // document.addEventListener('mousemove', update);
 // document.addEventListener('touchmove', update);
 // let size = 10;
-function updateDotPosition(e){
-  var rect = home3.getBoundingClientRect();
-  let x = e.clientX;
-  let y = e.clientY;
-  var width = window.innerWidth;
-  // console.log(width);
-  var mouseX, mouseY;
-  mouseX = x - 80;
-  mouseY = y - 80 -rect.top;
-  if(width <= 768){
-    mouseX = x - 50;
-    mouseY = y - 50 -rect.top;
-  }
-  else if(width <= 1024){
-    mouseX = x - 100;
-    mouseY = y - 100 -rect.top;
-  }
-  else if(width <= 1280){
-    mouseX = x - 120;
-    mouseY = y - 120 -rect.top;
-  }
-  else if(width <= 1536){
-    mouseX = x - 150;
-    mouseY = y - 120 -rect.top;
-  }
-  else if(width >= 1700){
-    mouseX = x - 150;
-    mouseY = y - 120 -rect.top;
-  }
-  
-  // mouseX = x - 120;
-  // mouseY = y - 100 -rect.top;
+  function updateDotPosition(e){
+    var rect = home3.getBoundingClientRect();
+    let x = e.clientX;
+    let y = e.clientY;
+    var width = window.innerWidth;
+    // console.log(width);
+    var mouseX, mouseY;
+    mouseX = x - 80;
+    mouseY = y - 80 -rect.top;
+    if(width <= 768){
+      mouseX = x - 50;
+      mouseY = y - 50 -rect.top;
+    }
+    else if(width <= 1024){
+      mouseX = x - 100;
+      mouseY = y - 100 -rect.top;
+    }
+    else if(width <= 1280){
+      mouseX = x - 120;
+      mouseY = y - 120 -rect.top;
+    }
+    else if(width <= 1536){
+      mouseX = x - 150;
+      mouseY = y - 120 -rect.top;
+    }
+    else if(width >= 1700){
+      mouseX = x - 150;
+      mouseY = y - 120 -rect.top;
+    }
+    
+    // mouseX = x - 120;
+    // mouseY = y - 100 -rect.top;
 
-  gsap.set(mask, {
-    maskPosition: `${mouseX}px ${mouseY}px`,
-    webkitMaskPosition: `${mouseX}px ${mouseY}px`,
-        ease: "power2.out",
-        opacity: 1,
-      })
+    gsap.set(mask, {
+      maskPosition: `${mouseX}px ${mouseY}px`,
+      webkitMaskPosition: `${mouseX}px ${mouseY}px`,
+          ease: "power2.out",
+          opacity: 1,
+    })
+
+  }
+
+
+
+  let items = document.querySelectorAll('.carousel-c .card');
+  let carousel = document.querySelector('.carousel-c');
+  let next = document.getElementById('next');
+  let prev = document.getElementById('prev');
+
+  // Convert items to a circular linked list
+  let head = null;
+  let tail = null;
+
+  for (let i = 0; i < items.length; i++) {
+    let newNode = new Node(items[i]);
+
+    if (!head) {
+      head = newNode;
+      tail = newNode;
+    } else {
+      tail.next = newNode;
+      newNode.prev = tail;
+      tail = newNode;
+    }
+  }
+
+  tail.next = head; // Make the list circular
+  head.prev = tail;
+
+  let active = head;
+  var width = window.innerWidth;
+
+  let count = 0;
+  while(count<8){
+    active = active.next;
+    count++;
+  }
+
+  function loadshow() {
+    // console.log(active.element);
+
+    active.element.style.transform = `none`;
+    active.element.style.zIndex = 1;
+    active.element.style.filter = 'none';
+    active.element.style.opacity = 1;
+
+    let stt = 0;
+    let current = active.next;
+
+    if(width<= 465){
+      while (current !== head.prev) {
+        stt++;
+        current.element.style.transform = `translateX(${27 * stt}vw) scale(${1-0.2*stt}) perspective(16px) rotateY(-2deg)`;
+        current.element.style.zIndex = -stt;
+        current.element.style.filter = 'contrast(60%)';
+        // console.log(current.element, stt);
+        current = current.next;
+      }
+    }
+    else{
+      let i = 0;
+      // while (current !== head) {
+      while (i < 2) {
+        stt++;
+        current.element.style.transform = `translateX(${12 * stt}vw) translateY(${3 * stt}vw)`;
+        current.element.style.zIndex = -stt;
+        current.element.style.filter = 'contrast(60%)';
+        // console.log(current.element, stt);
+        current = current.next;
+        i++;
+      }
+    }
+
+    stt = 0;
+    current = active.prev;
+    if(width <= 465){
+      while (current !== tail.next) {
+        stt++;
+        current.element.style.transform = `translateX(${-27 * stt}vw) scale(${1-0.2*stt}) perspective(16px) rotateY(2deg)`;
+        current.element.style.zIndex = -stt;
+        current.element.style.filter = 'contrast(60%)';
+        // console.log(current.element, stt);
+        current = current.prev;
+      }
+    }
+    else{
+      let i = 0;
+      // while (current !== tail) {
+      while (i < 2) {
+        stt++;
+        current.element.style.transform = `translateX(${-12 * stt}vw) translateY(${3 * stt}vw)`;
+        current.element.style.zIndex = -stt;
+        current.element.style.filter = 'contrast(60%)';
+        // console.log(current.element, stt);
+        current = current.prev;
+        i++
+      }
+    }
+
+  }
+
+  loadshow();
+
+  next.onclick = function () {
+    active = active.next;
+    // console.log(active.element);
+    head = head.next;
+    tail = tail.next;
+    loadshow();
+  };
+
+  prev.onclick = function () {
+    active = active.prev;
+    head = head.prev;
+    tail = tail.prev;
+    loadshow();
+  };
+
+  // Touch slider functionality
+  if(width <= 465){
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    carousel.addEventListener('touchstart', function (e) {
+      touchStartX = e.touches[0].clientX;
+    });
+    
+    carousel.addEventListener('touchmove', function (e) {
+      touchEndX = e.touches[0].clientX;
+    });
+    
+    carousel.addEventListener('touchend', function () {
+      // Determine the swipe direction
+      let deltaX = touchEndX - touchStartX;
+    
+      if (deltaX > 0) {
+        // Swipe right
+        active = active.prev;
+        head = head.prev;
+        tail = tail.prev;
+        loadshow();
+      } else if (deltaX < 0) {
+        // Swipe left
+        active = active.next;
+        head = head.next;
+        tail = tail.next;
+        loadshow();
+      }
+    });
+  }
 
 }
+
 
 // function updateSize() {
 //   mask.style.maskSize = size + "px";
@@ -253,161 +416,6 @@ function updateDotPosition(e){
 
 
 
-// ARTIST COLLAB
-class Node {
-  constructor(element) {
-    this.element = element;
-    this.next = null;
-    this.prev = null;
-  }
-}
-
-let items = document.querySelectorAll('.carousel-c .card');
-let carousel = document.querySelector('.carousel-c');
-let next = document.getElementById('next');
-let prev = document.getElementById('prev');
-
-// Convert items to a circular linked list
-let head = null;
-let tail = null;
-
-for (let i = 0; i < items.length; i++) {
-  let newNode = new Node(items[i]);
-
-  if (!head) {
-    head = newNode;
-    tail = newNode;
-  } else {
-    tail.next = newNode;
-    newNode.prev = tail;
-    tail = newNode;
-  }
-}
-
-tail.next = head; // Make the list circular
-head.prev = tail;
-
-let active = head;
-var width = window.innerWidth;
-
-let count = 0;
-while(count<8){
-  active = active.next;
-  count++;
-}
-
-function loadshow() {
-  // console.log(active.element);
-
-  active.element.style.transform = `none`;
-  active.element.style.zIndex = 1;
-  active.element.style.filter = 'none';
-  active.element.style.opacity = 1;
-
-  let stt = 0;
-  let current = active.next;
-
-  if(width<= 465){
-    while (current !== head.prev) {
-      stt++;
-      current.element.style.transform = `translateX(${27 * stt}vw) scale(${1-0.2*stt}) perspective(16px) rotateY(-2deg)`;
-      current.element.style.zIndex = -stt;
-      current.element.style.filter = 'contrast(60%)';
-      // console.log(current.element, stt);
-      current = current.next;
-    }
-  }
-  else{
-    let i = 0;
-    // while (current !== head) {
-    while (i < 2) {
-      stt++;
-      current.element.style.transform = `translateX(${12 * stt}vw) translateY(${3 * stt}vw)`;
-      current.element.style.zIndex = -stt;
-      current.element.style.filter = 'contrast(60%)';
-      // console.log(current.element, stt);
-      current = current.next;
-      i++;
-    }
-  }
-
-  stt = 0;
-  current = active.prev;
-  if(width <= 465){
-    while (current !== tail.next) {
-      stt++;
-      current.element.style.transform = `translateX(${-27 * stt}vw) scale(${1-0.2*stt}) perspective(16px) rotateY(2deg)`;
-      current.element.style.zIndex = -stt;
-      current.element.style.filter = 'contrast(60%)';
-      // console.log(current.element, stt);
-      current = current.prev;
-    }
-  }
-  else{
-    let i = 0;
-    // while (current !== tail) {
-    while (i < 2) {
-      stt++;
-      current.element.style.transform = `translateX(${-12 * stt}vw) translateY(${3 * stt}vw)`;
-      current.element.style.zIndex = -stt;
-      current.element.style.filter = 'contrast(60%)';
-      // console.log(current.element, stt);
-      current = current.prev;
-      i++
-    }
-  }
-
-}
-
-loadshow();
-
-next.onclick = function () {
-  active = active.next;
-  // console.log(active.element);
-  head = head.next;
-  tail = tail.next;
-  loadshow();
-};
-
-prev.onclick = function () {
-  active = active.prev;
-  head = head.prev;
-  tail = tail.prev;
-  loadshow();
-};
-
-// Touch slider functionality
-if(width <= 465){
-  let touchStartX = 0;
-  let touchEndX = 0;
-  
-  carousel.addEventListener('touchstart', function (e) {
-    touchStartX = e.touches[0].clientX;
-  });
-  
-  carousel.addEventListener('touchmove', function (e) {
-    touchEndX = e.touches[0].clientX;
-  });
-  
-  carousel.addEventListener('touchend', function () {
-    // Determine the swipe direction
-    let deltaX = touchEndX - touchStartX;
-  
-    if (deltaX > 0) {
-      // Swipe right
-      active = active.prev;
-      head = head.prev;
-      tail = tail.prev;
-      loadshow();
-    } else if (deltaX < 0) {
-      // Swipe left
-      active = active.next;
-      head = head.next;
-      tail = tail.next;
-      loadshow();
-    }
-  });
-}
 
 // OUR WORK BUTTON
 let itemsOw = document.querySelectorAll('.thumbnail-container');

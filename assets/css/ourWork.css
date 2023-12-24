@@ -401,7 +401,7 @@ button {
   position: relative;
   background: #010101;
   width: 32vw;
-  height: 30vw;
+  height: 20vw;
 }
 
 .vid-carousel{
@@ -410,9 +410,9 @@ button {
 
 .txt-container{
   position: absolute;
-  opacity: 0;
+  /* opacity: 0; */
   background-color: #010101;
-  height: 25vw;
+  height: 24vw;
 }
 
 .title{
@@ -425,7 +425,7 @@ button {
 }
 
 .desc{
-  font-size: 1.5vw;
+  font-size: 1.4vw;
 }
 
 .thumbnail-container {
@@ -463,6 +463,6 @@ button {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 25vw;
+  height: 35vw;
   justify-content: space-evenly;
 }
