@@ -3,7 +3,7 @@ var width = window.innerWidth;
 const tl = gsap.timeline();
 if(width <= 475){
   tl.to(".hero-anim", {display: "block", duration: 3});
-  tl.to(".hero-anim", {height: "70vw", top: "15vw"}, "start");
+  tl.to(".hero-anim", {height: "70vw", top: "17vw"}, "start");
   tl.to(".left", {top: "30vw", height: "15vw", duration: 1}, "start");
   tl.to(".right", {top: "45vw", height: "15vw",duration: 1}, "start");
   tl.to(".text-3", {top: "45vw", duration: 1}, "start");
