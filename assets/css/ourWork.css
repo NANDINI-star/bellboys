@@ -410,7 +410,7 @@ button {
 
 .txt-container{
   position: absolute;
-  opacity: 0;
+  /* opacity: 0; */
   background-color: #010101;
   height: 25vw;
 }
