@@ -154,11 +154,12 @@
       overflow-y: hidden;
       position: relative;
       left: -3vw;
+      height: 31vw;
   }
 
   .carousel__thumbnails li{
     margin: 0 2vw;
-    height: 17.5vw;
+    height: 31vw;
   }
 
   .video {
@@ -464,5 +465,6 @@ button {
   display: flex;
   flex-direction: column;
   height: 35vw;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
+  row-gap: 5vw;
 }
