@@ -157,7 +157,10 @@ class Node {
     this.prev = null;
   }
 }
-if(window.location.href.endsWith("/index.html")){
+if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWith("/collab.html") && 
+!window.location.href.endsWith("/contactus.html") && !window.location.href.endsWith("/ourwork.html") &&
+!window.location.href.endsWith("/team.html")
+){
   //custom-cursor
   const mask = document.querySelector(".h3-2");
   var cursor = document.querySelector('#cursor');
