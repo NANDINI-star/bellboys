@@ -860,7 +860,7 @@ section {
   border: 2px solid white;
   background: #060606;
   width: 48vw;
-  height: 27vw;
+  height: 29vw;
   /* transition: 0.2s;
   transform: scale(1) translateY(0); */
   transition: transform 0.2s ease-in-out;
