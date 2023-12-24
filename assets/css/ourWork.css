@@ -464,5 +464,6 @@ button {
   display: flex;
   flex-direction: column;
   height: 35vw;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
+  row-gap: 5vw;
 }
