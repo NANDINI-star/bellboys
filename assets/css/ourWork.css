@@ -454,16 +454,16 @@ button {
   left: 0; */
   /* width: 100%;
   height: 100%; */
-  display: none; /* Hide the iframe initially if you want to show only the thumbnail */
+  /* display: none; Hide the iframe initially if you want to show only the thumbnail */
 }
 
-.thumbnail-container:hover img {
-  opacity: 0; /* Hide the image on hover */
-}
+/* .thumbnail-container:hover img { */
+  /* opacity: 0; Hide the image on hover */
+/* } */
 
-.thumbnail-container:hover iframe {
-  display: block; /* Display the iframe on hover */
-}
+/* .thumbnail-container:hover iframe { */
+  /* display: block; Display the iframe on hover */
+/* } */
 
 .owc-left{
   position: relative;

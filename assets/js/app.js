@@ -482,11 +482,31 @@ function loadshowOw() {
   activeOw.element.style.filter = 'none';
   activeOw.element.style.opacity = 1;
 
+
   activeTxtOw.element.style.transform = `none`;
   activeTxtOw.element.style.zIndex = 1;
   activeTxtOw.element.style.filter = 'none';
   activeTxtOw.element.style.opacity = 1;
+  
+  const iframe = activeOw.element.querySelectorAll("iframe");
+  const transformValue = window.getComputedStyle(activeOw.element).getPropertyValue('transform');
+  console.log(iframe, transformValue);
+  if (transformValue == 'none') {
+    // Add autoplay parameter to the src attribute
+    console.log(iframe[0].src)
+    const videoSrc = iframe[0].src + '?autoplay=1';
+    if(!iframe[0].src.endsWith("autoplay=1")){
+      iframe[0].src = iframe[0].src + '&autoplay=1';
 
+    }
+    console.log(iframe[0].src)
+  }
+  else{
+    if(iframe[0].src.endsWith("autoplay=1")){
+      iframe[0].src = iframe[0].src.substring(0, iframe[0].src.length-11);
+    }
+    console.log(iframe[0].src)
+  }
   let stt = 0;
   let current = activeOw.next;
   let currentTxt = activeTxtOw.next;
@@ -494,6 +514,7 @@ function loadshowOw() {
     let i = 0;
     // while (current !== head) {
     while (current !== headOw) {
+      
       console.log(stt, current);
       stt++;
       current.element.style.transform = `translateX(${2 * stt}vw) translateY(${4 * stt}vw) scale(${1-0.1*stt})`;
@@ -516,8 +537,14 @@ function loadshowOw() {
 loadshowOw();
 
 nextOw.onclick = function () {
+  const iframe = activeOw.element.querySelectorAll("iframe");
+  if(iframe[0].src.endsWith("autoplay=1")){
+    iframe[0].src = iframe[0].src.substring(0, iframe[0].src.length-11);
+  }
+  console.log(iframe[0].src);
   activeOw = activeOw.next;
   activeTxtOw = activeTxtOw.next;
+  
   // console.log(active.element);
   headOw = headOw.next;
   tailOw = tailOw.next;
@@ -528,6 +555,10 @@ nextOw.onclick = function () {
 };
 
 prevOw.onclick = function () {
+  const iframe = activeOw.element.querySelectorAll("iframe");
+  if(iframe[0].src.endsWith("autoplay=1")){
+    iframe[0].src = iframe[0].src.substring(0, iframe[0].src.length-11);
+  }
   activeOw = activeOw.prev;
   activeTxtOw = activeTxtOw.prev;
 
@@ -539,7 +570,3 @@ prevOw.onclick = function () {
   loadshowOw();
 };
 
-//iframe video playing
-
-// const x = document.querySelector("#t-1");
-// console.log(x.style.opacity);
