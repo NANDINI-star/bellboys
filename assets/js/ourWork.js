@@ -64,3 +64,26 @@
 //   onUp: () => !animating && goTo(currentIndex + 1, 'down' ),
 //   preventDefault: true,
 // })
+const carousel_thumbnail = document.querySelector(".carousel__thumbnails");
+carousel_thumbnail.addEventListener("click",()=>{
+  const input_checked = document.querySelectorAll("input");
+  let iframeOwr = document.querySelectorAll(".slide-vid");
+  
+  input_checked.forEach((ele, idx) => {
+    // console.log(ele.checked, idx);
+  
+    if (ele.checked && iframeOwr[idx]) {
+      console.log(iframeOwr[idx].src);
+  
+      if (!iframeOwr[idx].src.endsWith("autoplay=1")) {
+        console.log(iframeOwr[idx].src)
+        iframeOwr[idx].src = iframeOwr[idx].src + '&autoplay=1';
+        console.log(iframeOwr[idx].src)
+      }
+    } else if (!ele.checked && iframeOwr[idx] && iframeOwr[idx].src.endsWith("autoplay=1")) {
+      console.log(iframeOwr[idx].src, idx);
+      iframeOwr[idx].src = iframeOwr[idx].src.substring(0, iframeOwr[idx].src.length - 11);
+      console.log(iframeOwr[idx].src, idx);
+    }
+  });
+});
