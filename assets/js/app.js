@@ -146,7 +146,7 @@ function handleNavClick() {
   }
 }
 
-console.log(window.location.href);
+// console.log(window.location.href);
 // http://127.0.0.1:5500/bellboys/ourwork.html
 
 // ARTIST COLLAB
@@ -434,7 +434,7 @@ let headTxtOw = null;
 let tailTxtOw = null;
 
 for (let i = 0; i < itemsOw.length; i++) {
-  console.log(itemsOw.length)
+  // console.log(itemsOw.length)
   let newNode = new Node(itemsOw[i]);
 
   if (!headOw) {
@@ -447,7 +447,7 @@ for (let i = 0; i < itemsOw.length; i++) {
   }
 }
 for (let i = 0; i < itemsOw.length; i++) {
-  console.log(itemsOw.length)
+  // console.log(itemsOw.length)
   let newTxtNode = new Node(itemsTextOw[i]);
 
   if (!headTxtOw) {
@@ -475,7 +475,7 @@ var width = window.innerWidth;
 let countOw = 0;
 
 function loadshowOw() {
-  console.log(activeOw.element);
+  // console.log(activeOw.element);
 
   activeOw.element.style.transform = `none`;
   activeOw.element.style.zIndex = 1;
@@ -490,22 +490,22 @@ function loadshowOw() {
   
   const iframe = activeOw.element.querySelectorAll("iframe");
   const transformValue = window.getComputedStyle(activeOw.element).getPropertyValue('transform');
-  console.log(iframe, transformValue);
+  // console.log(iframe, transformValue);
   if (transformValue == 'none') {
     // Add autoplay parameter to the src attribute
-    console.log(iframe[0].src)
+    // console.log(iframe[0].src)
     const videoSrc = iframe[0].src + '?autoplay=1';
     if(!iframe[0].src.endsWith("autoplay=1")){
       iframe[0].src = iframe[0].src + '&autoplay=1';
 
     }
-    console.log(iframe[0].src)
+    // console.log(iframe[0].src)
   }
   else{
     if(iframe[0].src.endsWith("autoplay=1")){
       iframe[0].src = iframe[0].src.substring(0, iframe[0].src.length-11);
     }
-    console.log(iframe[0].src)
+    // console.log(iframe[0].src)
   }
   let stt = 0;
   let current = activeOw.next;
@@ -515,7 +515,7 @@ function loadshowOw() {
     // while (current !== head) {
     while (current !== headOw) {
       
-      console.log(stt, current);
+      // console.log(stt, current);
       stt++;
       current.element.style.transform = `translateX(${2 * stt}vw) translateY(${4 * stt}vw) scale(${1-0.1*stt})`;
       current.element.style.zIndex = -stt;
@@ -524,7 +524,7 @@ function loadshowOw() {
       current = current.next;
       i++;
 
-      console.log(stt, current);
+      // console.log(stt, current);
       // currentTxt.element.style.transform = `translateX(${2 * stt}vw) translateY(${3 * stt}vw) scale(${1-0.1*stt})`;
       currentTxt.element.style.zIndex = -stt;
       currentTxt.element.style.filter = 'contrast(60%)';
@@ -541,7 +541,7 @@ nextOw.onclick = function () {
   if(iframe[0].src.endsWith("autoplay=1")){
     iframe[0].src = iframe[0].src.substring(0, iframe[0].src.length-11);
   }
-  console.log(iframe[0].src);
+  // console.log(iframe[0].src);
   activeOw = activeOw.next;
   activeTxtOw = activeTxtOw.next;
   
