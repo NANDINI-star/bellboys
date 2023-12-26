@@ -377,15 +377,15 @@ section {
 
 @media (min-width: 475px){
   .home-3{
-    transform: translateY(20vw);
+    transform: translateY(10vw);
   }
 
   .home-5{
-    transform: translateY(20vw);
+    transform: translateY(10vw);
   }
 
   .our-work{
-    transform: translateY(20vw);
+    transform: translateY(10vw);
   }
 }
 
