@@ -41,9 +41,9 @@ var tl_anim3 = gsap.timeline({
   }
 });
 
-tl_anim.to(".home-3",{y: "-10vw", duration: 1});
-tl_anim2.to(".home-5",{y: "-10vw"});
-tl_anim3.to(".our-work",{y: "-10vw"});
+tl_anim.to(".home-3",{y: "-5vw", duration: 1});
+tl_anim2.to(".home-5",{y: "-5vw"});
+tl_anim3.to(".our-work",{y: "-5vw"});
 
 // homeLink.addEventListener("click", (e) => {
 //   console.log(window.location.href)
