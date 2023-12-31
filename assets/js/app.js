@@ -575,8 +575,10 @@ var audio = document.getElementById("myAudio");
 
 // Get the img element
 var img = document.querySelector(".h2-vid");
-var snd = new Audio('assets/videos/back-vid.mp4')//wav is also supported
-
+// var snd = new Audio('assets/videos/back-vid.mp3')//wav is also supported
+var snd = document.createElement("audio");
+snd.preload = "auto";
+snd.src="assets/videos/back-vid.mp3";
 // Set up a timeline with GSAP
 var gsap_tl = gsap.timeline({ paused: true });
 gsap_tl.to(audio, { volume: 1, duration: 1 });
@@ -597,12 +599,18 @@ function isElementInViewport(el) {
 
 // Function to handle scrolling and play audio if the img is in the viewport
 function handleScroll() {
+  document.querySelector(".h2-vid").click();
   console.log("SCROLLING")
     if (isElementInViewport(img)) {
+      // document.getElementById("myAudio").click();
       console.log("PLAYYY")
       // 
+      // snd.muted = true;
       snd.play()//plays the sound
       gsap_tl.play();
+      
+
+    
     } else {
       snd.pause()
       gsap_tl.reverse();
