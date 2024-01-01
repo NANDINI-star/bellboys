@@ -425,7 +425,7 @@ section {
 }
 
 .nav-menu ul li{
-  padding: 3rem 6rem 3rem 3rem;
+  padding: 3vh 6vh 3vh 3vh;
   font-size: 2vw;
   font-family: 'Poppins';
   word-wrap: break-word;
