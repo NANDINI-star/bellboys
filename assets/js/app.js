@@ -293,7 +293,7 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
   var width = window.innerWidth;
 
   let count = 0;
-  while(count<8){
+  while(count<(items.length/2)){
     active = active.next;
     count++;
   }
@@ -321,11 +321,14 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
     }
     else{
       let i = 0;
-      // while (current !== head) {
-      while (i < 2) {
-        stt++;
+      while (current !== head.prev) {
+      // while (i < 2) {
+        if(i<2){
+          stt++;
+        }
+        
         current.element.style.transform = `translateX(${12 * stt}vw) translateY(${3 * stt}vw)`;
-        current.element.style.zIndex = -stt;
+        current.element.style.zIndex = -i;
         current.element.style.filter = 'contrast(60%)';
         // console.log(current.element, stt);
         current = current.next;
@@ -347,11 +350,14 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
     }
     else{
       let i = 0;
-      // while (current !== tail) {
-      while (i < 2) {
-        stt++;
+      while (current !== tail) {
+      // while (i < 2) {
+        if(i<2){
+          stt++;
+        }
+        
         current.element.style.transform = `translateX(${-12 * stt}vw) translateY(${3 * stt}vw)`;
-        current.element.style.zIndex = -stt;
+        current.element.style.zIndex = -i;
         current.element.style.filter = 'contrast(60%)';
         // console.log(current.element, stt);
         current = current.prev;
