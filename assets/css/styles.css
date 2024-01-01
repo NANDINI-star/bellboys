@@ -92,6 +92,7 @@ section {
   background-color: #010101;
   z-index: 2000;
   display: none;
+  
 }
 
 .hero::before{

@@ -4,15 +4,18 @@ const tl = gsap.timeline();
 if(width <= 475){
   tl.to(".hero-anim", {display: "block", duration: 3});
   tl.to(".hero-anim", {height: "70vw", top: "10vw"}, "start");
-  tl.to(".left", {top: "30vw", height: "15vw", duration: 1}, "start");
-  tl.to(".right", {top: "45vw", height: "15vw",duration: 1}, "start");
-  tl.to(".text-3", {top: "45vw", duration: 1}, "start");
+  tl.to(".ha-lp", {height: "70vw", top: "10vw"}, "start");
+  // tl.to(".left", {top: "30vw", height: "15vw", duration: 1}, "start");
+  // tl.to(".right", {top: "45vw", height: "15vw",duration: 1}, "start");
+  // tl.to(".text-3", {top: "45vw", duration: 1}, "start");
   tl.to(".hero-anim", {opacity: "0", duration:2}, "start3");
-  tl.to(".left", {opacity: "0", duration: 2}, "start3");
-  tl.to(".right", {opacity: "0", duration: 2}, "start3");
+  tl.to(".ha-lp", {opacity: "0", duration:2}, "start3");
+  // tl.to(".left", {opacity: "0", duration: 2}, "start3");
+  // tl.to(".right", {opacity: "0", duration: 2}, "start3");
   tl.to(".hero-anim", {display: "none"}, "start2");
-  tl.to(".left", {display: "none"}, "start2");
-  tl.to(".right", {display: "none"}, "start2");
+  tl.to(".ha-lp", {display: "none"}, "start2");
+  // tl.to(".left", {display: "none"}, "start2");
+  // tl.to(".right", {display: "none"}, "start2");
 
 }
 
