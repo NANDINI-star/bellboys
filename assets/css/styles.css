@@ -1002,3 +1002,11 @@ position: absolute;
   margin: auto;
   margin-bottom: 4rem;
 }
+
+.active-element{
+  transform: none;
+  -webkit-transform: none;
+  z-index: 1;
+  filter: none;
+  opacity: 1;
+}
