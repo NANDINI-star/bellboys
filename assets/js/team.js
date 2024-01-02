@@ -129,7 +129,8 @@ ScrollTrigger.matchMedia({
 
     tl4.to(".team-txt", {
       opacity: 1,
-      duration: 5
+      duration: 5,
+      top: "55vh"
     })
     // tl4.to(".team-txt", {
     //   opacity: 0
