@@ -1,4 +1,6 @@
-var width = window.innerWidth;
+// var width = window.innerWidth;
+var width = document.documentElement.clientWidth;
+console.log(width);
 
 const tl = gsap.timeline();
 if(width <= 475){
@@ -224,7 +226,7 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
     var rect = home3.getBoundingClientRect();
     let x = e.clientX;
     let y = e.clientY;
-    var width = window.innerWidth;
+    // var width = window.innerWidth;
     // console.log(width);
     var mouseX, mouseY;
     mouseX = x - 80;
@@ -290,7 +292,7 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
   head.prev = tail;
 
   let active = head;
-  var width = window.innerWidth;
+  // var width = window.innerWidth;
 
   let count = 0;
   while(count<(items.length/2)){
@@ -479,7 +481,7 @@ let activeOw = headOw;
 
 let activeTxtOw = headTxtOw;
 
-var width = window.innerWidth;
+// var width = window.innerWidth;
 
 let countOw = 0;
 
@@ -595,7 +597,7 @@ gsap_tl.to(audio, { volume: 1, duration: 1 });
 // Function to check if the element is in the viewport
 function isElementInViewport(el) {
     var rect = el.getBoundingClientRect();
-    console.log(rect.top);
+    // console.log(rect.top);
     return (
         rect.top <= 250 &&
         rect.top >= 0 &&
@@ -609,10 +611,10 @@ function isElementInViewport(el) {
 // Function to handle scrolling and play audio if the img is in the viewport
 function handleScroll() {
   document.querySelector(".h2-vid").click();
-  console.log("SCROLLING")
+  // console.log("SCROLLING")
     if (isElementInViewport(img)) {
       // document.getElementById("myAudio").click();
-      console.log("PLAYYY")
+      // console.log("PLAYYY")
       // 
       // snd.muted = true;
       snd.play()//plays the sound
