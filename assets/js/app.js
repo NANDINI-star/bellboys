@@ -1,5 +1,5 @@
-// var width = window.innerWidth;
-var width = document.documentElement.clientWidth;
+var width = window.innerWidth;
+// var width = document.documentElement.clientWidth;
 console.log(width);
 
 const tl = gsap.timeline();
@@ -167,7 +167,7 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
 !window.location.href.endsWith("/team.html")
 ){
   //custom-cursor
-  const mask = document.querySelector(".h3-2");
+  var mask = document.querySelector(".h3-2");
   var cursor = document.querySelector('#cursor');
   var circle = document.querySelector('.circle');
   var circleClr = document.querySelector('.circle-clr');
@@ -179,49 +179,7 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
   home3.addEventListener("mousemove", updateDotPosition);
   home3.addEventListener("wheel", updateDotPosition);
 
-// function updateDotPosition(dets){
 
-//   gsap.to(cursor, {
-//     x: dets.clientX-180,
-//     y: dets.clientY-180,
-//     duration: 0.2,
-//     ease: Expo,
-//     opacity: 1,
-//   })
-// }
-
-// function updateDotPosition(dets){
-//   document.documentElement.style.setProperty('--pointerX', e.clientX + "px");
-//   document.documentElement.style.setProperty('--pointerY', e.clientY + "px");
-
-// }
-
-
-// const light = document.querySelector('.light');
-// const roomPosition = { 
-//     'top': home3.offsetTop,
-//     'left': home3.offsetLeft
-// };
-
-// const topMargin = roomPosition.top + (window.innerHeight * Math.random());
-// const position = {
-//     left:  Math.random() * roomPosition.left,
-//     top: topMargin + 150 < window.innerHeight ? topMargin : topMargin - 350
-// };
-
-// function update(e) {
-
-//     var x = ( e.clientX - 150) || (e.touches[0].clientX - 150);
-//     var y = (e.clientY - 150) || (e.touches[0].clientY - 150);
-
-//     light.style.left = x + "px";
-//     light.style.top = y + "px";
-
-// }
-
-// document.addEventListener('mousemove', update);
-// document.addEventListener('touchmove', update);
-// let size = 10;
   function updateDotPosition(e){
     var rect = home3.getBoundingClientRect();
     let x = e.clientX;
@@ -265,15 +223,15 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
   }
 
 
-
+//COLLAB
   let items = document.querySelectorAll('.carousel-c .card');
   let carousel = document.querySelector('.carousel-c');
   let next = document.getElementById('next');
   let prev = document.getElementById('prev');
 
   // Convert items to a circular linked list
-  let head = null;
-  let tail = null;
+  var head = null;
+  var tail = null;
 
   for (let i = 0; i < items.length; i++) {
     let newNode = new Node(items[i]);
@@ -291,7 +249,7 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
   tail.next = head; // Make the list circular
   head.prev = tail;
 
-  let active = head;
+  var active = head;
   // var width = window.innerWidth;
 
   let count = 0;
@@ -304,6 +262,7 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
     // console.log(active.element);
 
     active.element.style.transform = `none`;
+    active.element.style.webkitTransform = `none`;
     active.element.style.zIndex = 1;
     active.element.style.filter = 'none';
     active.element.style.opacity = 1;
@@ -315,6 +274,7 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
       while (current !== head.prev) {
         stt++;
         current.element.style.transform = `translateX(${27 * stt}vw) scale(${1-0.2*stt}) perspective(16px) rotateY(-2deg)`;
+        current.element.style.webkitTransform = `translateX(${27 * stt}vw) scale(${1-0.2*stt}) perspective(16px) rotateY(-2deg)`;
         current.element.style.zIndex = -stt;
         current.element.style.filter = 'contrast(60%)';
         // console.log(current.element, stt);
@@ -330,6 +290,7 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
         }
         
         current.element.style.transform = `translateX(${12 * stt}vw) translateY(${3 * stt}vw)`;
+        current.element.style.webkitTransform = `translateX(${12 * stt}vw) translateY(${3 * stt}vw)`;
         current.element.style.zIndex = -i;
         current.element.style.filter = 'contrast(60%)';
         // console.log(current.element, stt);
@@ -344,6 +305,7 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
       while (current !== tail.next) {
         stt++;
         current.element.style.transform = `translateX(${-27 * stt}vw) scale(${1-0.2*stt}) perspective(16px) rotateY(2deg)`;
+        current.element.style.webkitTransform = `translateX(${-27 * stt}vw) scale(${1-0.2*stt}) perspective(16px) rotateY(2deg)`;
         current.element.style.zIndex = -stt;
         current.element.style.filter = 'contrast(60%)';
         // console.log(current.element, stt);
@@ -358,6 +320,7 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
           stt++;
         }
         
+        current.element.style.webkitTransform = `translateX(${-12 * stt}vw) translateY(${3 * stt}vw)`;
         current.element.style.transform = `translateX(${-12 * stt}vw) translateY(${3 * stt}vw)`;
         current.element.style.zIndex = -i;
         current.element.style.filter = 'contrast(60%)';
@@ -388,21 +351,53 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
 
   // Touch slider functionality
   if(width <= 465){
+    // let touchStartX = 0;
+    // let touchEndX = 0;
+    
+    // carousel.addEventListener('touchstart', function (e) {
+    //   touchStartX = e.touches[0].clientX;
+    // });
+    
+    // carousel.addEventListener('touchmove', function (e) {
+    //   touchEndX = e.touches[0].clientX;
+    // });
+    
+    // carousel.addEventListener('touchend', function () {
+    //   // Determine the swipe direction
+    //   let deltaX = touchEndX - touchStartX;
+    
+    //   if (deltaX > 0) {
+    //     // Swipe right
+    //     active = active.prev;
+    //     head = head.prev;
+    //     tail = tail.prev;
+    //     loadshow();
+    //   } else if (deltaX < 0) {
+    //     // Swipe left
+    //     active = active.next;
+    //     head = head.next;
+    //     tail = tail.next;
+    //     loadshow();
+    //   }
+    // });
     let touchStartX = 0;
     let touchEndX = 0;
-    
+
     carousel.addEventListener('touchstart', function (e) {
       touchStartX = e.touches[0].clientX;
+      touchEndX = touchStartX;
+      e.preventDefault();
     });
-    
+
     carousel.addEventListener('touchmove', function (e) {
       touchEndX = e.touches[0].clientX;
+      e.preventDefault();
     });
-    
+
     carousel.addEventListener('touchend', function () {
       // Determine the swipe direction
       let deltaX = touchEndX - touchStartX;
-    
+
       if (deltaX > 0) {
         // Swipe right
         active = active.prev;
@@ -420,15 +415,6 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
   }
 
 }
-
-
-// function updateSize() {
-//   mask.style.maskSize = size + "px";
-//   mask.style.webkitMaskSize = size + "px";
-
-// }
-
-
 
 
 // OUR WORK BUTTON
@@ -489,12 +475,14 @@ function loadshowOw() {
   // console.log(activeOw.element);
 
   activeOw.element.style.transform = `none`;
+  activeOw.element.style.webkitTransform = `none`;
   activeOw.element.style.zIndex = 1;
   activeOw.element.style.filter = 'none';
   activeOw.element.style.opacity = 1;
 
 
   activeTxtOw.element.style.transform = `none`;
+  activeTxtOw.element.style.webkitTransform = `none`;
   activeTxtOw.element.style.zIndex = 1;
   activeTxtOw.element.style.filter = 'none';
   activeTxtOw.element.style.opacity = 1;
@@ -529,6 +517,7 @@ function loadshowOw() {
       // console.log(stt, current);
       stt++;
       current.element.style.transform = `translateX(${2 * stt}vw) translateY(${4 * stt}vw) scale(${1-0.1*stt})`;
+      current.element.style.webkitTransform = `translateX(${2 * stt}vw) translateY(${4 * stt}vw) scale(${1-0.1*stt})`;
       current.element.style.zIndex = -stt;
       current.element.style.filter = 'contrast(60%)';
       // console.log(current.element, stt);
@@ -617,7 +606,7 @@ function handleScroll() {
       // console.log("PLAYYY")
       // 
       // snd.muted = true;
-      snd.play()//plays the sound
+      // snd.play()//plays the sound
       gsap_tl.play();
       
 
