@@ -41,6 +41,7 @@
     border-top-right-radius: 0 !important;
     height: 17vh !important;
     font-size: 2.5vw !important;
+    
   }
 
   .au-desc{
@@ -75,7 +76,7 @@
   height: 100%;
   /* background-color: #0D0D0D; */
   grid-template-columns: repeat(3, 1fr);
-  overflow: scroll;
+  /* overflow: scroll; */
   
 }
 
@@ -96,9 +97,9 @@
 .about-us-desc{
   grid-column: 2/4;
   grid-row: 1 ;
-  overflow-y:scroll;
+  overflow-y:hidden;
   height: 50vh;
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
 }
 ::-webkit-scrollbar {
   width: 0px;
