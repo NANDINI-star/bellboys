@@ -1,6 +1,9 @@
 @font-face { font-family: Black Mango; src: url('./Black Mango Black.ttf'); } 
 
 @media (max-width: 475px){
+  .our-work-scroll{
+    display: none !important;
+  }
   .our-work-hero{
     height: 80vh !important;
     /* position: relative; */
@@ -419,6 +422,34 @@ button {
   /* opacity: 0; */
   background-color: #010101;
   height: 24vw;
+}
+.txt-container-ow{
+  /* position: absolute; */
+  /* opacity: 0; */
+  background-color: #010101;
+  height: 24vw;
+  width: 50%;
+}
+
+.vid-and-details{
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  column-gap: 2vw;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.our-work-scroll{
+  /*justify-content: center; */
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  height: 31vw;
+  /* justify-content: center; */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  /* scroll-padding: 50%; */
 }
 
 .title{
