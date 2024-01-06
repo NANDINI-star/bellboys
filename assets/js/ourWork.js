@@ -91,18 +91,66 @@ carousel_thumbnail.forEach(item => {
     iframeOwr.forEach((iframe, x)=>{
       // console.log(iframe,x, parseInt(idx),iframeOwr[idx], (x == idx));
       if (iframe && (x == idx) && !iframe.src.endsWith("autoplay=1")) {
-              console.log(iframe.src)
-              iframe.src = iframe.src + '&autoplay=1';
-              console.log(iframe.src, idx)
-            }
-           else if ((x !== idx) && iframe && iframe.src.endsWith("autoplay=1")) {
-            // console.log(iframeOwr[idx].src, idx);
-            iframe.src = iframe.src.substring(0, iframe.src.length - 11);
-            // console.log(iframe.src, idx);
-          }
+        console.log(iframe.src)
+        iframe.src = iframe.src + '&autoplay=1';
+        console.log(iframe.src, idx)
+      }
+      else if ((x !== idx) && iframe && iframe.src.endsWith("autoplay=1")) {
+        // console.log(iframeOwr[idx].src, idx);
+        iframe.src = iframe.src.substring(0, iframe.src.length - 11);
+        // console.log(iframe.src, idx);
+      }
     })
     // console.log(event.target.classList.item(0));
   });
 })
 
 
+// Global variable to track whether YouTube API has been loaded
+let youtubeApiLoaded = false;
+
+// Function to initialize the YouTube API
+function onYouTubeIframeAPIReady() {
+  youtubeApiLoaded = true;
+}
+
+// Check if YouTube API is loaded, if not, dynamically load it
+if (!youtubeApiLoaded) {
+  const scriptTag = document.createElement("script");
+  scriptTag.src = "https://www.youtube.com/iframe_api";
+  document.head.appendChild(scriptTag);
+}
+
+const vid_and_details = document.querySelectorAll(".vid-and-details");
+const options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.5, // Adjust this threshold based on your needs
+};
+
+const callback = (entries, observer) => {
+  entries.forEach((entry) => {
+    const iframeElement = entry.target.querySelector("iframe");
+    console.log("IFRame")
+    if (iframeElement && entry.isIntersecting) {
+      // Create a new YouTube player instance
+      // const player = new YT.Player(iframeElement);
+      console.log(iframeElement);
+      if (iframeElement && !iframeElement.src.endsWith("autoplay=1")) {
+        iframeElement.src = iframeElement.src + '&autoplay=1';
+        console.log("autoplay")
+      } 
+      // Play the video
+      // player.playVideo();
+    } else if(iframeElement.src.endsWith("autoplay=1")){
+      console.log("autoplay hai")
+      iframeElement.src = iframeElement.src.substring(0, iframeElement.src.length - 11);
+    }
+  });
+};
+
+const observer = new IntersectionObserver(callback, options);
+
+vid_and_details.forEach((item) => {
+  observer.observe(item);
+});
