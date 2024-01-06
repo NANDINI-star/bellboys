@@ -1,6 +1,9 @@
 @font-face { font-family: Black Mango; src: url('./Black Mango Black.ttf'); } 
 
 @media (max-width: 475px){
+  .our-work-scroll{
+    display: none !important;
+  }
   .our-work-hero{
     height: 80vh !important;
     /* position: relative; */
