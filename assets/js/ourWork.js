@@ -90,12 +90,12 @@ carousel_thumbnail.forEach(item => {
     const idx = parseInt(event.target.classList.item(0))-1;
     iframeOwr.forEach((iframe, x)=>{
       // console.log(iframe,x, parseInt(idx),iframeOwr[idx], (x == idx));
-      if (iframe && (x == idx) && !iframe.src.endsWith("autoplay=1")) {
+      if (iframe && (x == idx) && !iframe.src.endsWith("autoplay=0")) {
         console.log(iframe.src)
-        iframe.src = iframe.src + '&autoplay=1';
+        iframe.src = iframe.src + '&autoplay=0';
         console.log(iframe.src, idx)
       }
-      else if ((x !== idx) && iframe && iframe.src.endsWith("autoplay=1")) {
+      else if ((x !== idx) && iframe && iframe.src.endsWith("autoplay=0")) {
         // console.log(iframeOwr[idx].src, idx);
         iframe.src = iframe.src.substring(0, iframe.src.length - 11);
         // console.log(iframe.src, idx);
@@ -136,13 +136,13 @@ const callback = (entries, observer) => {
       // Create a new YouTube player instance
       // const player = new YT.Player(iframeElement);
       console.log(iframeElement);
-      if (iframeElement && !iframeElement.src.endsWith("autoplay=1")) {
-        iframeElement.src = iframeElement.src + '&autoplay=1';
+      if (iframeElement && !iframeElement.src.endsWith("autoplay=0")) {
+        iframeElement.src = iframeElement.src + '&autoplay=0';
         console.log("autoplay")
       } 
       // Play the video
       // player.playVideo();
-    } else if(iframeElement.src.endsWith("autoplay=1")){
+    } else if(iframeElement.src.endsWith("autoplay=0")){
       console.log("autoplay hai")
       iframeElement.src = iframeElement.src.substring(0, iframeElement.src.length - 11);
     }
