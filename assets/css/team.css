@@ -37,44 +37,70 @@
   /* .six{
     display: none;
   } */
-  .one img, .two img, .three img, .four img, .five img, .six img, .seven img{
+  /* .one img, .two img, .three img, .four img, .five img, .six img, .seven img{ */
     /* height: 18vw ; */
-    width: 18vw !important;
-  }
+    /* width: 18vw !important; */
+  /* } */
   .one{
     z-index: 3;
     position: absolute;
-    left: 29vw;
+    left: 27vw;
+    top: 63vh;
+  }
+  .one img{
+    width: 19vw;
   }
   .two{
     left: 41vw !important;
     z-index: 4;
     position: absolute;
   }
+  .two img{
+    width: 16vw;
+  }
   .three{
     left: 55vw;
     z-index: 3;
     position: absolute;
+    top: 66vh;
+  }
+  .three img{
+    width: 16vw
   }
   .four{
     z-index: 2;
     position: absolute;
-    left: 18vw;
+    left: 17vw;
+    top: 66vh;
+  }
+  .four img{
+    width: 16vw;
   }
   .five{
     z-index: 2;
     position: absolute;
     left: 69vw;
+    top: 65vh;
+  }
+  .five img{
+    width: 16vw
   }
   .six{
     z-index: 1;
     position: absolute;
-    left: 79vw;
+    left: 81vw;
+  }
+  .six img{
+    width: 16vw;
   }
   .seven{
     z-index: 1;
     position: absolute;
     left: 4vw;
+    top: 66vh;
+  }
+  .seven img{
+    width: 14vw;
   }
   .meet-team-txt{
     font-size: 6vw !important;

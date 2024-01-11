@@ -184,6 +184,10 @@ ScrollTrigger.matchMedia({
         pin: true,
       }
     });
+    tl.from(".one", {
+      scale:0
+      // scale:1
+    }, "start2")
     tl1.to(".one",{
       x: 400,
       y: 200,
@@ -192,14 +196,22 @@ ScrollTrigger.matchMedia({
       rotateY: 360,
       duration: 10
     }, 'start')
+    tl.from(".two", {
+      scale:0
+      // scale:0.8
+    }, "start2")
     tl1.to(".two",{
       x: '-30vw',
       y: '7vw',
       delay: 1,
       opacity: 0,
-      scale: 2,
+      // scale: 2,
       duration:8
     }, 'start')
+    tl.from(".three", {
+      // scale:0.8
+      scale:0
+    }, "start2")
     tl1.to(".three",{
       x: 300,
       y: 200,
@@ -208,7 +220,10 @@ ScrollTrigger.matchMedia({
       rotateY: 360,
       duration: 10
     }, 'start')
-    
+    tl.from(".four", {
+      // scale:0.8
+      scale:0
+    }, "start2")
     tl1.to(".four",{
       x: 200,
       y: 200,
@@ -217,6 +232,10 @@ ScrollTrigger.matchMedia({
       rotateY: 360,
       duration: 10
     }, 'start')
+    tl.from(".five", {
+      // scale:0.8
+      scale:0
+    }, "start2")
     tl1.to(".five",{
       x: 200,
       y: 200,
@@ -225,6 +244,10 @@ ScrollTrigger.matchMedia({
       rotateY: 360,
       duration: 10
     }, 'start')
+    tl.from(".six", {
+      // scale:0.8
+      scale:0
+    }, "start2")
     tl1.to(".six",{
       x: 200,
       y: 200,
@@ -233,6 +256,10 @@ ScrollTrigger.matchMedia({
       rotateY: 360,
       duration: 10
     }, 'start')
+    tl.from(".seven", {
+      // scale:0.7
+      scale:0
+    }, "start2")
     tl1.to(".seven",{
       x: 200,
       y: 200,
@@ -253,8 +280,8 @@ ScrollTrigger.matchMedia({
     
     tl.add('start1')
     tl.to(".one", {
-      top: "15vw",
-      left: "27vw",
+      top: "12vw",
+      left: "25vw",
       scale: 1.2
     }, 'start1')
     // tl.from(".two",{
@@ -263,13 +290,13 @@ ScrollTrigger.matchMedia({
     tl.to(".two",{
       top: "15vw",
       left: "41vw",
-      scale: 1.8
+      scale: 1.4
     }, 'start1')
     
     tl.to(".three",{
-      top: "14vw",
+      top: "17vw",
       left: "56vw",
-      scale: 1.2
+      scale: 1.1
     }, 'start1')
     
     tl.to(".four",{
@@ -279,17 +306,17 @@ ScrollTrigger.matchMedia({
     }, 'start1')
     
     tl.to(".five",{
-      top: "13vw",
-      left: "70vw"
+      top: "14vw",
+      left: "69vw"
     }, 'start1')
 
     tl.to(".six",{
-      top: "14vw",
+      top: "13vw",
       left: "82vw"
     }, 'start1')
     tl.to(".seven",{
       top: "14vw",
-      left: "3vw"
+      left: "4vw"
     }, 'start1')
 
   },
