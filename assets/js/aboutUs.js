@@ -99,10 +99,11 @@
 // })
 
 var width = window.innerWidth;
-
 let gsap_au = gsap.timeline({});
+console.log(width > 435);
 
 if(width > 435) {
+  console.log("here");
   function loop(){
     // gsap_au.fromTo(".ad-0", {y: 0}, {y: "-50vh"})
     gsap_au.fromTo(".ad-1", {y: "50vh"}, {y: "-50vh", delay: 1})
@@ -125,14 +126,17 @@ if(width > 435) {
       color: "#FFEB5B",
       delay: 0.5
     })
-    // gsap_au.fromTo(".ad-3", {y: "0vh"}, {y: "-50vh"})
+    gsap_au.fromTo(".ad-3", {y: "0vh"}, {y: "-50vh"})
   }
   loop();
   setInterval(loop, 8000);
+
+  
 }
 
 else{
-  function loop(){
+  // console.log("here also")
+  function loop2(){
     // gsap_au.fromTo(".ad-0", {y: 0}, {y: "-50vh"})
     console.log("inside mobile about us")
     gsap_au.fromTo(".ad-1", {y: "17vh"}, {y: "-17vh", delay: 1})
@@ -157,6 +161,7 @@ else{
     })
     // gsap_au.fromTo(".ad-3", {y: "0vh"}, {y: "-50vh"})
   }
-  loop();
-  setInterval(loop, 8000);
+  loop2();
+  setInterval(loop2, 8000);
 }
+

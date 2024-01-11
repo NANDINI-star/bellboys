@@ -2,53 +2,58 @@ var width = window.innerWidth;
 // var width = document.documentElement.clientWidth;
 console.log(width);
 
-const tl = gsap.timeline();
-if(width <= 475){
-  tl.to(".hero-anim", {display: "block", duration: 3});
-  tl.to(".hero-anim", {height: "70vw", top: "10vw"}, "start");
-  tl.to(".ha-lp", {height: "70vw", top: "10vw"}, "start");
-  // tl.to(".left", {top: "30vw", height: "15vw", duration: 1}, "start");
-  // tl.to(".right", {top: "45vw", height: "15vw",duration: 1}, "start");
-  // tl.to(".text-3", {top: "45vw", duration: 1}, "start");
-  tl.to(".hero-anim", {opacity: "0", duration:2}, "start3");
-  tl.to(".ha-lp", {opacity: "0", duration:2}, "start3");
-  // tl.to(".left", {opacity: "0", duration: 2}, "start3");
-  // tl.to(".right", {opacity: "0", duration: 2}, "start3");
-  tl.to(".hero-anim", {display: "none"}, "start2");
-  tl.to(".ha-lp", {display: "none"}, "start2");
-  // tl.to(".left", {display: "none"}, "start2");
-  // tl.to(".right", {display: "none"}, "start2");
+if(window.location.href === "https://www.bellboysproductions.com/"){
+  const tl = gsap.timeline();
 
+  if(width <= 475){
+    tl.to(".hero-anim", {display: "block", duration: 3});
+    tl.to(".hero-anim", {height: "70vw", top: "10vw"}, "start");
+    tl.to(".ha-lp", {height: "70vw", top: "10vw"}, "start");
+    // tl.to(".left", {top: "30vw", height: "15vw", duration: 1}, "start");
+    // tl.to(".right", {top: "45vw", height: "15vw",duration: 1}, "start");
+    // tl.to(".text-3", {top: "45vw", duration: 1}, "start");
+    tl.to(".hero-anim", {opacity: "0", duration:2}, "start3");
+    tl.to(".ha-lp", {opacity: "0", duration:2}, "start3");
+    // tl.to(".left", {opacity: "0", duration: 2}, "start3");
+    // tl.to(".right", {opacity: "0", duration: 2}, "start3");
+    tl.to(".hero-anim", {display: "none"}, "start2");
+    tl.to(".ha-lp", {display: "none"}, "start2");
+    // tl.to(".left", {display: "none"}, "start2");
+    // tl.to(".right", {display: "none"}, "start2");
+  
+  }
+  
+  var tl_anim = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".home-3",
+      // scrub: 1,
+      // markers: true,
+      end: "top 0"
+    }
+  });
+  var tl_anim2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".home-5",
+      // scrub: 1,
+      // markers: true,
+      end: "top 0"
+    }
+  });
+  var tl_anim3 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".our-work",
+      // scrub: 1,
+      // markers: true,
+      end: "top 0"
+    }
+  });
+  
+  tl_anim.to(".home-3",{y: "-5vw", duration: 1});
+  tl_anim2.to(".home-5",{y: "-5vw"});
+  tl_anim3.to(".our-work",{y: "-5vw"});
 }
 
-var tl_anim = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".home-3",
-    // scrub: 1,
-    // markers: true,
-    end: "top 0"
-  }
-});
-var tl_anim2 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".home-5",
-    // scrub: 1,
-    // markers: true,
-    end: "top 0"
-  }
-});
-var tl_anim3 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".our-work",
-    // scrub: 1,
-    // markers: true,
-    end: "top 0"
-  }
-});
 
-tl_anim.to(".home-3",{y: "-5vw", duration: 1});
-tl_anim2.to(".home-5",{y: "-5vw"});
-tl_anim3.to(".our-work",{y: "-5vw"});
 
 // homeLink.addEventListener("click", (e) => {
 //   console.log(window.location.href)
@@ -416,6 +421,8 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
 
 }
 
+if(window.location.href.includes("ourwork")){
+
 
 // OUR WORK BUTTON
 let itemsOw = document.querySelectorAll('.thumbnail-container');
@@ -605,3 +612,5 @@ function isElementInViewport(el) {
 
 // Initial check on page load
 // handleScroll();
+
+}
