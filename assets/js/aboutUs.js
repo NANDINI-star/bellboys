@@ -98,70 +98,70 @@
 //   delay: 1
 // })
 
-var width = window.innerWidth;
-let gsap_au = gsap.timeline({});
-console.log(width > 435);
+// var width = window.innerWidth;
+// let gsap_au = gsap.timeline({});
+// console.log(width > 435);
 
-if(width > 435) {
-  console.log("here");
-  function loop(){
-    // gsap_au.fromTo(".ad-0", {y: 0}, {y: "-50vh"})
-    gsap_au.fromTo(".ad-1", {y: "50vh"}, {y: "-50vh", delay: 1})
-    gsap_au.fromTo(".clr-1", {color: 'white'},{
-      // scrollTrigger: ".ad-1",
-      color: "#FFEB5B",
-      delay: 0.5
-    })
-    // gsap_au.fromTo(".ad-1", {y: "0vh"}, {y: "-50vh"})
-    gsap_au.fromTo(".ad-2", {y: "100vh"}, {y: "-100vh", delay: 1})
-    gsap_au.fromTo(".clr-2", {color: 'white'},{
-      // scrollTrigger: ".ad-2",
-      color: "#FFEB5B",
-      delay: 0.5
-    })
-    // gsap_au.fromTo(".ad-2", {y: "0vh"}, {y: "-50vh"})
-    gsap_au.fromTo(".ad-3", {y: "150vh"}, {y: "-150vh", delay: 1})
-    gsap_au.fromTo(".clr-3", {color: 'white'},{
-      // scrollTrigger: ".ad-3",
-      color: "#FFEB5B",
-      delay: 0.5
-    })
-    gsap_au.fromTo(".ad-3", {y: "0vh"}, {y: "-50vh"})
-  }
-  loop();
-  setInterval(loop, 8000);
+// if(width > 435) {
+//   console.log("here");
+//   function loop(){
+//     // gsap_au.fromTo(".ad-0", {y: 0}, {y: "-50vh"})
+//     gsap_au.fromTo(".ad-1", {y: "50vh"}, {y: "-50vh", delay: 1})
+//     gsap_au.fromTo(".clr-1", {color: 'white'},{
+//       // scrollTrigger: ".ad-1",
+//       color: "#FFEB5B",
+//       delay: 0.5
+//     })
+//     // gsap_au.fromTo(".ad-1", {y: "0vh"}, {y: "-50vh"})
+//     gsap_au.fromTo(".ad-2", {y: "100vh"}, {y: "-100vh", delay: 1})
+//     gsap_au.fromTo(".clr-2", {color: 'white'},{
+//       // scrollTrigger: ".ad-2",
+//       color: "#FFEB5B",
+//       delay: 0.5
+//     })
+//     // gsap_au.fromTo(".ad-2", {y: "0vh"}, {y: "-50vh"})
+//     gsap_au.fromTo(".ad-3", {y: "150vh"}, {y: "-150vh", delay: 1})
+//     gsap_au.fromTo(".clr-3", {color: 'white'},{
+//       // scrollTrigger: ".ad-3",
+//       color: "#FFEB5B",
+//       delay: 0.5
+//     })
+//     gsap_au.fromTo(".ad-3", {y: "0vh"}, {y: "-50vh"})
+//   }
+//   loop();
+//   setInterval(loop, 8000);
 
   
-}
+// }
 
-else{
-  // console.log("here also")
-  function loop2(){
-    // gsap_au.fromTo(".ad-0", {y: 0}, {y: "-50vh"})
-    console.log("inside mobile about us")
-    gsap_au.fromTo(".ad-1", {y: "17vh"}, {y: "-17vh", delay: 1})
-    gsap_au.fromTo(".clr-1", {color: 'white'},{
-      // scrollTrigger: ".ad-1",
-      color: "#FFEB5B",
-      delay: 0.5
-    })
-    // gsap_au.fromTo(".ad-1", {y: "0vh"}, {y: "-50vh"})
-    gsap_au.fromTo(".ad-2", {y: "34vh"}, {y: "-34vh", delay: 1})
-    gsap_au.fromTo(".clr-2", {color: 'white'},{
-      // scrollTrigger: ".ad-2",
-      color: "#FFEB5B",
-      delay: 0.5
-    })
-    // gsap_au.fromTo(".ad-2", {y: "0vh"}, {y: "-50vh"})
-    gsap_au.fromTo(".ad-3", {y: "51vh"}, {y: "-51vh", delay: 1})
-    gsap_au.fromTo(".clr-3", {color: 'white'},{
-      // scrollTrigger: ".ad-3",
-      color: "#FFEB5B",
-      delay: 0.5
-    })
-    // gsap_au.fromTo(".ad-3", {y: "0vh"}, {y: "-50vh"})
-  }
-  loop2();
-  setInterval(loop2, 8000);
-}
+// else{
+//   // console.log("here also")
+//   function loop2(){
+//     // gsap_au.fromTo(".ad-0", {y: 0}, {y: "-50vh"})
+//     console.log("inside mobile about us")
+//     gsap_au.fromTo(".ad-1", {y: "17vh"}, {y: "-17vh", delay: 1})
+//     gsap_au.fromTo(".clr-1", {color: 'white'},{
+//       // scrollTrigger: ".ad-1",
+//       color: "#FFEB5B",
+//       delay: 0.5
+//     })
+//     // gsap_au.fromTo(".ad-1", {y: "0vh"}, {y: "-50vh"})
+//     gsap_au.fromTo(".ad-2", {y: "34vh"}, {y: "-34vh", delay: 1})
+//     gsap_au.fromTo(".clr-2", {color: 'white'},{
+//       // scrollTrigger: ".ad-2",
+//       color: "#FFEB5B",
+//       delay: 0.5
+//     })
+//     // gsap_au.fromTo(".ad-2", {y: "0vh"}, {y: "-50vh"})
+//     gsap_au.fromTo(".ad-3", {y: "51vh"}, {y: "-51vh", delay: 1})
+//     gsap_au.fromTo(".clr-3", {color: 'white'},{
+//       // scrollTrigger: ".ad-3",
+//       color: "#FFEB5B",
+//       delay: 0.5
+//     })
+//     // gsap_au.fromTo(".ad-3", {y: "0vh"}, {y: "-50vh"})
+//   }
+//   loop2();
+//   setInterval(loop2, 8000);
+// }
 

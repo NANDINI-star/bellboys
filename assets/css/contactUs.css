@@ -115,11 +115,11 @@ img{
 /* xs */
 @media (max-width: 475px) {
   .contact-us-content{
-    height: 60vh;
+    /* height: 60vh; */
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr;
     padding: 3rem;
-    row-gap: 3rem;
+    row-gap: 1vh;
   }
   .contact-us-hero {
     height: 100vh;
@@ -135,18 +135,18 @@ img{
     font-size: 1.5rem !important;
   }
   .iframe-rwd-1{
-    grid-row: 3;
+    grid-row: 2;
     height: 20vh !important;
   }
   .iframe-rwd-2{
-    grid-row: 4;
+    grid-row: 3;
     height: 20vh !important;
   }
   .iframe-rwd-1 iframe{
-    grid-row: 3;
+    grid-row: 2;
   }
   .iframe-rwd-2 iframe{
-    grid-row: 4;
+    grid-row: 3;
   }
   .idea{
     font-size: 3vw !important;
@@ -154,6 +154,16 @@ img{
   .contact, .mail{
     font-size: 3.5vw !important;
   }
+  .contact{
+    display: flex; 
+    flex-direction: row;
+    padding: 0 !important;
+  }
+  .mail{
+    color: white;font-family: Poppins; font-weight: 500; word-wrap: break-word; 
+    padding: 1rem 1rem 1rem 0 !important;
+  }
+
 }
 
 .contact-us-details{
@@ -223,4 +233,10 @@ img{
 
 .contact, .mail{
   font-size: 2vw;
+}
+.contact{
+  display: flex; flex-direction: row;padding: 4rem 0 2rem 0;
+}
+.mail{
+  color: white;font-family: Poppins; font-weight: 500; word-wrap: break-word; padding: 2rem 2rem 2rem 0;
 }
