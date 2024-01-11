@@ -268,26 +268,30 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
 
     active.element.style.transform = `none`;
     active.element.style.webkitTransform = `none`;
-    active.element.style.zIndex = 1;
+    active.element.style.zIndex = 2;
     active.element.style.filter = 'none';
     active.element.style.opacity = 1;
 
     let stt = 0;
+    let sttz = -1;
     let current = active.next;
 
     if(width<= 465){
       while (current !== head.prev) {
         stt++;
+
         current.element.style.transform = `translateX(${27 * stt}vw) scale(${1-0.2*stt}) perspective(16px) rotateY(-2deg)`;
         current.element.style.webkitTransform = `translateX(${27 * stt}vw) scale(${1-0.2*stt}) perspective(16px) rotateY(-2deg)`;
-        current.element.style.zIndex = -stt;
+        current.element.style.zIndex = -sttz;
         current.element.style.filter = 'contrast(60%)';
         // console.log(current.element, stt);
         current = current.next;
+        sttz++;
       }
     }
     else{
       let i = 0;
+      let iz= -1;
       while (current !== head.prev) {
       // while (i < 2) {
         if(i<2){
@@ -296,29 +300,33 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
         
         current.element.style.transform = `translateX(${12 * stt}vw) translateY(${3 * stt}vw)`;
         current.element.style.webkitTransform = `translateX(${12 * stt}vw) translateY(${3 * stt}vw)`;
-        current.element.style.zIndex = -i;
+        current.element.style.zIndex = -iz;
         current.element.style.filter = 'contrast(60%)';
         // console.log(current.element, stt);
         current = current.next;
         i++;
+        iz++;
       }
     }
 
     stt = 0;
+    sttz = -1;
     current = active.prev;
     if(width <= 465){
       while (current !== tail.next) {
         stt++;
         current.element.style.transform = `translateX(${-27 * stt}vw) scale(${1-0.2*stt}) perspective(16px) rotateY(2deg)`;
         current.element.style.webkitTransform = `translateX(${-27 * stt}vw) scale(${1-0.2*stt}) perspective(16px) rotateY(2deg)`;
-        current.element.style.zIndex = -stt;
+        current.element.style.zIndex = -sttz;
         current.element.style.filter = 'contrast(60%)';
         // console.log(current.element, stt);
         current = current.prev;
+        sttz++;
       }
     }
     else{
       let i = 0;
+      let iz = -1;
       while (current !== tail) {
       // while (i < 2) {
         if(i<2){
@@ -327,11 +335,12 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
         
         current.element.style.webkitTransform = `translateX(${-12 * stt}vw) translateY(${3 * stt}vw)`;
         current.element.style.transform = `translateX(${-12 * stt}vw) translateY(${3 * stt}vw)`;
-        current.element.style.zIndex = -i;
+        current.element.style.zIndex = -iz;
         current.element.style.filter = 'contrast(60%)';
         // console.log(current.element, stt);
         current = current.prev;
-        i++
+        i++;
+        iz++;
       }
     }
 

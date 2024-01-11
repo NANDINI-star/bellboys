@@ -743,7 +743,7 @@ section {
   width: 90%;
   padding: 3rem;
   margin: 0 auto;
-  background-color: transparent;
+  background-color: black;
   position: relative;
   height: 35vw;
   overflow: hidden;
