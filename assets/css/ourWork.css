@@ -208,7 +208,7 @@
   display: none;
 }
 .our-work-txt{
-  padding: 5vw;
+  /* padding: 5vw; */
   font-size: 4vw;
   display: flex;
   justify-content: center;
