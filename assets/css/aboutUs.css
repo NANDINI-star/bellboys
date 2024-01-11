@@ -166,3 +166,7 @@
   display: none;
   width: 100%
 }
+
+.ad-1, .ad-2, .ad-3 {
+  transform: translateZ(0);
+}
