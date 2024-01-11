@@ -509,15 +509,15 @@ if(window.location.href === "https://www.bellboysproductions.com/" || window.loc
     if (transformValue == 'none') {
       // Add autoplay parameter to the src attribute
       // console.log(iframe[0].src)
-      const videoSrc = iframe[0].src + '?autoplay=1';
-      if(!iframe[0].src.endsWith("autoplay=1")){
-        iframe[0].src = iframe[0].src + '&autoplay=1';
+      const videoSrc = iframe[0].src + '?autoplay=0';
+      if(!iframe[0].src.endsWith("autoplay=0")){
+        iframe[0].src = iframe[0].src + '&autoplay=0';
 
       }
       // console.log(iframe[0].src)
     }
     else{
-      if(iframe[0].src.endsWith("autoplay=1")){
+      if(iframe[0].src.endsWith("autoplay=0")){
         iframe[0].src = iframe[0].src.substring(0, iframe[0].src.length-11);
       }
       // console.log(iframe[0].src)
@@ -554,7 +554,7 @@ if(window.location.href === "https://www.bellboysproductions.com/" || window.loc
 
   nextOw.onclick = function () {
     const iframe = activeOw.element.querySelectorAll("iframe");
-    if(iframe[0].src.endsWith("autoplay=1")){
+    if(iframe[0].src.endsWith("autoplay=0")){
       iframe[0].src = iframe[0].src.substring(0, iframe[0].src.length-11);
     }
     // console.log(iframe[0].src);
@@ -572,7 +572,7 @@ if(window.location.href === "https://www.bellboysproductions.com/" || window.loc
 
   prevOw.onclick = function () {
     const iframe = activeOw.element.querySelectorAll("iframe");
-    if(iframe[0].src.endsWith("autoplay=1")){
+    if(iframe[0].src.endsWith("autoplay=0")){
       iframe[0].src = iframe[0].src.substring(0, iframe[0].src.length-11);
     }
     activeOw = activeOw.prev;
