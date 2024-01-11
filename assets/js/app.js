@@ -1,8 +1,8 @@
 var width = window.innerWidth;
 // var width = document.documentElement.clientWidth;
 console.log(width);
-
-if(window.location.href === "https://www.bellboysproductions.com/"){
+console.log(window.location.href === "https://www.bellboysproductions.com/" || window.location.href === "https://www.bellboys.in/" || window.location.href === "http://localhost:5500/bellboys/index.html");
+if(window.location.href === "https://www.bellboysproductions.com/" || window.location.href === "https://www.bellboys.in/" || window.location.href === "http://localhost:5500/bellboys/index.html"){
   const tl = gsap.timeline();
 
   if(width <= 475){
@@ -228,7 +228,7 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
   }
 
 
-//COLLAB
+  //COLLAB
   let items = document.querySelectorAll('.carousel-c .card');
   let carousel = document.querySelector('.carousel-c');
   let next = document.getElementById('next');
@@ -420,197 +420,197 @@ if(!window.location.href.endsWith("/about.html") && !window.location.href.endsWi
   }
 
 }
+console.log(window.location.href);
+console.log(window.location.href === "https://www.bellboysproductions.com/" || window.location.href === "https://www.bellboys.in/" || window.location.href === "http://localhost:5500/bellboys/index.html");
+if(window.location.href === "https://www.bellboysproductions.com/" || window.location.href === "https://www.bellboys.in/" || window.location.href === "http://localhost:5500/bellboys/index.html"){
 
-if(window.location.href.includes("ourwork")){
+  // OUR WORK BUTTON
+  let itemsOw = document.querySelectorAll('.thumbnail-container');
+  let itemsTextOw = document.querySelectorAll('.txt-container');
+  let nextOw = document.getElementById('next-ow');
+  let prevOw = document.getElementById('prev-ow');
 
+  // Convert items to a circular linked list
+  let headOw = null;
+  let tailOw = null;
 
-// OUR WORK BUTTON
-let itemsOw = document.querySelectorAll('.thumbnail-container');
-let itemsTextOw = document.querySelectorAll('.txt-container');
-let nextOw = document.getElementById('next-ow');
-let prevOw = document.getElementById('prev-ow');
+  let headTxtOw = null;
+  let tailTxtOw = null;
 
-// Convert items to a circular linked list
-let headOw = null;
-let tailOw = null;
+  for (let i = 0; i < itemsOw.length; i++) {
+    // console.log(itemsOw.length)
+    let newNode = new Node(itemsOw[i]);
 
-let headTxtOw = null;
-let tailTxtOw = null;
-
-for (let i = 0; i < itemsOw.length; i++) {
-  // console.log(itemsOw.length)
-  let newNode = new Node(itemsOw[i]);
-
-  if (!headOw) {
-    headOw = newNode;
-    tailOw = newNode;
-  } else {
-    tailOw.next = newNode;
-    newNode.prev = tailOw;
-    tailOw = newNode;
-  }
-}
-for (let i = 0; i < itemsOw.length; i++) {
-  // console.log(itemsOw.length)
-  let newTxtNode = new Node(itemsTextOw[i]);
-
-  if (!headTxtOw) {
-    headTxtOw = newTxtNode;
-    tailTxtOw = newTxtNode;
-  } else {
-    tailTxtOw.next = newTxtNode;
-    newTxtNode.prev = tailTxtOw;
-    tailTxtOw = newTxtNode;
-  }
-}
-
-tailOw.next = headOw; // Make the list circular
-headOw.prev = tailOw;
-
-tailTxtOw.next = headTxtOw; // Make the list circular
-headTxtOw.prev = tailTxtOw;
-
-let activeOw = headOw;
-
-let activeTxtOw = headTxtOw;
-
-// var width = window.innerWidth;
-
-let countOw = 0;
-
-function loadshowOw() {
-  // console.log(activeOw.element);
-
-  activeOw.element.style.transform = `none`;
-  activeOw.element.style.webkitTransform = `none`;
-  activeOw.element.style.zIndex = 1;
-  activeOw.element.style.filter = 'none';
-  activeOw.element.style.opacity = 1;
-
-
-  activeTxtOw.element.style.transform = `none`;
-  activeTxtOw.element.style.webkitTransform = `none`;
-  activeTxtOw.element.style.zIndex = 1;
-  activeTxtOw.element.style.filter = 'none';
-  activeTxtOw.element.style.opacity = 1;
-  
-  const iframe = activeOw.element.querySelectorAll("iframe");
-  const transformValue = window.getComputedStyle(activeOw.element).getPropertyValue('transform');
-  // console.log(iframe, transformValue);
-  if (transformValue == 'none') {
-    // Add autoplay parameter to the src attribute
-    // console.log(iframe[0].src)
-    const videoSrc = iframe[0].src + '?autoplay=1';
-    if(!iframe[0].src.endsWith("autoplay=1")){
-      iframe[0].src = iframe[0].src + '&autoplay=1';
-
+    if (!headOw) {
+      headOw = newNode;
+      tailOw = newNode;
+    } else {
+      tailOw.next = newNode;
+      newNode.prev = tailOw;
+      tailOw = newNode;
     }
-    // console.log(iframe[0].src)
   }
-  else{
+  for (let i = 0; i < itemsOw.length; i++) {
+    // console.log(itemsOw.length)
+    let newTxtNode = new Node(itemsTextOw[i]);
+
+    if (!headTxtOw) {
+      headTxtOw = newTxtNode;
+      tailTxtOw = newTxtNode;
+    } else {
+      tailTxtOw.next = newTxtNode;
+      newTxtNode.prev = tailTxtOw;
+      tailTxtOw = newTxtNode;
+    }
+  }
+
+  tailOw.next = headOw; // Make the list circular
+  headOw.prev = tailOw;
+
+  tailTxtOw.next = headTxtOw; // Make the list circular
+  headTxtOw.prev = tailTxtOw;
+
+  let activeOw = headOw;
+
+  let activeTxtOw = headTxtOw;
+
+  // var width = window.innerWidth;
+
+  let countOw = 0;
+
+  function loadshowOw() {
+    // console.log(activeOw.element);
+
+    activeOw.element.style.transform = `none`;
+    activeOw.element.style.webkitTransform = `none`;
+    activeOw.element.style.zIndex = 1;
+    activeOw.element.style.filter = 'none';
+    activeOw.element.style.opacity = 1;
+
+
+    activeTxtOw.element.style.transform = `none`;
+    activeTxtOw.element.style.webkitTransform = `none`;
+    activeTxtOw.element.style.zIndex = 1;
+    activeTxtOw.element.style.filter = 'none';
+    activeTxtOw.element.style.opacity = 1;
+    
+    const iframe = activeOw.element.querySelectorAll("iframe");
+    const transformValue = window.getComputedStyle(activeOw.element).getPropertyValue('transform');
+    // console.log(iframe, transformValue);
+    if (transformValue == 'none') {
+      // Add autoplay parameter to the src attribute
+      // console.log(iframe[0].src)
+      const videoSrc = iframe[0].src + '?autoplay=1';
+      if(!iframe[0].src.endsWith("autoplay=1")){
+        iframe[0].src = iframe[0].src + '&autoplay=1';
+
+      }
+      // console.log(iframe[0].src)
+    }
+    else{
+      if(iframe[0].src.endsWith("autoplay=1")){
+        iframe[0].src = iframe[0].src.substring(0, iframe[0].src.length-11);
+      }
+      // console.log(iframe[0].src)
+    }
+    let stt = 0;
+    let current = activeOw.next;
+    let currentTxt = activeTxtOw.next;
+
+      let i = 0;
+      // while (current !== head) {
+      while (current !== headOw) {
+        
+        // console.log(stt, current);
+        stt++;
+        current.element.style.transform = `translateX(${2 * stt}vw) translateY(${4 * stt}vw) scale(${1-0.1*stt})`;
+        current.element.style.webkitTransform = `translateX(${2 * stt}vw) translateY(${4 * stt}vw) scale(${1-0.1*stt})`;
+        current.element.style.zIndex = -stt;
+        current.element.style.filter = 'contrast(60%)';
+        // console.log(current.element, stt);
+        current = current.next;
+        i++;
+
+        // console.log(stt, current);
+        // currentTxt.element.style.transform = `translateX(${2 * stt}vw) translateY(${3 * stt}vw) scale(${1-0.1*stt})`;
+        currentTxt.element.style.zIndex = -stt;
+        currentTxt.element.style.filter = 'contrast(60%)';
+        // console.log(current.element, stt);
+        currentTxt = currentTxt.next;
+    }
+
+  }
+
+  loadshowOw();
+
+  nextOw.onclick = function () {
+    const iframe = activeOw.element.querySelectorAll("iframe");
     if(iframe[0].src.endsWith("autoplay=1")){
       iframe[0].src = iframe[0].src.substring(0, iframe[0].src.length-11);
     }
-    // console.log(iframe[0].src)
+    // console.log(iframe[0].src);
+    activeOw = activeOw.next;
+    activeTxtOw = activeTxtOw.next;
+    
+    // console.log(active.element);
+    headOw = headOw.next;
+    tailOw = tailOw.next;
+
+    headTxtOw = headTxtOw.next;
+    tailTxtOw = tailTxtOw.next;
+    loadshowOw();
+  };
+
+  prevOw.onclick = function () {
+    const iframe = activeOw.element.querySelectorAll("iframe");
+    if(iframe[0].src.endsWith("autoplay=1")){
+      iframe[0].src = iframe[0].src.substring(0, iframe[0].src.length-11);
+    }
+    activeOw = activeOw.prev;
+    activeTxtOw = activeTxtOw.prev;
+
+    headOw = headOw.prev;
+    tailOw = tailOw.prev;
+
+    headTxtOw = headTxtOw.prev;
+    tailTxtOw = tailTxtOw.prev;
+    loadshowOw();
+  };
+
+  // Get the audio element
+  var audio = document.getElementById("myAudio");
+  // Get the img element
+  var img = document.querySelector(".h2-vid");
+
+
+  // Function to check if the element is in the viewport
+  function isElementInViewport(el) {
+      var rect = el.getBoundingClientRect();
+      // console.log(rect.top);
+      return (
+          rect.top <= 250 &&
+          rect.top >= 0 &&
+          rect.left >= 0 
+          // &&
+          // rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          // rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
   }
-  let stt = 0;
-  let current = activeOw.next;
-  let currentTxt = activeTxtOw.next;
 
-    let i = 0;
-    // while (current !== head) {
-    while (current !== headOw) {
-      
-      // console.log(stt, current);
-      stt++;
-      current.element.style.transform = `translateX(${2 * stt}vw) translateY(${4 * stt}vw) scale(${1-0.1*stt})`;
-      current.element.style.webkitTransform = `translateX(${2 * stt}vw) translateY(${4 * stt}vw) scale(${1-0.1*stt})`;
-      current.element.style.zIndex = -stt;
-      current.element.style.filter = 'contrast(60%)';
-      // console.log(current.element, stt);
-      current = current.next;
-      i++;
+  // Function to handle scrolling and play audio if the img is in the viewport
+  // function handleScroll() {
+  //   // console.log("SCROLLING")
+  //     if (isElementInViewport(img)) {
+  //       audio.muted = false;
+  //     } else {
+  //       audio.muted = true;
+  //     }
+  // }
 
-      // console.log(stt, current);
-      // currentTxt.element.style.transform = `translateX(${2 * stt}vw) translateY(${3 * stt}vw) scale(${1-0.1*stt})`;
-      currentTxt.element.style.zIndex = -stt;
-      currentTxt.element.style.filter = 'contrast(60%)';
-      // console.log(current.element, stt);
-      currentTxt = currentTxt.next;
-  }
+  // Listen for scroll events
+  // window.addEventListener("scroll", handleScroll);
 
-}
-
-loadshowOw();
-
-nextOw.onclick = function () {
-  const iframe = activeOw.element.querySelectorAll("iframe");
-  if(iframe[0].src.endsWith("autoplay=1")){
-    iframe[0].src = iframe[0].src.substring(0, iframe[0].src.length-11);
-  }
-  // console.log(iframe[0].src);
-  activeOw = activeOw.next;
-  activeTxtOw = activeTxtOw.next;
-  
-  // console.log(active.element);
-  headOw = headOw.next;
-  tailOw = tailOw.next;
-
-  headTxtOw = headTxtOw.next;
-  tailTxtOw = tailTxtOw.next;
-  loadshowOw();
-};
-
-prevOw.onclick = function () {
-  const iframe = activeOw.element.querySelectorAll("iframe");
-  if(iframe[0].src.endsWith("autoplay=1")){
-    iframe[0].src = iframe[0].src.substring(0, iframe[0].src.length-11);
-  }
-  activeOw = activeOw.prev;
-  activeTxtOw = activeTxtOw.prev;
-
-  headOw = headOw.prev;
-  tailOw = tailOw.prev;
-
-  headTxtOw = headTxtOw.prev;
-  tailTxtOw = tailTxtOw.prev;
-  loadshowOw();
-};
-
-// Get the audio element
-var audio = document.getElementById("myAudio");
-// Get the img element
-var img = document.querySelector(".h2-vid");
-
-
-// Function to check if the element is in the viewport
-function isElementInViewport(el) {
-    var rect = el.getBoundingClientRect();
-    // console.log(rect.top);
-    return (
-        rect.top <= 250 &&
-        rect.top >= 0 &&
-        rect.left >= 0 
-        // &&
-        // rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        // rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-// Function to handle scrolling and play audio if the img is in the viewport
-// function handleScroll() {
-//   // console.log("SCROLLING")
-//     if (isElementInViewport(img)) {
-//       audio.muted = false;
-//     } else {
-//       audio.muted = true;
-//     }
-// }
-
-// Listen for scroll events
-// window.addEventListener("scroll", handleScroll);
-
-// Initial check on page load
-// handleScroll();
+  // Initial check on page load
+  // handleScroll();
 
 }
