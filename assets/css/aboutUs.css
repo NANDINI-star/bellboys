@@ -170,3 +170,7 @@
 .ad-1, .ad-2, .ad-3 {
   transform: translateZ(0);
 }
+
+.clr-1, .clr-2, .clr-3{
+  color: #FFEB5B;
+}
