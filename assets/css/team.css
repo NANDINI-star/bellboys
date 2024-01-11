@@ -1,4 +1,13 @@
 @font-face { font-family: Black Mango; src: url('./Black Mango Black.ttf'); } 
+:root {
+  --dynamic-top-factor-one: 0; /* Adjust the factor as needed */
+  --dynamic-top-factor-two: 0.15; /* Adjust the factor as needed */
+  --dynamic-top-factor-three: 0.2; /* Adjust the factor as needed */
+  --dynamic-top-factor-four: 0.1; /* Adjust the factor as needed */
+  --dynamic-top-factor-five: 0.4; /* Adjust the factor as needed */
+  --dynamic-top-factor-six: 0.4; /* Adjust the factor as needed */
+  --dynamic-top-factor-seven: 0.1; /* Adjust the factor as needed */
+}
 
 @media (max-width: 1700px) {
   .hero{
@@ -100,16 +109,18 @@
   }
 }
 
-@media (min-width: 476px){
+@media screen and (min-width: 476px){
   .one{
     z-index: 2;
     position: absolute;
     top: 0; 
+    /* top: calc(var(--dynamic-top-factor-one) * 100vh); */
     left: 0;
   }
 
   .two{
-    top: 15vw; 
+    top: 18vw; 
+    /* top: calc(var(--dynamic-top-factor-two) * 100vh); */
     left: 10vw; 
     z-index: 3;
     position: absolute;
@@ -119,6 +130,7 @@
     z-index: 2;
     position: absolute;
     top: 15vw; 
+    /* top: calc(var(--dynamic-top-factor-three) * 100vh); */
     left: 40vw
   }
 
@@ -126,6 +138,7 @@
     z-index: 1;
     position: absolute;
     top: 0; 
+    /* top: calc(var(--dynamic-top-factor-four) * 100vh); */
     left: 60vw
   }
 
@@ -133,13 +146,15 @@
     z-index: 1;
     position: absolute;
     top: 20vw; 
+    /* top: calc(var(--dynamic-top-factor-five) * 90vh); */
     left: 58vw
   }
 
   .six{
     z-index: 0;
     position: absolute;
-    top: 9vw; 
+    /* top: 9vw;  */
+    top: calc(var(--dynamic-top-factor-six) * 100vh);
     left: 75vw;
   }
 
@@ -147,44 +162,76 @@
     z-index: 0;
     position: absolute;
     top: 5vw; 
+    /* top: calc(var(--dynamic-top-factor-seven) * 100vh); */
     left: 20vw;
   }
 
-  .six img, .seven img{
+  .six img{
     /* height: 11.6vw; */
-    width: 11.6vw;
+    width: 12vw;
   }
 
-  .one img, .three img{
+  .seven img{
+    width: 10.6vw;
+  }
+
+  .one img{
     /* height: 17.3vw; */
-    width: 17.3vw;
+    width: 19.5vw;
+  }
+
+  .three img{
+    width: 15vw;
   }
   
   .two img{
     /* height: 24vw; */
-    width: 28vw;
+    width: 20vw;
   }
   
-  .four img, .five img{
+  .four img{
     /* height: 15vw; */
-    width: 15vw;
+    width: 13.5vw;
+  }
+  .five img{
+    width: 13vw
   }
   .team-img{
     top: -10vh;
   }
 }
 
+@media screen and (max-height: 300px){
+
+}
+
+@media screen and (max-height: 1100px){
+  .three img{
+    width: 15vw;
+  }
+}
+
+@media(max-height: 300px){
+  .top-nav{
+    padding: 0 1rem 0 1rem;
+  }
+  .meet-team-txt{
+    top: 0 !important;
+  }
+}
 
 .elevator{
   position: absolute;
   height: 100vh;
-  background-color: #010101;
+  /* background-color: #010101; */
 }
 
 .meet-team-txt{
   display: flex;
   justify-content: center;
   font-size: 4vw;
+  /* position: relative;
+  top: 8vw; */
 }
 
 /* .six{
@@ -205,7 +252,7 @@
 .hero-content{
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: auto;
 }
 
 .team-content{
@@ -284,7 +331,7 @@
   flex-direction: row;
   opacity: 0;
   background-color: #010101;
-  padding: 5rem 5rem 0 5rem;
+  padding: 5rem 10rem 0 10rem;
 }
 
 .person-container-flip{
@@ -349,5 +396,56 @@
 }
 
 .pavan{
-  padding: 5rem;
+  /* padding: 5rem; */
+  justify-content: center !important;
+  column-gap: 25rem;
+}
+
+.tarun{
+  justify-content: center !important;
+  column-gap: 10rem;
+
+}
+
+#loader-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#loader {
+  border: 16px solid #3498db;
+  border-top: 16px solid #fff;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+}
+
+.loader-section {
+  position: fixed;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+}
+
+.section-left {
+  left: 0;
+}
+
+.section-right {
+  right: 0;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

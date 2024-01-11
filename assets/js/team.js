@@ -1,7 +1,33 @@
+document.addEventListener("DOMContentLoaded", function () {
+  var loaderWrapper = document.getElementById("loader-wrapper");
+  
+  // You can add more image elements to the array if needed
+  var images = document.querySelectorAll("img");
 
+  var imagesLoaded = 0;
+  var totalImages = images.length;
 
+  function imageLoaded() {
+      imagesLoaded++;
+
+      if (imagesLoaded === totalImages) {
+          loaderWrapper.style.display = "none"; // Hide the loader when all images are loaded
+      }
+  }
+
+  images.forEach(function (image) {
+      if (image.complete) {
+          imageLoaded();
+      } else {
+          image.addEventListener("load", imageLoaded);
+      }
+  });
+});
+
+console.log(window.innerHeight);
+const innerHeight = window.innerHeight;
 ScrollTrigger.matchMedia({
-  "(min-width: 476px)": () => {
+  "screen and (min-width: 476px)": () => {
     const tl4 = gsap.timeline({
       delay: 1,
     });
@@ -24,6 +50,7 @@ ScrollTrigger.matchMedia({
       rotateY: 360,
       duration: 10
     }, 'start')
+    console.log(innerHeight-500)
     tl2.to(".two",{
       x: '-30vw',
       y: '7vw',
@@ -78,7 +105,8 @@ ScrollTrigger.matchMedia({
     
     tl2.to(".person-container1",{
       opacity: 1,
-      delay: -3
+      delay: -3,
+      zIndex: 4
     })
     tl2.to(".person-container",{
       opacity: 1,
@@ -91,52 +119,59 @@ ScrollTrigger.matchMedia({
     
     tl4.add('start1')
     tl4.to(".one", {
-      top: "4vw",
-      left: "27vw",
+      // top: "4vw",
+      top: "1vw",
+      left: "25vw",
     }, 'start1')
     
     tl4.to(".two",{
-      top: "-2vw",
-      left: "33vw"
+      // top: "-2vw",
+      top: "2vw",
+      left: "38vw"
     }, 'start1')
     
     tl4.to(".three",{
-      top: "3.5vw",
-      left: "52vw"
+      // top: "3.5vw",
+      top: "6.5vw",
+      left: "55vw"
     }, 'start1')
     
     tl4.to(".four",{
-      top: "5.5vw",
+      // top: "5.5vw",
+      top: "7vw",
       left: "19vw"
     }, 'start1')
     
     tl4.to(".five",{
-      top: "4.5vw",
-      left: "65vw"
+      top: "6.8vw",
+      // top: "4.5vw",
+      left: "68vw"
     }, 'start1')
     
     tl4.to(".six",{
       // opacity: 0
-      top: "8vw",
-      left: "75vw"
+      // top: "8vw",
+      top: "7vw",
+      left: "78vw"
     }, 'start1')
 
     tl4.to(".seven",{
       // opacity: 0
-      top: "7.5vw",
-      left: "11vw"
+      top: "7.8vw",
+      left: "10.5vw"
     }, 'start1')
 
     tl4.to(".team-txt", {
       opacity: 1,
       duration: 5,
-      top: "55vh"
+      top: "55vh",
+
     })
     // tl4.to(".team-txt", {
     //   opacity: 0
     // })
   },
-  "(max-width: 475px)": () => {
+  "screen and (max-width: 475px)": () => {
     const tl = gsap.timeline({
       delay: 1,
     });
@@ -257,5 +292,6 @@ ScrollTrigger.matchMedia({
       left: "3vw"
     }, 'start1')
 
-  }
+  },
+
 })
