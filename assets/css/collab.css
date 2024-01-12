@@ -1,8 +1,10 @@
 @media (max-width: 475px){
   .a-name{
     padding: 0 0 0 1vw !important;
+    font-size: 1vw !important;
   }
   .a-desig{
+    font-size: 0.5vw !important;
     padding: 0 0 1vw 1vw !important;
   }
   .collab-title,.a-title{
