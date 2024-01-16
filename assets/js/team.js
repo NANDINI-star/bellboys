@@ -277,6 +277,10 @@ ScrollTrigger.matchMedia({
       opacity: 1,
       delay: -3
     })
+    tl1.to(".person-container-flip2-other",{
+      opacity: 1,
+      delay: -3
+    })
     
     tl.add('start1')
     tl.to(".one", {
