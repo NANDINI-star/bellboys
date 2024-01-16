@@ -126,43 +126,50 @@ ScrollTrigger.matchMedia({
       // top: "4vw",
       top: "1vw",
       left: "25vw",
+      delay: 1
     }, 'start1')
     
     tl4.to(".two",{
       // top: "-2vw",
       top: "2vw",
-      left: "38vw"
+      left: "38vw",
+      delay:1
     }, 'start1')
     
     tl4.to(".three",{
       // top: "3.5vw",
       top: "6.5vw",
-      left: "55vw"
+      left: "55vw",
+      delay:1
     }, 'start1')
     
     tl4.to(".four",{
       // top: "5.5vw",
       top: "7vw",
-      left: "19vw"
+      left: "19vw",
+      delay: 1
     }, 'start1')
     
     tl4.to(".five",{
       top: "6.8vw",
       // top: "4.5vw",
-      left: "68vw"
+      left: "68vw",
+      delay: 1
     }, 'start1')
     
     tl4.to(".six",{
       // opacity: 0
       // top: "8vw",
       top: "7vw",
-      left: "78vw"
+      left: "78vw",
+       delay: 1
     }, 'start1')
 
     tl4.to(".seven",{
       // opacity: 0
       top: "7.8vw",
-      left: "10.5vw"
+      left: "10.5vw",
+      delay: 1
     }, 'start1')
 
     tl4.to(".team-txt", {
