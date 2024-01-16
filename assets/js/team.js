@@ -2,8 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
   var loaderWrapper = document.getElementById("loader-wrapper");
   
   // You can add more image elements to the array if needed
-  var images = document.querySelectorAll("img");
-
+  var images_Arr = document.querySelectorAll("img");
+  var images = [];
+  for(var i = 2; i< 9;i++){
+    console.log(images_Arr[i]);
+    images.push(images_Arr[i]);
+  }
   var imagesLoaded = 0;
   var totalImages = images.length;
 
