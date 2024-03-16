@@ -1,32 +1,32 @@
-document.addEventListener("DOMContentLoaded", function () {
-  var loaderWrapper = document.getElementById("loader-wrapper");
+// document.addEventListener("DOMContentLoaded", function () {
+//   var loaderWrapper = document.getElementById("loader-wrapper");
   
-  // You can add more image elements to the array if needed
-  var images_Arr = document.querySelectorAll("img");
-  var images = [];
-  for(var i = 2; i< 9;i++){
-    console.log(images_Arr[i]);
-    images.push(images_Arr[i]);
-  }
-  var imagesLoaded = 0;
-  var totalImages = images.length;
+//   // You can add more image elements to the array if needed
+//   var images_Arr = document.querySelectorAll("img");
+//   var images = [];
+//   for(var i = 2; i< 9;i++){
+//     console.log(images_Arr[i]);
+//     images.push(images_Arr[i]);
+//   }
+//   var imagesLoaded = 0;
+//   var totalImages = images.length;
 
-  function imageLoaded() {
-      imagesLoaded++;
+//   function imageLoaded() {
+//       imagesLoaded++;
 
-      if (imagesLoaded === totalImages) {
-          loaderWrapper.style.display = "none"; // Hide the loader when all images are loaded
-      }
-  }
+//       if (imagesLoaded === totalImages) {
+//           loaderWrapper.style.display = "none"; // Hide the loader when all images are loaded
+//       }
+//   }
 
-  images.forEach(function (image) {
-      if (image.complete) {
-          imageLoaded();
-      } else {
-          image.addEventListener("load", imageLoaded);
-      }
-  });
-});
+//   images.forEach(function (image) {
+//       if (image.complete) {
+//           imageLoaded();
+//       } else {
+//           image.addEventListener("load", imageLoaded);
+//       }
+//   });
+// });
 
 console.log(window.innerHeight);
 const innerHeight = window.innerHeight;
