@@ -139,7 +139,7 @@ function handleNavClick() {
   if (navIcon.src.endsWith('nav-icon.svg')) {
     navIcon.addEventListener('click', function () {
       // console.log("upup")
-      navIcon.src = './assets/images/close-icon.svg';
+      navIcon.src = 'https://websitebellboys.s3.ap-south-1.amazonaws.com/close-icon.svg';
       navbar.style.display = 'block';
       // navIcon.style.display = 'none';
       // closeIcon.style.visibility = 'visible';
@@ -148,7 +148,7 @@ function handleNavClick() {
   } else {
     navIcon.addEventListener('click', function () {
       // console.log("opp")
-      navIcon.src = 'assets/images/nav-icon.svg'; // Change back to the first image
+      navIcon.src = 'https://websitebellboys.s3.ap-south-1.amazonaws.com/nav-icon.svg'; // Change back to the first image
       navbar.style.display = 'none';
       navIcon.style.display = 'block';
       navbar.style.visibility = 'visible';
