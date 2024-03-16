@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
           ScrollTrigger.matchMedia({
             "screen and (min-width: 476px)": () => {
               const tl4 = gsap.timeline({
-                delay: 1,
+                // delay: 1,
               });
               
               const tl2 = gsap.timeline({
@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             "screen and (max-width: 475px)": () => {
               const tl = gsap.timeline({
-                delay: 1,
+                // delay: 1,
               });
               const tl1 = gsap.timeline({
                 scrollTrigger: {
