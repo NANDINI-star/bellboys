@@ -646,8 +646,18 @@ section {
   width: 6.5vw ;
   /* height: 5vw; */
   background-color: white;
-  /* border-radius: 50%; */
+  
   /* z-index: 1; */
+}
+
+.ups{
+  width: 9vw !important;
+  border-radius: 50%;
+}
+
+.ia{
+  width: 9vw !important;
+  border-radius: 50%;
 }
 
 .mopg{
@@ -659,8 +669,8 @@ section {
 }
 
 .c-3{
-  border-radius: 0 !important;
-  width: 5.5vw !important;
+  border-radius: 0% !important;
+  width: 6vw !important;
 }
 
 .ca-5{
